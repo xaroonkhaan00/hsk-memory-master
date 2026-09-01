@@ -1,0 +1,29 @@
+{
+  "name": "hsk-memory-master",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A local-first Mandarin memory coach for the 600 HSK-3 vocabulary items.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "data": "python3 scripts/build_data.py",
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "npm run build && node tests/smoke.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "playwright": "^1.62.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9"
+  }
+}

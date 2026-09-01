@@ -1,0 +1,9196 @@
+[
+ {
+  "id": 1,
+  "hanzi": "爱",
+  "pinyin": "ài",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "love",
+    "examples": [
+     "妈妈，我～你。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "like doing sth.",
+    "examples": [
+     "我～吃米饭。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2,
+  "hanzi": "八",
+  "pinyin": "bā",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "eight",
+    "examples": [
+     "他儿子今年～岁了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 3,
+  "hanzi": "爸爸",
+  "pinyin": "bàba",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "father; dad; daddy",
+    "examples": [
+     "我～是医生。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 4,
+  "hanzi": "杯子",
+  "pinyin": "bēizi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "cup; glass",
+    "examples": [
+     "～里有茶。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 5,
+  "hanzi": "北京",
+  "pinyin": "Běijīng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "Beijing",
+    "examples": [
+     "我住在～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 6,
+  "hanzi": "本",
+  "pinyin": "běn",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "copy; issue (used for counting books and other bound items)",
+    "examples": [
+     "桌子上有一～书。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 7,
+  "hanzi": "不客气",
+  "pinyin": "búkèqi",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "You’re welcome.",
+    "examples": [
+     "甲：谢谢你！乙：～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 8,
+  "hanzi": "不",
+  "pinyin": "bù",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "not; no",
+    "examples": [
+     "我～是学生。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 9,
+  "hanzi": "菜",
+  "pinyin": "cài",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "vegetable",
+    "examples": [
+     "我去超市买点儿～。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "dish",
+    "examples": [
+     "今天我做了三个~。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 10,
+  "hanzi": "茶",
+  "pinyin": "chá",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "tea (liquid drink/tea leaves)",
+    "examples": [
+     "请喝杯～吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 11,
+  "hanzi": "吃",
+  "pinyin": "chī",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "eat",
+    "examples": [
+     "请～点儿米饭。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 12,
+  "hanzi": "出租车",
+  "pinyin": "chūzūchē",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "taxi",
+    "examples": [
+     "我们坐～去火车站。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 13,
+  "hanzi": "打电话",
+  "pinyin": "dǎ diànhuà",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "make a phone call",
+    "examples": [
+     "他在～呢。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "hanzi": "大",
+  "pinyin": "dà",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "big; large; huge; great",
+    "examples": [
+     "这个苹果很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 15,
+  "hanzi": "的",
+  "pinyin": "de",
+  "senses": [
+   {
+    "pos": "sa.",
+    "meaning": "of (marker of attributive)",
+    "examples": [
+     "这是我～书。"
+    ]
+   },
+   {
+    "pos": "sa.",
+    "meaning": "expressing emphasis",
+    "examples": [
+     "我是坐飞机来中国～。"
+    ]
+   },
+   {
+    "pos": "",
+    "meaning": "indicating sb. or sth.",
+    "examples": [
+     "家里没吃～了，我们去买点儿吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 16,
+  "hanzi": "点",
+  "pinyin": "diǎn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "o’clock",
+    "examples": [
+     "现在是下午 3～20。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "order",
+    "examples": [
+     "先生，请问您什么时候开始～菜？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 17,
+  "hanzi": "电脑",
+  "pinyin": "diànnǎo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "computer",
+    "examples": [
+     "我买了个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 18,
+  "hanzi": "电视",
+  "pinyin": "diànshì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "television",
+    "examples": [
+     "妈妈在看～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 19,
+  "hanzi": "电影",
+  "pinyin": "diànyǐng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "motion picture; movie; film",
+    "examples": [
+     "我喜欢看～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 20,
+  "hanzi": "东西",
+  "pinyin": "dōngxi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "thing; object",
+    "examples": [
+     "我在商店买了很多～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 21,
+  "hanzi": "都",
+  "pinyin": "dōu",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "all",
+    "examples": [
+     "我们～来了。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "used to emphasize",
+    "examples": [
+     "我～快吃完了。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "already",
+    "examples": [
+     "现在～三点了，我们快迟到了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 22,
+  "hanzi": "读",
+  "pinyin": "dú",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "read",
+    "examples": [
+     "你会～这个汉字吗？",
+     "你喜欢～书吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 23,
+  "hanzi": "对不起",
+  "pinyin": "duìbuqǐ",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "I’m sorry.",
+    "examples": [
+     "甲：～。乙：没关系。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 24,
+  "hanzi": "多",
+  "pinyin": "duō",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "a lot of",
+    "examples": [
+     "这里的人很～。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "how (used in an interrogative sentence, expressing an inquiry of number or degree)",
+    "examples": [
+     "你儿子～大了？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 25,
+  "hanzi": "多少",
+  "pinyin": "duōshao",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "how many; how much",
+    "examples": [
+     "你们学校有～学生？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 26,
+  "hanzi": "儿子",
+  "pinyin": "érzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "son",
+    "examples": [
+     "我～三岁了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 27,
+  "hanzi": "二",
+  "pinyin": "èr",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "two",
+    "examples": [
+     "现在十～点了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 28,
+  "hanzi": "饭店",
+  "pinyin": "fàndiàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "restaurant,eatery;(large) hotel",
+    "examples": [
+     "中午我们去～吃吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 29,
+  "hanzi": "飞机",
+  "pinyin": "fēijī",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "plane",
+    "examples": [
+     "我坐～去北京。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 30,
+  "hanzi": "分钟",
+  "pinyin": "fēnzhōng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "minute",
+    "examples": [
+     "我想休息几～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 31,
+  "hanzi": "高兴",
+  "pinyin": "gāoxìng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "happy; glad; cheerful; pleased",
+    "examples": [
+     "今天我很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 32,
+  "hanzi": "个",
+  "pinyin": "gè",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "used with nouns without specific measure words",
+    "examples": [
+     "我是一～学生。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 33,
+  "hanzi": "工作",
+  "pinyin": "gōngzuò",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "job; work",
+    "examples": [
+     "我很喜欢现在的～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "work",
+    "examples": [
+     "我在医院～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 34,
+  "hanzi": "汉语",
+  "pinyin": "Hànyǔ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "Chinese language",
+    "examples": [
+     "他在学习～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 35,
+  "hanzi": "好",
+  "pinyin": "hǎo",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "good; nice; well; fine",
+    "examples": [
+     "今天天气很～。"
+    ]
+   },
+   {
+    "pos": "",
+    "meaning": "ok; please",
+    "examples": [
+     "你听我说，～吗？"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "very",
+    "examples": [
+     "你的衣服～漂亮啊！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 36,
+  "hanzi": "号",
+  "pinyin": "hào",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "date",
+    "examples": [
+     "今天是 2002 年 1 月 1～。"
+    ]
+   },
+   {
+    "pos": "nm.",
+    "meaning": "number",
+    "examples": [
+     "你的房间～是多少？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 37,
+  "hanzi": "喝",
+  "pinyin": "hē",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "drink",
+    "examples": [
+     "我想～水。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 38,
+  "hanzi": "和",
+  "pinyin": "hé",
+  "senses": [
+   {
+    "pos": "conj.",
+    "meaning": "and",
+    "examples": [
+     "爸爸～妈妈都在家。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 39,
+  "hanzi": "很",
+  "pinyin": "hěn",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "very",
+    "examples": [
+     "李小姐～漂亮。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 40,
+  "hanzi": "后面",
+  "pinyin": "hòumiàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "at the back; in the rear; behind",
+    "examples": [
+     "商店在学校～。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "later; afterwards",
+    "examples": [
+     "关于这个问题，～我还会详细说。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 41,
+  "hanzi": "回",
+  "pinyin": "huí",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "go back",
+    "examples": [
+     "我八点～家。"
+    ]
+   },
+   {
+    "pos": "vm.",
+    "meaning": "number of times",
+    "examples": [
+     "我去过一～北京。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 42,
+  "hanzi": "会",
+  "pinyin": "huì",
+  "senses": [
+   {
+    "pos": "aux.",
+    "meaning": "can; be capable of",
+    "examples": [
+     "我～开车。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "used after a verb, resultative",
+    "examples": [
+     "我学～了汉语。"
+    ]
+   },
+   {
+    "pos": "aux.",
+    "meaning": "may",
+    "examples": [
+     "明天是不～下雨的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 43,
+  "hanzi": "几",
+  "pinyin": "jǐ",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "how many",
+    "examples": [
+     "你有～个儿子？"
+    ]
+   },
+   {
+    "pos": "pron.",
+    "meaning": "express an indeterminate amount",
+    "examples": [
+     "我家里来了～个人。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 44,
+  "hanzi": "家",
+  "pinyin": "jiā",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "home; family; household",
+    "examples": [
+     "我～在北京。"
+    ]
+   },
+   {
+    "pos": "nm.",
+    "meaning": "used for families, restaurants, hotels or companies",
+    "examples": [
+     "我哥哥开了一～公司。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 45,
+  "hanzi": "叫",
+  "pinyin": "jiào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "call(ed) (followed by a name)",
+    "examples": [
+     "我的名字～李明。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 46,
+  "hanzi": "今天",
+  "pinyin": "jīntiān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "today",
+    "examples": [
+     "我～去北京。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 47,
+  "hanzi": "九",
+  "pinyin": "jiǔ",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "nine",
+    "examples": [
+     "今天是八月～日。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 48,
+  "hanzi": "开",
+  "pinyin": "kāi",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "drive",
+    "examples": [
+     "我～了三年出租车了。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "open; found",
+    "examples": [
+     "我爸爸～了一个小公司。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "open",
+    "examples": [
+     "请～门，让我进去。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "hold",
+    "examples": [
+     "我们学校在每年夏天～运动会。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 49,
+  "hanzi": "看",
+  "pinyin": "kàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "look; watch",
+    "examples": [
+     "你～，那本书在桌子上呢。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "read; appreciate",
+    "examples": [
+     "我在～书呢。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 50,
+  "hanzi": "看见",
+  "pinyin": "kànjiàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "see",
+    "examples": [
+     "我没～他。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 51,
+  "hanzi": "块",
+  "pinyin": "kuài",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "RMB Yuan",
+    "examples": [
+     "这本书三十～钱。"
+    ]
+   },
+   {
+    "pos": "nm.",
+    "meaning": "piece",
+    "examples": [
+     "来吃～西瓜吧。"
+    ]
+   },
+   {
+    "pos": "vm.",
+    "meaning": "together",
+    "examples": [
+     "我跟朋友在一～儿呢。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 52,
+  "hanzi": "来",
+  "pinyin": "lái",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "come",
+    "examples": [
+     "他是昨天～这儿的。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "used to indicate some action",
+    "examples": [
+     "再～点儿水果，怎么样？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 53,
+  "hanzi": "老师",
+  "pinyin": "lǎoshī",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "teacher",
+    "examples": [
+     "他就是我们的汉语～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 54,
+  "hanzi": "了",
+  "pinyin": "le",
+  "senses": [
+   {
+    "pos": "mp.",
+    "meaning": "used at the end of a senence to indicate change in status",
+    "examples": [
+     "昨天下雨～。"
+    ]
+   },
+   {
+    "pos": "sa.",
+    "meaning": "used after a verb to indicate that the action is in the past and has been completed",
+    "examples": [
+     "我吃～饭就去你那里。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 55,
+  "hanzi": "冷",
+  "pinyin": "lěng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "cold",
+    "examples": [
+     "今天太～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 56,
+  "hanzi": "里",
+  "pinyin": "lǐ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "interior; inside",
+    "examples": [
+     "我们都在学校～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 57,
+  "hanzi": "零",
+  "pinyin": "líng",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "zero",
+    "examples": [
+     "今年是二～一二年。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 58,
+  "hanzi": "六",
+  "pinyin": "liù",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "six",
+    "examples": [
+     "桌子上有～个杯子。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 59,
+  "hanzi": "妈妈",
+  "pinyin": "māma",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "mother; ma; mamma;mum",
+    "examples": [
+     "我～不在家。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 60,
+  "hanzi": "吗",
+  "pinyin": "ma",
+  "senses": [
+   {
+    "pos": "mp.",
+    "meaning": "used at the end of a sentence, indicating a question",
+    "examples": [
+     "你是中国人～？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 61,
+  "hanzi": "买",
+  "pinyin": "mǎi",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "buy",
+    "examples": [
+     "我～了一些苹果。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 62,
+  "hanzi": "没关系",
+  "pinyin": "méi guānxi",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "That’s all right. You are welcome.",
+    "examples": [
+     "甲：对不起！乙：～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 63,
+  "hanzi": "没有",
+  "pinyin": "méiyǒu",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "have nothing or nobody; can’t compare with others",
+    "examples": [
+     "我家里～人。",
+     "我～他高。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 64,
+  "hanzi": "米饭",
+  "pinyin": "mǐfàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "cooked rice",
+    "examples": [
+     "我爱吃～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 65,
+  "hanzi": "明天",
+  "pinyin": "míngtiān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "tomorrow",
+    "examples": [
+     "今天星期日，～是星期一。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 66,
+  "hanzi": "名字",
+  "pinyin": "míngzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "name; title",
+    "examples": [
+     "我的～叫李明。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 67,
+  "hanzi": "哪",
+  "pinyin": "nǎ",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "which ( used in front of a measure word)",
+    "examples": [
+     "～个杯子是你的？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 68,
+  "hanzi": "哪儿",
+  "pinyin": "nǎr",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "where",
+    "examples": [
+     "你家在～？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 69,
+  "hanzi": "那（那儿）",
+  "pinyin": "nà（nàr）",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "that",
+    "examples": [
+     "我不认识～个人。"
+    ]
+   },
+   {
+    "pos": "pron.",
+    "meaning": "there",
+    "examples": [
+     "我们的车在～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 70,
+  "hanzi": "呢",
+  "pinyin": "ne",
+  "senses": [
+   {
+    "pos": "mp.",
+    "meaning": "used at the end of a sentence, indicating an interrogative statement",
+    "examples": [
+     "你们家有几个人～？"
+    ]
+   },
+   {
+    "pos": "mp.",
+    "meaning": "used at the end of a sentence to indicate a statement",
+    "examples": [
+     "我在睡觉～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 71,
+  "hanzi": "能",
+  "pinyin": "néng",
+  "senses": [
+   {
+    "pos": "aux.",
+    "meaning": "can; may",
+    "examples": [
+     "我～坐在这儿吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 72,
+  "hanzi": "你",
+  "pinyin": "nǐ",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "you",
+    "examples": [
+     "～认识这个人吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 73,
+  "hanzi": "年",
+  "pinyin": "nián",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "year",
+    "examples": [
+     "我在中国住了三～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 74,
+  "hanzi": "女儿",
+  "pinyin": "nǚ’ér",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "daughter",
+    "examples": [
+     "我有两个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 75,
+  "hanzi": "朋友",
+  "pinyin": "péngyou",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "friend",
+    "examples": [
+     "他是我的好～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 76,
+  "hanzi": "漂亮",
+  "pinyin": "piàoliang",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "good-looking; pretty; beautiful",
+    "examples": [
+     "你的衣服真～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 77,
+  "hanzi": "苹果",
+  "pinyin": "píngguǒ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "apple",
+    "examples": [
+     "你想不想吃个～？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 78,
+  "hanzi": "七",
+  "pinyin": "qī",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "seven",
+    "examples": [
+     "一个星期有～天。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 79,
+  "hanzi": "钱",
+  "pinyin": "qián",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "money",
+    "examples": [
+     "一个苹果三块～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 80,
+  "hanzi": "前面",
+  "pinyin": "qiánmiàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "before; in front; at the head; ahead",
+    "examples": [
+     "～那个人是我的同学。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 81,
+  "hanzi": "请",
+  "pinyin": "qǐng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "please",
+    "examples": [
+     "～坐在椅子上。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "request; ask; invite; engage; hire",
+    "examples": [
+     "我去～老师帮忙。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "entertain; treat",
+    "examples": [
+     "他想～我吃饭。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 82,
+  "hanzi": "去",
+  "pinyin": "qù",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "go; leave",
+    "examples": [
+     "我星期三～中国。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "used after a verb, indicating the tendency of the action",
+    "examples": [
+     "小猫跑到房间里～了。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "remove; get rid of",
+    "examples": [
+     "把这个字～掉，这个句子就对了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 83,
+  "hanzi": "热",
+  "pinyin": "rè",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "hot; high in temperature",
+    "examples": [
+     "今天很～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "heat up; warm up",
+    "examples": [
+     "我去～一下米饭。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 84,
+  "hanzi": "人",
+  "pinyin": "rén",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "human being; person; people",
+    "examples": [
+     "商店里有很多～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 85,
+  "hanzi": "认识",
+  "pinyin": "rènshi",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "get to know; get acquainted with",
+    "examples": [
+     "～你很高兴。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 86,
+  "hanzi": "三",
+  "pinyin": "sān",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "three",
+    "examples": [
+     "我有～本书。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 87,
+  "hanzi": "商店",
+  "pinyin": "shāngdiàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "shop; store",
+    "examples": [
+     "她去～买东西了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 88,
+  "hanzi": "上",
+  "pinyin": "shàng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "upper; up; on; upward",
+    "examples": [
+     "水果在桌子～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "be engaged (in work, study, etc.) at a fixed time",
+    "examples": [
+     "我们八点去～学。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "go up; mount; board; get on",
+    "examples": [
+     "我们坐电梯～楼。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 89,
+  "hanzi": "上午",
+  "pinyin": "shàngwǔ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "morning",
+    "examples": [
+     "现在是～10 点。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 90,
+  "hanzi": "少",
+  "pinyin": "shǎo",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "not much / many",
+    "examples": [
+     "杯子里的水很～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "be short; be lack",
+    "examples": [
+     "我还～本书。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 91,
+  "hanzi": "谁",
+  "pinyin": "shéi",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "who(m)",
+    "examples": [
+     "那个人是～？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 92,
+  "hanzi": "什么",
+  "pinyin": "shénme",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "what",
+    "examples": [
+     "你看见了～？"
+    ]
+   },
+   {
+    "pos": "pron.",
+    "meaning": "express explicit meaning, referring to the thing uncertain or unspoken",
+    "examples": [
+     "你真棒，～都会！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 93,
+  "hanzi": "十",
+  "pinyin": "shí",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "ten",
+    "examples": [
+     "现在是～月。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 94,
+  "hanzi": "时候",
+  "pinyin": "shíhou",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "moment; time; period",
+    "examples": [
+     "我回家的～，他在睡觉。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 95,
+  "hanzi": "是",
+  "pinyin": "shì",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "be",
+    "examples": [
+     "他不～学生。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "yes",
+    "examples": [
+     "甲：你是中国人吗？",
+     "乙：～，我是中国人。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 96,
+  "hanzi": "书",
+  "pinyin": "shū",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "book",
+    "examples": [
+     "我喜欢读～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 97,
+  "hanzi": "水",
+  "pinyin": "shuǐ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "water",
+    "examples": [
+     "杯子里还有～吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 98,
+  "hanzi": "水果",
+  "pinyin": "shuǐguǒ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "fruit",
+    "examples": [
+     "我想去商店买～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 99,
+  "hanzi": "睡觉",
+  "pinyin": "shuìjiào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "sleep; go to bed",
+    "examples": [
+     "儿子在～呢。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 100,
+  "hanzi": "说",
+  "pinyin": "shuō",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "speak; talk; say",
+    "examples": [
+     "你在～什么？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 101,
+  "hanzi": "说话",
+  "pinyin": "shuōhuà",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "speak; talk; say",
+    "examples": [
+     "他们在～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 102,
+  "hanzi": "四",
+  "pinyin": "sì",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "four",
+    "examples": [
+     "我们～个人去看电影。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 103,
+  "hanzi": "岁",
+  "pinyin": "suì",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "year (of age)",
+    "examples": [
+     "李医生今年 40～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 104,
+  "hanzi": "他",
+  "pinyin": "tā",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "he; him",
+    "examples": [
+     "～是我们的老师。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 105,
+  "hanzi": "她",
+  "pinyin": "tā",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "she; her",
+    "examples": [
+     "我认识～的妈妈。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 106,
+  "hanzi": "太",
+  "pinyin": "tài",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "(in expressing approval or compliment) very much or extremely",
+    "examples": [
+     "这个学校～大了。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "too; excessively",
+    "examples": [
+     "这个苹果～大，我吃不完。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 107,
+  "hanzi": "天气",
+  "pinyin": "tiānqì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "weather",
+    "examples": [
+     "今天的～非常好。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 108,
+  "hanzi": "听",
+  "pinyin": "tīng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "hear; listen",
+    "examples": [
+     "你～，谁来了？"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "obey; accept",
+    "examples": [
+     "这件事儿，我～你的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 109,
+  "hanzi": "同学",
+  "pinyin": "tóngxué",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "student; classmate",
+    "examples": [
+     "～们，你们好！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 110,
+  "hanzi": "喂",
+  "pinyin": "wèi",
+  "senses": [
+   {
+    "pos": "int.",
+    "meaning": "hello; hey;hi",
+    "examples": [
+     "～，李老师在吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 111,
+  "hanzi": "我",
+  "pinyin": "wǒ",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "I; me",
+    "examples": [
+     "～是一个学生。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 112,
+  "hanzi": "我们",
+  "pinyin": "wǒmen",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "we; us",
+    "examples": [
+     "～都是学生。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 113,
+  "hanzi": "五",
+  "pinyin": "wǔ",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "five",
+    "examples": [
+     "今天星期～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 114,
+  "hanzi": "喜欢",
+  "pinyin": "xǐhuan",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "like or be interested in (sb. or sth.)",
+    "examples": [
+     "我～学汉语。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 115,
+  "hanzi": "下",
+  "pinyin": "xià",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "under; below",
+    "examples": [
+     "小猫在桌子～面。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "fall",
+    "examples": [
+     "今天～雨了。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "next",
+    "examples": [
+     "我～个月去北京。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "go down; get off",
+    "examples": [
+     "他在～飞机呢。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "finish; leave (work or shift or class)",
+    "examples": [
+     "我们八点～班。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 116,
+  "hanzi": "下午",
+  "pinyin": "xiàwǔ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "afternoon",
+    "examples": [
+     "我今天～不去学校了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 117,
+  "hanzi": "下雨",
+  "pinyin": "xiàyǔ",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "rain",
+    "examples": [
+     "昨天～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 118,
+  "hanzi": "先生",
+  "pinyin": "xiānsheng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "(addressing) Mr.; Mister; sir",
+    "examples": [
+     "你也认识王～？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 119,
+  "hanzi": "现在",
+  "pinyin": "xiànzài",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "now; nowadays; today; at present",
+    "examples": [
+     "～是 12 点。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 120,
+  "hanzi": "想",
+  "pinyin": "xiǎng",
+  "senses": [
+   {
+    "pos": "aux.",
+    "meaning": "want to; be going to; would like to",
+    "examples": [
+     "我～星期六去北京。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "think; think about; think of; think over",
+    "examples": [
+     "妈妈，你在～什么呢？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 121,
+  "hanzi": "小",
+  "pinyin": "xiǎo",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "small; little",
+    "examples": [
+     "这个苹果太~了。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "become smaller",
+    "examples": [
+     "雨～了，我们现在走吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 122,
+  "hanzi": "小姐",
+  "pinyin": "xiǎojiě",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "Miss",
+    "examples": [
+     "～，你叫什么名字？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 123,
+  "hanzi": "些",
+  "pinyin": "xiē",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "some",
+    "examples": [
+     "我买了～苹果。"
+    ]
+   },
+   {
+    "pos": "vm.",
+    "meaning": "a little bit",
+    "examples": [
+     "我的病好～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 124,
+  "hanzi": "写",
+  "pinyin": "xiě",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "write",
+    "examples": [
+     "你～的字很漂亮。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 125,
+  "hanzi": "谢谢",
+  "pinyin": "xièxie",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "thank",
+    "examples": [
+     "甲：～你。乙：不客气！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 126,
+  "hanzi": "星期",
+  "pinyin": "xīngqī",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "week",
+    "examples": [
+     "一个～有七天。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 127,
+  "hanzi": "学生",
+  "pinyin": "xuésheng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "student",
+    "examples": [
+     "我们学校里的～很多。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 128,
+  "hanzi": "学习",
+  "pinyin": "xuéxí",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "study; learn",
+    "examples": [
+     "你喜欢～汉语吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 129,
+  "hanzi": "学校",
+  "pinyin": "xuéxiào",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "school",
+    "examples": [
+     "我们～很大。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 130,
+  "hanzi": "一",
+  "pinyin": "yī",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "one",
+    "examples": [
+     "这儿～个人都没有。"
+    ]
+   },
+   {
+    "pos": "num.",
+    "meaning": "used between a reduplicative verb",
+    "examples": [
+     "请让我看～看。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 131,
+  "hanzi": "一点儿",
+  "pinyin": "yìdiǎnr",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "a little",
+    "examples": [
+     "我只有～钱。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 132,
+  "hanzi": "衣服",
+  "pinyin": "yīfu",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "clothing; clothes; dress",
+    "examples": [
+     "我在商店买了很多～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 133,
+  "hanzi": "医生",
+  "pinyin": "yīshēng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "doctor; surgeon",
+    "examples": [
+     "他是这个医院里的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 134,
+  "hanzi": "医院",
+  "pinyin": "yīyuàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "hospital",
+    "examples": [
+     "这是一个大～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 135,
+  "hanzi": "椅子",
+  "pinyin": "yǐzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "chair",
+    "examples": [
+     "小狗在～下面呢。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 136,
+  "hanzi": "有",
+  "pinyin": "yǒu",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "have",
+    "examples": [
+     "我～一个女儿。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 137,
+  "hanzi": "月",
+  "pinyin": "yuè",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "month",
+    "examples": [
+     "一年有 12 个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 138,
+  "hanzi": "再见",
+  "pinyin": "zàijiàn",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "goodbye",
+    "examples": [
+     "妈妈，我去学校了，～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 139,
+  "hanzi": "在",
+  "pinyin": "zài",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "exist; lie; be at; be on",
+    "examples": [
+     "书～桌子上。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "in the process of doing sth; just; be + verb + ing",
+    "examples": [
+     "我～吃饭呢。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 140,
+  "hanzi": "怎么",
+  "pinyin": "zěnme",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "inquiring for property, condition, way, and cause, etc.",
+    "examples": [
+     "你～去北京？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 141,
+  "hanzi": "怎么样",
+  "pinyin": "zěnmeyàng",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "How about it? What do you think? (inquiring for comments and suggestions as an independent sentence)",
+    "examples": [
+     "我们去看电影，～？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 142,
+  "hanzi": "这（这儿）",
+  "pinyin": "zhè（zhèr）",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "this; here",
+    "examples": [
+     "～个人是我的同学。",
+     "我能坐在～儿吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 143,
+  "hanzi": "中国",
+  "pinyin": "Zhōngguó",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "China",
+    "examples": [
+     "我在～学汉语。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 144,
+  "hanzi": "中午",
+  "pinyin": "zhōngwǔ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "noon; midday; noonday",
+    "examples": [
+     "我今天～去火车站。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 145,
+  "hanzi": "住",
+  "pinyin": "zhù",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "live; stay; dwell",
+    "examples": [
+     "他在北京～了很多年。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 146,
+  "hanzi": "桌子",
+  "pinyin": "zhuōzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "desk; table",
+    "examples": [
+     "电脑在～上。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 147,
+  "hanzi": "字",
+  "pinyin": "zì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "written Chinese character",
+    "examples": [
+     "这个～你认识吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 148,
+  "hanzi": "昨天",
+  "pinyin": "zuótiān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "yesterday",
+    "examples": [
+     "他～没去学校。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 149,
+  "hanzi": "坐",
+  "pinyin": "zuò",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "sit",
+    "examples": [
+     "他一个下午都～在电视前。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "travel by (a vehicle)",
+    "examples": [
+     "我～飞机去中国。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 150,
+  "hanzi": "做",
+  "pinyin": "zuò",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "make; produce",
+    "examples": [
+     "今天妈妈～了很多菜。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "be; become, to do",
+    "examples": [
+     "你是～什么工作的？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 151,
+  "hanzi": "吧",
+  "pinyin": "ba",
+  "senses": [
+   {
+    "pos": "mp.",
+    "meaning": "used at the end of a sentence to express speculative interrogation",
+    "examples": [
+     "你是个学生～？"
+    ]
+   },
+   {
+    "pos": "mp.",
+    "meaning": "used at the end of an imperative sentence",
+    "examples": [
+     "请你走～！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 152,
+  "hanzi": "白",
+  "pinyin": "bái",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "white",
+    "examples": [
+     "我很爱穿那件～衣服。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 153,
+  "hanzi": "百",
+  "pinyin": "bǎi",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "one hundred",
+    "examples": [
+     "这个自行车五～多元。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 154,
+  "hanzi": "帮助",
+  "pinyin": "bāngzhù",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "help; assist; aid; support",
+    "examples": [
+     "请～我找一家搬家公司，好吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 155,
+  "hanzi": "报纸",
+  "pinyin": "bàozhǐ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "newspaper",
+    "examples": [
+     "我每天早上都要读～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 156,
+  "hanzi": "比",
+  "pinyin": "bǐ",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "used to make comparison",
+    "examples": [
+     "我的孩子～我高。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 157,
+  "hanzi": "别",
+  "pinyin": "bié",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "don’t",
+    "examples": [
+     "太晚了，～看电视了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 158,
+  "hanzi": "长",
+  "pinyin": "cháng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "long",
+    "examples": [
+     "姐姐的腿～，跑得快。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 159,
+  "hanzi": "唱歌",
+  "pinyin": "chànggē",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "sing",
+    "examples": [
+     "我最爱～了，我给你们唱一个。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 160,
+  "hanzi": "出",
+  "pinyin": "chū",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "exit; go out",
+    "examples": [
+     "我已经走～火车站了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 161,
+  "hanzi": "穿",
+  "pinyin": "chuān",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "wear; put on",
+    "examples": [
+     "天冷了，多～些衣服吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 162,
+  "hanzi": "次",
+  "pinyin": "cì",
+  "senses": [
+   {
+    "pos": "nm./vm.",
+    "meaning": "number of times",
+    "examples": [
+     "我去过一～北京。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 163,
+  "hanzi": "从",
+  "pinyin": "cóng",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "from; since",
+    "examples": [
+     "～我家到公司，开车要 20 分钟。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 164,
+  "hanzi": "错",
+  "pinyin": "cuò",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "wrong; incorrect",
+    "examples": [
+     "对不起，我～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 165,
+  "hanzi": "打篮球",
+  "pinyin": "dǎ lánqiú",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "play basketball",
+    "examples": [
+     "我每天下午都去～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 166,
+  "hanzi": "大家",
+  "pinyin": "dàjiā",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "everyone;everybody",
+    "examples": [
+     "请～不要等我了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 167,
+  "hanzi": "到",
+  "pinyin": "dào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "arrive; reach",
+    "examples": [
+     "我早上 9 点～公司。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 168,
+  "hanzi": "得",
+  "pinyin": "de",
+  "senses": [
+   {
+    "pos": "sa.",
+    "meaning": "marker of complement",
+    "examples": [
+     "你走～太快了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 169,
+  "hanzi": "等",
+  "pinyin": "děng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "wait",
+    "examples": [
+     "你还要再～我 10 分钟。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 170,
+  "hanzi": "弟弟",
+  "pinyin": "dìdi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "younger brother",
+    "examples": [
+     "在我们家，我最大，我下面还有两个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 171,
+  "hanzi": "第一",
+  "pinyin": "dì-yī",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "first",
+    "examples": [
+     "这是我～次见到他。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 172,
+  "hanzi": "懂",
+  "pinyin": "dǒng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "understand",
+    "examples": [
+     "你的意思我～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 173,
+  "hanzi": "对",
+  "pinyin": "duì",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "right; correct",
+    "examples": [
+     "你是～的，我错了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 174,
+  "hanzi": "对",
+  "pinyin": "duì",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "to; towards",
+    "examples": [
+     "孩子～妈妈说：“妈妈，我爱你。”"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 175,
+  "hanzi": "房间",
+  "pinyin": "fángjiān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "room",
+    "examples": [
+     "我们两个人住一个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 176,
+  "hanzi": "非常",
+  "pinyin": "fēicháng",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "very",
+    "examples": [
+     "奶奶～喜欢我们送的礼物。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 177,
+  "hanzi": "服务员",
+  "pinyin": "fúwùyuán",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "attendant; waiter; waitress",
+    "examples": [
+     "我在饭馆做～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 178,
+  "hanzi": "高",
+  "pinyin": "gāo",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "tall; high",
+    "examples": [
+     "我比爸爸还～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 179,
+  "hanzi": "告诉",
+  "pinyin": "gàosu",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "tell",
+    "examples": [
+     "你能～我学校怎么走吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 180,
+  "hanzi": "哥哥",
+  "pinyin": "gēge",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "elder brother",
+    "examples": [
+     "我～比我大三岁。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 181,
+  "hanzi": "给",
+  "pinyin": "gěi",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "hand over",
+    "examples": [
+     "请把这本书～他。"
+    ]
+   },
+   {
+    "pos": "prep.",
+    "meaning": "for",
+    "examples": [
+     "这是～你买的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 182,
+  "hanzi": "公共汽车",
+  "pinyin": "gōnggòngqìchē",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "bus",
+    "examples": [
+     "坐～去，要 20 分钟。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 183,
+  "hanzi": "公司",
+  "pinyin": "gōngsī",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "company; firm",
+    "examples": [
+     "我在一个～上班。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 184,
+  "hanzi": "狗",
+  "pinyin": "gǒu",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "dog",
+    "examples": [
+     "女儿很喜欢小～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 185,
+  "hanzi": "贵",
+  "pinyin": "guì",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "expensive; costly",
+    "examples": [
+     "这块手表很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 186,
+  "hanzi": "过",
+  "pinyin": "guo",
+  "senses": [
+   {
+    "pos": "sa.",
+    "meaning": "used after a verb, referring to sth. that happened previously",
+    "examples": [
+     "我没看～这本书。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 187,
+  "hanzi": "还",
+  "pinyin": "hái",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "still; yet",
+    "examples": [
+     "他～没来呢。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 188,
+  "hanzi": "孩子",
+  "pinyin": "háizi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "son or daughter",
+    "examples": [
+     "我有三个～。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "child",
+    "examples": [
+     "我们这里女～比男～多。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 189,
+  "hanzi": "好吃",
+  "pinyin": "hǎochī",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "delicious",
+    "examples": [
+     "您做的米饭真～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 190,
+  "hanzi": "黑",
+  "pinyin": "hēi",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "black; dark",
+    "examples": [
+     "我不喜欢～颜色的衣服。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 191,
+  "hanzi": "红",
+  "pinyin": "hóng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "red",
+    "examples": [
+     "我的自行车是～色的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 192,
+  "hanzi": "欢迎",
+  "pinyin": "huānyíng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "welcome",
+    "examples": [
+     "～你们来我们家。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 193,
+  "hanzi": "回答",
+  "pinyin": "huídá",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "answer; reply; respond",
+    "examples": [
+     "我能～这个问题。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 194,
+  "hanzi": "火车站",
+  "pinyin": "huǒchēzhàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "railway station",
+    "examples": [
+     "我下午 3 点去～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 195,
+  "hanzi": "机场",
+  "pinyin": "jīchǎng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "airport",
+    "examples": [
+     "我在～工作了三年了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 196,
+  "hanzi": "鸡蛋",
+  "pinyin": "jīdàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "egg",
+    "examples": [
+     "我每天早上都要吃个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 197,
+  "hanzi": "件",
+  "pinyin": "jiàn",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "used for clothes and things",
+    "examples": [
+     "这～衣服颜色非常好看。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 198,
+  "hanzi": "教室",
+  "pinyin": "jiàoshì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "classroom",
+    "examples": [
+     "请大家都到～去上课。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 199,
+  "hanzi": "姐姐",
+  "pinyin": "jiějie",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "elder sister",
+    "examples": [
+     "我有两个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 200,
+  "hanzi": "介绍",
+  "pinyin": "jièshào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "introduce sb. or sth.",
+    "examples": [
+     "我来～一下我的朋友。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "an introduction",
+    "examples": [
+     "我在报纸上看到了这个电影的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 201,
+  "hanzi": "进",
+  "pinyin": "jìn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "enter",
+    "examples": [
+     "我马上要～机场了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 202,
+  "hanzi": "近",
+  "pinyin": "jìn",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "close; near",
+    "examples": [
+     "我们家离公司很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 203,
+  "hanzi": "就",
+  "pinyin": "jiù",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "indicating certainty; right on",
+    "examples": [
+     "我～知道他会来的。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "immediately; right now; right away",
+    "examples": [
+     "我一到家～给他打电话。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 204,
+  "hanzi": "觉得",
+  "pinyin": "juéde",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "feel; think",
+    "examples": [
+     "你～这本书怎么样？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 205,
+  "hanzi": "咖啡",
+  "pinyin": "kāfēi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "coffee",
+    "examples": [
+     "您想喝～，还是茶？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 206,
+  "hanzi": "开始",
+  "pinyin": "kāishǐ",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "start; begin",
+    "examples": [
+     "我们从第十课～学习。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "beginning",
+    "examples": [
+     "（学汉字）～可能会觉得有点难。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 207,
+  "hanzi": "考试",
+  "pinyin": "kǎoshì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "examination / take a test",
+    "examples": [
+     "为了准备～，他每天都学习到很晚。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 208,
+  "hanzi": "可能",
+  "pinyin": "kěnéng",
+  "senses": [
+   {
+    "pos": "aux.",
+    "meaning": "may; can",
+    "examples": [
+     "我～不能去上班了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 209,
+  "hanzi": "可以",
+  "pinyin": "kěyǐ",
+  "senses": [
+   {
+    "pos": "aux.",
+    "meaning": "can; may",
+    "examples": [
+     "你～开我的车去上班。"
+    ]
+   },
+   {
+    "pos": "adj.",
+    "meaning": "not bad; passable; pretty good",
+    "examples": [
+     "这个菜做得还～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 210,
+  "hanzi": "课",
+  "pinyin": "kè",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "lesson",
+    "examples": [
+     "今天我们学习第一～。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "class",
+    "examples": [
+     "现在，我们上～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 211,
+  "hanzi": "快",
+  "pinyin": "kuài",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "fast",
+    "examples": [
+     "他跑得真～。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "be going to; will; shall",
+    "examples": [
+     "7点 50 了，～上课了"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 212,
+  "hanzi": "快乐",
+  "pinyin": "kuàilè",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "happy; joyful; cheerful; glad",
+    "examples": [
+     "祝你生日～！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 213,
+  "hanzi": "累",
+  "pinyin": "lèi",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "tired; fatigued",
+    "examples": [
+     "我～了，想休息。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 214,
+  "hanzi": "离",
+  "pinyin": "lí",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "away from",
+    "examples": [
+     "我家～学校很近。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 215,
+  "hanzi": "两",
+  "pinyin": "liǎng",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "two",
+    "examples": [
+     "苹果～块钱一斤。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 216,
+  "hanzi": "路",
+  "pinyin": "lù",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "road",
+    "examples": [
+     "我每天走～去上学。"
+    ]
+   },
+   {
+    "pos": "nm.",
+    "meaning": "used to indicate a bus route",
+    "examples": [
+     "我们可以坐 10～公共汽车去。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 217,
+  "hanzi": "旅游",
+  "pinyin": "lǚyóu",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "travel",
+    "examples": [
+     "我们开车去～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 218,
+  "hanzi": "卖",
+  "pinyin": "mài",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "sell",
+    "examples": [
+     "这个商店～的东西比较便宜。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 219,
+  "hanzi": "慢",
+  "pinyin": "màn",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "slow",
+    "examples": [
+     "我们走得很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 220,
+  "hanzi": "忙",
+  "pinyin": "máng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "busy",
+    "examples": [
+     "这个星期，我很～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "be busy doing sth.",
+    "examples": [
+     "你在～什么呢？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 221,
+  "hanzi": "猫",
+  "pinyin": "māo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "cat",
+    "examples": [
+     "你的小～去哪儿了？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 222,
+  "hanzi": "每",
+  "pinyin": "měi",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "every; each",
+    "examples": [
+     "你～天都看报纸吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 223,
+  "hanzi": "妹妹",
+  "pinyin": "mèimei",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "younger sister",
+    "examples": [
+     "我有两个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 224,
+  "hanzi": "门",
+  "pinyin": "mén",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "exits and entrances; doorways",
+    "examples": [
+     "我在～外等你。"
+    ]
+   },
+   {
+    "pos": "nm.",
+    "meaning": "used for curriculum in school",
+    "examples": [
+     "今年我有五～课。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 225,
+  "hanzi": "男",
+  "pinyin": "nán",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "man; male",
+    "examples": [
+     "我不认识那个～人。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 226,
+  "hanzi": "您",
+  "pinyin": "nín",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "you or your (used to address someone with respect)",
+    "examples": [
+     "老师，～好！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 227,
+  "hanzi": "牛奶",
+  "pinyin": "niúnǎi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "milk",
+    "examples": [
+     "睡觉前喝杯～吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 228,
+  "hanzi": "女",
+  "pinyin": "nǚ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "woman; female",
+    "examples": [
+     "那个～人你认识吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 229,
+  "hanzi": "旁边",
+  "pinyin": "pángbiān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "side; by the side of; nearby",
+    "examples": [
+     "爸爸在我～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 230,
+  "hanzi": "跑步",
+  "pinyin": "pǎobù",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "run; jog",
+    "examples": [
+     "我每天早上都～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 231,
+  "hanzi": "便宜",
+  "pinyin": "piányi",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "cheap; inexpensive",
+    "examples": [
+     "苹果很～，我们买点儿吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 232,
+  "hanzi": "票",
+  "pinyin": "piào",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "ticket",
+    "examples": [
+     "我要去火车站买车～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 233,
+  "hanzi": "妻子",
+  "pinyin": "qīzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "wife",
+    "examples": [
+     "我～上班去了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 234,
+  "hanzi": "起床",
+  "pinyin": "qǐchuáng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "rise (from bed); get up",
+    "examples": [
+     "我早上七点～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 235,
+  "hanzi": "千",
+  "pinyin": "qiān",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "thousand",
+    "examples": [
+     "这个手机一～元。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 236,
+  "hanzi": "铅笔",
+  "pinyin": "qiānbǐ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "pencil",
+    "examples": [
+     "你看见我的～了吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 237,
+  "hanzi": "晴",
+  "pinyin": "qíng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "fine; clear",
+    "examples": [
+     "今天是～天。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 238,
+  "hanzi": "去年",
+  "pinyin": "qùnián",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "last year",
+    "examples": [
+     "我是～8 月来北京的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 239,
+  "hanzi": "让",
+  "pinyin": "ràng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "let; allow; make; ask",
+    "examples": [
+     "他爸爸不～他来。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 240,
+  "hanzi": "日",
+  "pinyin": "rì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "day or date",
+    "examples": [
+     "今天是 2012 年 2 月 26～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 241,
+  "hanzi": "上班",
+  "pinyin": "shàngbān",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "go to work; start work",
+    "examples": [
+     "我七点半去～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 242,
+  "hanzi": "身体",
+  "pinyin": "shēntǐ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "body (of a human or animal)",
+    "examples": [
+     "今天我的～不太舒服。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 243,
+  "hanzi": "生病",
+  "pinyin": "shēngbìng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "fall sick;fall ill; get ill; be taken ill",
+    "examples": [
+     "我～了，不能去上班了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 244,
+  "hanzi": "生日",
+  "pinyin": "shēngrì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "birthday",
+    "examples": [
+     "祝你～快乐！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 245,
+  "hanzi": "时间",
+  "pinyin": "shíjiān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "time",
+    "examples": [
+     "我没～去北京。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 246,
+  "hanzi": "事情",
+  "pinyin": "shìqing",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "matter; business; circumstance; event; affair; incident; occurrence",
+    "examples": [
+     "你下午有什么～吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 247,
+  "hanzi": "手表",
+  "pinyin": "shǒubiǎo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "wrist watch; watch",
+    "examples": [
+     "这块～非常漂亮。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 248,
+  "hanzi": "手机",
+  "pinyin": "shǒujī",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "mobile phone",
+    "examples": [
+     "你看，我新买了一个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 249,
+  "hanzi": "送",
+  "pinyin": "sòng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "give sb. sth. as a gift",
+    "examples": [
+     "我～你一本书。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "see sb off; escort or provide transportation for sb.",
+    "examples": [
+     "我去～一个朋友。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 250,
+  "hanzi": "虽然……但是……",
+  "pinyin": "suīrán…dànshì…",
+  "senses": [
+   {
+    "pos": "conj.",
+    "meaning": "though;but; however",
+    "examples": [
+     "～下雨了，～我们还是想去看电影。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 251,
+  "hanzi": "它",
+  "pinyin": "tā",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "it; its",
+    "examples": [
+     "我知道小猫在哪儿，～在桌子下面。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 252,
+  "hanzi": "踢足球",
+  "pinyin": "tī zúqiú",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "play soccer",
+    "examples": [
+     "我和同学们在～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 253,
+  "hanzi": "题",
+  "pinyin": "tí",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "questions, problems (in a test or a quiz)",
+    "examples": [
+     "这个～我不会做。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 254,
+  "hanzi": "跳舞",
+  "pinyin": "tiàowǔ",
+  "senses": [
+   {
+    "pos": "sv.",
+    "meaning": "dance",
+    "examples": [
+     "妹妹会唱歌，也会～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 255,
+  "hanzi": "外",
+  "pinyin": "wài",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "outer; outside",
+    "examples": [
+     "～面下雨了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 256,
+  "hanzi": "完",
+  "pinyin": "wán",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "indicating finished; be used up; run out",
+    "examples": [
+     "这本书我看～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 257,
+  "hanzi": "玩",
+  "pinyin": "wán",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "play",
+    "examples": [
+     "他在～，没有学习。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 258,
+  "hanzi": "晚上",
+  "pinyin": "wǎnshang",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "evening",
+    "examples": [
+     "今天～我不能看电视了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 259,
+  "hanzi": "为什么",
+  "pinyin": "wèi shénme",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "why",
+    "examples": [
+     "你～不喝点儿水呢？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 260,
+  "hanzi": "问",
+  "pinyin": "wèn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "ask; inquire after",
+    "examples": [
+     "老师，我可以～你一个问题吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 261,
+  "hanzi": "问题",
+  "pinyin": "wèntí",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "question; problem",
+    "examples": [
+     "这个～太难了！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 262,
+  "hanzi": "西瓜",
+  "pinyin": "xīguā",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "watermelon",
+    "examples": [
+     "请吃块儿～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 263,
+  "hanzi": "希望",
+  "pinyin": "xīwàng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "hope; wish; want; be desirous of",
+    "examples": [
+     "我～你别走了。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "hope; wish",
+    "examples": [
+     "孩子是爸爸、妈妈的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 264,
+  "hanzi": "洗",
+  "pinyin": "xǐ",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "wash",
+    "examples": [
+     "今天我要～很多衣服。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "develope and print (a picture)",
+    "examples": [
+     "照片要三天才能～出来。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 265,
+  "hanzi": "小时",
+  "pinyin": "xiǎoshí",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "hour",
+    "examples": [
+     "我看了一～的书。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 266,
+  "hanzi": "笑",
+  "pinyin": "xiào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "laugh; smile",
+    "examples": [
+     "听到他这么说，我们都～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 267,
+  "hanzi": "新",
+  "pinyin": "xīn",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "new; up-to-date",
+    "examples": [
+     "这是我买的～衣服。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 268,
+  "hanzi": "姓",
+  "pinyin": "xìng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "surname",
+    "examples": [
+     "中国人的～在名字的前面。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "take … as surname",
+    "examples": [
+     "我～张。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 269,
+  "hanzi": "休息",
+  "pinyin": "xiūxi",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "relax; have a rest; take a break",
+    "examples": [
+     "太累了，让我～一下。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 270,
+  "hanzi": "雪",
+  "pinyin": "xuě",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "snow",
+    "examples": [
+     "今年冬天下了几次大～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 271,
+  "hanzi": "颜色",
+  "pinyin": "yánsè",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "color",
+    "examples": [
+     "你喜欢哪种～？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 272,
+  "hanzi": "眼睛",
+  "pinyin": "yǎnjing",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "eye",
+    "examples": [
+     "我的～是黑色的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 273,
+  "hanzi": "羊肉",
+  "pinyin": "yángròu",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "mutton",
+    "examples": [
+     "有些人不爱吃～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 274,
+  "hanzi": "药",
+  "pinyin": "yào",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "medicine",
+    "examples": [
+     "这个～一天吃三次。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 275,
+  "hanzi": "要",
+  "pinyin": "yào",
+  "senses": [
+   {
+    "pos": "aux.",
+    "meaning": "hope; want; wish",
+    "examples": [
+     "我～去北京。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "request; ask sb. to do sth..",
+    "examples": [
+     "妈妈～我去买菜。"
+    ]
+   },
+   {
+    "pos": "aux.",
+    "meaning": "ought to; might; must; should",
+    "examples": [
+     "你～认真地做这件事。"
+    ]
+   },
+   {
+    "pos": "aux.",
+    "meaning": "be going to; shall; will",
+    "examples": [
+     "～下雨了。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "cost; take",
+    "examples": [
+     "一斤菜～两块钱。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 276,
+  "hanzi": "也",
+  "pinyin": "yě",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "also; too; as well; either",
+    "examples": [
+     "你去，我～去。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 277,
+  "hanzi": "一下",
+  "pinyin": "yíxià",
+  "senses": [
+   {
+    "pos": "vm.",
+    "meaning": "once; in a short while",
+    "examples": [
+     "请等我～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 278,
+  "hanzi": "一起",
+  "pinyin": "yìqǐ",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "together",
+    "examples": [
+     "我和你～去北京。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 279,
+  "hanzi": "已经",
+  "pinyin": "yǐjīng",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "already; yet",
+    "examples": [
+     "我们～吃完饭了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 280,
+  "hanzi": "意思",
+  "pinyin": "yìsi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "meaning; content; indication; hint",
+    "examples": [
+     "这个词是什么～？"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "opinion; idea; concept",
+    "examples": [
+     "把你的～告诉我吧。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "fun; interest; enjoyment",
+    "examples": [
+     "这个电影真有～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 281,
+  "hanzi": "因为……所以……",
+  "pinyin": "yīnwèi…suǒyǐ…",
+  "senses": [
+   {
+    "pos": "conj.",
+    "meaning": "on account of; because of",
+    "examples": [
+     "～下雨了，～我没去跑步。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 282,
+  "hanzi": "阴",
+  "pinyin": "yīn",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "cloudy; overcast",
+    "examples": [
+     "今天是～天。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 283,
+  "hanzi": "游泳",
+  "pinyin": "yóuyǒng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "swim",
+    "examples": [
+     "我会～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 284,
+  "hanzi": "右边",
+  "pinyin": "yòubian",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "right; right side",
+    "examples": [
+     "王医生～那个人是谁？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 285,
+  "hanzi": "鱼",
+  "pinyin": "yú",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "fish",
+    "examples": [
+     "水里有很多～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 286,
+  "hanzi": "远",
+  "pinyin": "yuǎn",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "far",
+    "examples": [
+     "我家离公司很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 287,
+  "hanzi": "运动",
+  "pinyin": "yùndòng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "take exercise",
+    "examples": [
+     "我们都很喜欢～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 288,
+  "hanzi": "再",
+  "pinyin": "zài",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "again",
+    "examples": [
+     "我吃完饭～去商店。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "more; further",
+    "examples": [
+     "～高点儿，现在太低了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 289,
+  "hanzi": "早上",
+  "pinyin": "zǎoshang",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "morning",
+    "examples": [
+     "我～看见过他。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 290,
+  "hanzi": "丈夫",
+  "pinyin": "zhàngfu",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "husband",
+    "examples": [
+     "我～在医院工作。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 291,
+  "hanzi": "找",
+  "pinyin": "zhǎo",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "seek; look for",
+    "examples": [
+     "他想～一个工作。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 292,
+  "hanzi": "着",
+  "pinyin": "zhe",
+  "senses": [
+   {
+    "pos": "sa.",
+    "meaning": "used after a verb, indicating that the action starts and continues",
+    "examples": [
+     "他笑～说：“你不认识我，但是我认识你。”"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 293,
+  "hanzi": "真",
+  "pinyin": "zhēn",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "indeed; really",
+    "examples": [
+     "这个人～高。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 294,
+  "hanzi": "正在",
+  "pinyin": "zhèngzài",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "be + verb + ing; in the process of; in the course of; in the middle of; in the act of",
+    "examples": [
+     "弟弟～打篮球。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 295,
+  "hanzi": "知道",
+  "pinyin": "zhīdào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "know; be aware of",
+    "examples": [
+     "我不～他现在在哪里。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 296,
+  "hanzi": "准备",
+  "pinyin": "zhǔnbèi",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "be going to; intend; plan; prepare",
+    "examples": [
+     "我～星期日去北京。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "preparation; arrangement",
+    "examples": [
+     "我在为考试做～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 297,
+  "hanzi": "自行车",
+  "pinyin": "zìxíngchē",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "bicycle",
+    "examples": [
+     "这是我新买的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 298,
+  "hanzi": "走",
+  "pinyin": "zǒu",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "walk; go on foot",
+    "examples": [
+     "我女儿 9 个月就会～了。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "leave; go away; depart",
+    "examples": [
+     "我～了，再见！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 299,
+  "hanzi": "最",
+  "pinyin": "zuì",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "the most",
+    "examples": [
+     "她是我～好的朋友。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 300,
+  "hanzi": "左边",
+  "pinyin": "zuǒbian",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "left; left side",
+    "examples": [
+     "～的那个杯子是你的，右边的是我的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 301,
+  "hanzi": "阿姨",
+  "pinyin": "āyí",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "aunt",
+    "examples": [
+     "～，附近有地铁站吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 302,
+  "hanzi": "啊",
+  "pinyin": "a",
+  "senses": [
+   {
+    "pos": "int.",
+    "meaning": "used to express surprise,exclamation or promise",
+    "examples": [
+     "～，这儿的环境多么好啊！",
+     "你们家住在哪儿～？",
+     "～，好的，我现在就去。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 303,
+  "hanzi": "矮",
+  "pinyin": "ǎi",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "short, low",
+    "examples": [
+     "弟弟的个子比我～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 304,
+  "hanzi": "爱好",
+  "pinyin": "àihào",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "hobby; an interest; fancy",
+    "examples": [
+     "我最大的～就是打篮球。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "be fond of or keen on; have a taste for",
+    "examples": [
+     "我从小就～音乐。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 305,
+  "hanzi": "安静",
+  "pinyin": "ānjìng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "noiseless; quiet; calm",
+    "examples": [
+     "因为教室里没什么人，所以很～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "quiet down; keep silent",
+    "examples": [
+     "孩子们都睡着了，家里～了下来。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 306,
+  "hanzi": "把",
+  "pinyin": "bǎ",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "dealing with, used before an object, followed by a transitive verb",
+    "examples": [
+     "请～桌子上的铅笔给我。"
+    ]
+   },
+   {
+    "pos": "nm.",
+    "meaning": "used for things with a handle",
+    "examples": [
+     "房间里有四～椅子。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 307,
+  "hanzi": "班",
+  "pinyin": "bān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "class",
+    "examples": [
+     "我在三年级二～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 308,
+  "hanzi": "搬",
+  "pinyin": "bān",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "carry; move",
+    "examples": [
+     "请帮我把这张桌子～到楼下好吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 309,
+  "hanzi": "办法",
+  "pinyin": "bànfǎ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "way; means; measure; step to take; method; resource",
+    "examples": [
+     "你别急，我们再想想～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 310,
+  "hanzi": "办公室",
+  "pinyin": "bàngōngshì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "office",
+    "examples": [
+     "请问，校长～怎么走？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 311,
+  "hanzi": "半",
+  "pinyin": "bàn",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "half",
+    "examples": [
+     "现在是三点～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 312,
+  "hanzi": "帮忙",
+  "pinyin": "bāngmáng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "help; give a helping hand; do a favor; lend a hand",
+    "examples": [
+     "因为有你～，这件事情处理得很好。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 313,
+  "hanzi": "包",
+  "pinyin": "bāo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "bag",
+    "examples": [
+     "我的～忘在房间里了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 314,
+  "hanzi": "饱",
+  "pinyin": "bǎo",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "not hungry, full",
+    "examples": [
+     "我已经吃～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 315,
+  "hanzi": "北方",
+  "pinyin": "běifāng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "north",
+    "examples": [
+     "冬天，～比南方冷多了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 316,
+  "hanzi": "被",
+  "pinyin": "bèi",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "be made or forced, indicating passive voice",
+    "examples": [
+     "词典～王老师拿走了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 317,
+  "hanzi": "鼻子",
+  "pinyin": "bízi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "nose",
+    "examples": [
+     "姐姐的～很高，很漂亮。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 318,
+  "hanzi": "比较",
+  "pinyin": "bǐjiào",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "fairly; quite",
+    "examples": [
+     "今天天气～冷。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 319,
+  "hanzi": "比赛",
+  "pinyin": "bǐsài",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "competition",
+    "examples": [
+     "今天晚上有足球～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "compete",
+    "examples": [
+     "我们～跑步吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 320,
+  "hanzi": "笔记本",
+  "pinyin": "bǐjìběn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "notebook",
+    "examples": [
+     "老师讲的内容，我都写在～上了。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "laptop",
+    "examples": [
+     "你看，这是我新买的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 321,
+  "hanzi": "必须",
+  "pinyin": "bìxū",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "must; have to",
+    "examples": [
+     "我今天～去上班。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 322,
+  "hanzi": "变化",
+  "pinyin": "biànhuà",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "change; variation",
+    "examples": [
+     "十年不见，他好像没什么～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "change; vary",
+    "examples": [
+     "城市～得太快了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 323,
+  "hanzi": "别人",
+  "pinyin": "biéren",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "other people; another person",
+    "examples": [
+     "～都走了，为什么你还在这里？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 324,
+  "hanzi": "宾馆",
+  "pinyin": "bīnguǎn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "hotel",
+    "examples": [
+     "这是我们这儿最大的～，可以住 300 个客人。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 325,
+  "hanzi": "冰箱",
+  "pinyin": "bīngxiāng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "refrigerator",
+    "examples": [
+     "妈妈把刚买的鱼放进了～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 326,
+  "hanzi": "不但……而且……",
+  "pinyin": "búdàn… érqiě…",
+  "senses": [
+   {
+    "pos": "conj.",
+    "meaning": "moreover; not only… but also…",
+    "examples": [
+     "妹妹～喜欢唱歌，～爱跳舞。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 327,
+  "hanzi": "才",
+  "pinyin": "cái",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "late, indicating just happened",
+    "examples": [
+     "他 30 岁～读完大学。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "just; only (indicating only one solution)",
+    "examples": [
+     "这件事，只有他～能做好。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 328,
+  "hanzi": "菜单",
+  "pinyin": "càidān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "menu",
+    "examples": [
+     "服务员，请帮我拿一下～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 329,
+  "hanzi": "参加",
+  "pinyin": "cānjiā",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "join; take part in; attend",
+    "examples": [
+     "这次会议有两百多人～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 330,
+  "hanzi": "草",
+  "pinyin": "cǎo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "grass; straw",
+    "examples": [
+     "春天来了，小～绿了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 331,
+  "hanzi": "层",
+  "pinyin": "céng",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "layer, floor, etc.( used for things that have separate levels)",
+    "examples": [
+     "我住在三～，306。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 332,
+  "hanzi": "差",
+  "pinyin": "chà",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "bad; poor",
+    "examples": [
+     "我这次考试考得很～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "fall short of; owe",
+    "examples": [
+     "现在是～5 分 12 点。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 333,
+  "hanzi": "长",
+  "pinyin": "cháng",
+  "senses": [
+   {
+    "pos": "adj",
+    "meaning": "long",
+    "examples": [
+     "姐姐的头发又黑又～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 334,
+  "hanzi": "超市",
+  "pinyin": "chāoshì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "supermarket",
+    "examples": [
+     "这家～里的东西比较便宜。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 335,
+  "hanzi": "衬衫",
+  "pinyin": "chènshān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "shirt",
+    "examples": [
+     "今天我穿这件～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 336,
+  "hanzi": "成绩",
+  "pinyin": "chéngjì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "score",
+    "examples": [
+     "我们可以在网上查到考试～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 337,
+  "hanzi": "城市",
+  "pinyin": "chéngshì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "city",
+    "examples": [
+     "我已经喜欢上了这个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 338,
+  "hanzi": "迟到",
+  "pinyin": "chídào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "be late",
+    "examples": [
+     "对不起，我今天又～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 339,
+  "hanzi": "出现",
+  "pinyin": "chūxiàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "come out , happen; show up; appear",
+    "examples": [
+     "我们等了他一个小时，他也没有～。",
+     "我们工作中～了不少问题。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 340,
+  "hanzi": "除了",
+  "pinyin": "chúle",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "except (for); besides; in addition to",
+    "examples": [
+     "～小王，其他人都来了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 341,
+  "hanzi": "船",
+  "pinyin": "chuán",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "boat; ship",
+    "examples": [
+     "你可以坐～去上海。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 342,
+  "hanzi": "春",
+  "pinyin": "chūn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "spring (one of the four seasons)",
+    "examples": [
+     "～天是一年的开始。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 343,
+  "hanzi": "词典",
+  "pinyin": "cídiǎn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "dictionary",
+    "examples": [
+     "这本～对我的学习很有帮助。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 344,
+  "hanzi": "聪明",
+  "pinyin": "cōngming",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "bright; clever; intelligent",
+    "examples": [
+     "弟弟不但很～，而且很爱学习。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 345,
+  "hanzi": "打扫",
+  "pinyin": "dǎsǎo",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "clean; sweep",
+    "examples": [
+     "我准备周末把房间～一下。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 346,
+  "hanzi": "打算",
+  "pinyin": "dǎsuàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "be going to do sth.; plan to",
+    "examples": [
+     "我～下个星期去旅游。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "plan",
+    "examples": [
+     "我还没有结婚的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 347,
+  "hanzi": "带",
+  "pinyin": "dài",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "carry; take; bring; bear",
+    "examples": [
+     "我今天忘记～钱包了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 348,
+  "hanzi": "担心",
+  "pinyin": "dānxīn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "worry; be anxious; feel concerned",
+    "examples": [
+     "爷爷住院了，我很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 349,
+  "hanzi": "蛋糕",
+  "pinyin": "dàngāo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "cake",
+    "examples": [
+     "你饿了吗？先吃块～吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 350,
+  "hanzi": "当然",
+  "pinyin": "dāngrán",
+  "senses": [
+   {
+    "pos": "adv..",
+    "meaning": "of course; naturally; certainly",
+    "examples": [
+     "你生病了，我～要来看看你。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 351,
+  "hanzi": "灯",
+  "pinyin": "dēng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "lamp",
+    "examples": [
+     "房间里的～怎么不亮了？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 352,
+  "hanzi": "地",
+  "pinyin": "de",
+  "senses": [
+   {
+    "pos": "sa.",
+    "meaning": "marker of adverbial",
+    "examples": [
+     "天慢慢～黑了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 353,
+  "hanzi": "地方",
+  "pinyin": "dìfang",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "place",
+    "examples": [
+     "这个～我来过三次了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 354,
+  "hanzi": "地铁",
+  "pinyin": "dìtiě",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "subway",
+    "examples": [
+     "我们先坐三站～，再走一会儿就到了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 355,
+  "hanzi": "地图",
+  "pinyin": "dìtú",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "map",
+    "examples": [
+     "我的手机上有电子～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 356,
+  "hanzi": "电梯",
+  "pinyin": "diàntī",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "elevator",
+    "examples": [
+     "我们坐～上去吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 357,
+  "hanzi": "电子邮件",
+  "pinyin": "diànzǐyóujiàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "email",
+    "examples": [
+     "我晚上再给你发个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 358,
+  "hanzi": "东",
+  "pinyin": "dōng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "east",
+    "examples": [
+     "你一直向～走就到了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 359,
+  "hanzi": "冬",
+  "pinyin": "dōng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "winter",
+    "examples": [
+     "北方的～天很冷。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 360,
+  "hanzi": "动物园",
+  "pinyin": "dòngwùyuán",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "zoo",
+    "examples": [
+     "～里有一百多种动物。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 361,
+  "hanzi": "短",
+  "pinyin": "duǎn",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "short",
+    "examples": [
+     "这件事在～时间内很难做完。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 362,
+  "hanzi": "段",
+  "pinyin": "duàn",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "passage, paragraph (of an article); period (of time); section (of a distance)",
+    "examples": [
+     "这～时间我很忙。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 363,
+  "hanzi": "锻炼",
+  "pinyin": "duànliàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "do physical training; to take exercise",
+    "examples": [
+     "我每天早上都去～身体。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 364,
+  "hanzi": "多么",
+  "pinyin": "duōme",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "how (wonderful, etc.)",
+    "examples": [
+     "这里～漂亮啊！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 365,
+  "hanzi": "饿",
+  "pinyin": "è",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "hungry",
+    "examples": [
+     "我～了，想吃点东西。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 366,
+  "hanzi": "耳朵",
+  "pinyin": "ěrduo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "ear",
+    "examples": [
+     "我的～有点疼，要去医院看看。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 367,
+  "hanzi": "发",
+  "pinyin": "fā",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "send",
+    "examples": [
+     "你给我～电子邮件了吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 368,
+  "hanzi": "发烧",
+  "pinyin": "fāshāo",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "have a fever",
+    "examples": [
+     "我身体不舒服，～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 369,
+  "hanzi": "发现",
+  "pinyin": "fāxiàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "find out; discover",
+    "examples": [
+     "我～他瘦了很多。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 370,
+  "hanzi": "方便",
+  "pinyin": "fāngbiàn",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "convenient",
+    "examples": [
+     "我坐地铁去上班很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 371,
+  "hanzi": "放",
+  "pinyin": "fàng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "put; place",
+    "examples": [
+     "把书～在桌子上吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 372,
+  "hanzi": "放心",
+  "pinyin": "fàngxīn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "be assured",
+    "examples": [
+     "请～，我会把事情办好的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 373,
+  "hanzi": "分",
+  "pinyin": "fēn",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "minute",
+    "examples": [
+     "现在 8 点 30～。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "mark; grade; score",
+    "examples": [
+     "这次考试，我得了 85～。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "split; separate",
+    "examples": [
+     "这个苹果被～成了两块儿。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 374,
+  "hanzi": "附近",
+  "pinyin": "fùjìn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "nearby; neighbour; vicinity; proximity",
+    "examples": [
+     "他家就住在公司～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 375,
+  "hanzi": "复习",
+  "pinyin": "fùxí",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "review",
+    "examples": [
+     "考试前要好好地～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 376,
+  "hanzi": "干净",
+  "pinyin": "gānjìng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "clean",
+    "examples": [
+     "我把衣服洗～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 377,
+  "hanzi": "感冒",
+  "pinyin": "gǎnmào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "have/catch a cold",
+    "examples": [
+     "我～了，要吃点儿药。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 378,
+  "hanzi": "感兴趣",
+  "pinyin": "gǎnxìngqù",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "interest; taste",
+    "examples": [
+     "小王对音乐很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 379,
+  "hanzi": "刚才",
+  "pinyin": "gāngcái",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "a moment ago; just now",
+    "examples": [
+     "～是谁来的电话？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 380,
+  "hanzi": "个子",
+  "pinyin": "gèzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "height",
+    "examples": [
+     "哥哥比我～高。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 381,
+  "hanzi": "根据",
+  "pinyin": "gēnjù",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "on the basis of; according to",
+    "examples": [
+     "请～这篇文章谈一谈自己的想法。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "basis; cause; foundation",
+    "examples": [
+     "他这么说，是有～的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 382,
+  "hanzi": "跟",
+  "pinyin": "gēn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "follow",
+    "examples": [
+     "散步的时候，小狗一直～在我身后。"
+    ]
+   },
+   {
+    "pos": "prep.",
+    "meaning": "with",
+    "examples": [
+     "姐姐～妈妈一起去公园了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 383,
+  "hanzi": "更",
+  "pinyin": "gèng",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "more",
+    "examples": [
+     "他比我～喜欢游泳。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 384,
+  "hanzi": "公斤",
+  "pinyin": "gōngjīn",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "kilogram",
+    "examples": [
+     "我买了一～鸡蛋。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 385,
+  "hanzi": "公园",
+  "pinyin": "gōngyuán",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "park",
+    "examples": [
+     "我家附近有个～，我常去那里散步。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 386,
+  "hanzi": "故事",
+  "pinyin": "gùshi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "story",
+    "examples": [
+     "睡觉前，我都给女儿讲～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 387,
+  "hanzi": "刮风",
+  "pinyin": "guāfēng",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "blow (of wind)",
+    "examples": [
+     "今天～了，别骑自行车了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 388,
+  "hanzi": "关",
+  "pinyin": "guān",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "close; turn off",
+    "examples": [
+     "他～上了门。",
+     "我把电视～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 389,
+  "hanzi": "关系",
+  "pinyin": "guānxì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "relation; relationship",
+    "examples": [
+     "这件事和她没有～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 390,
+  "hanzi": "关心",
+  "pinyin": "guānxīn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "care for; be concerned for",
+    "examples": [
+     "爸爸很～我的学习。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "concern; consideration",
+    "examples": [
+     "谢谢你的～，我的身体好多了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 391,
+  "hanzi": "关于",
+  "pinyin": "guānyú",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "with regard to",
+    "examples": [
+     "～这个问题，我们还要再想一想。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 392,
+  "hanzi": "国家",
+  "pinyin": "guójiā",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "country",
+    "examples": [
+     "我爱旅游，去过几十个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 393,
+  "hanzi": "过",
+  "pinyin": "guò",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "live; pass",
+    "examples": [
+     "今天我～生日，朋友们都来了。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "spend the time; pass the time",
+    "examples": [
+     "时间～得真快，要过春节了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 394,
+  "hanzi": "过去",
+  "pinyin": "guòqù",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "in the past",
+    "examples": [
+     "奶奶经常给我讲～的事情。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 395,
+  "hanzi": "还是",
+  "pinyin": "háishì",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "still; all the same",
+    "examples": [
+     "我～在北京，没去其他地方。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "had better",
+    "examples": [
+     "你～吃点儿水果吧，别喝啤酒了。"
+    ]
+   },
+   {
+    "pos": "adv.",
+    "meaning": "or",
+    "examples": [
+     "你是开车去～坐公共汽车去？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 396,
+  "hanzi": "害怕",
+  "pinyin": "hàipà",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "be afraid; be frightened",
+    "examples": [
+     "我～一个人晚上出门。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 397,
+  "hanzi": "航班",
+  "pinyin": "hángbān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "flight; scheduled flight",
+    "examples": [
+     "各位顾客，欢迎您乘坐我们的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 398,
+  "hanzi": "黑板",
+  "pinyin": "hēibǎn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "blackboard",
+    "examples": [
+     "请大家看～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 399,
+  "hanzi": "后来",
+  "pinyin": "hòulái",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "later; afterwards",
+    "examples": [
+     "～我再也没见过他。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 400,
+  "hanzi": "护照",
+  "pinyin": "hùzhào",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "passport",
+    "examples": [
+     "你的～办好了吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 401,
+  "hanzi": "花",
+  "pinyin": "huā",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "spend",
+    "examples": [
+     "今天我～了不少钱。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 402,
+  "hanzi": "花",
+  "pinyin": "huā",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "flower",
+    "examples": [
+     "今天是妈妈的生日，我们送一些～给她吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 403,
+  "hanzi": "画",
+  "pinyin": "huà",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "draw; paint",
+    "examples": [
+     "我从小就喜欢～画儿。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 404,
+  "hanzi": "坏",
+  "pinyin": "huài",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "bad; evil",
+    "examples": [
+     "面包很新鲜，没有～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 405,
+  "hanzi": "还",
+  "pinyin": "huán",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "return sth to the owner",
+    "examples": [
+     "我把书～给图书馆了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 406,
+  "hanzi": "环境",
+  "pinyin": "huánjìng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "environment; condition; circumstance",
+    "examples": [
+     "这里的～很不错，在这里住很舒服。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 407,
+  "hanzi": "换",
+  "pinyin": "huàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "change",
+    "examples": [
+     "你等我一下，我去～件衣服。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "exchange money",
+    "examples": [
+     "我去银行～点儿钱。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 408,
+  "hanzi": "黄河",
+  "pinyin": "Huánghé",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "the Yellow River",
+    "examples": [
+     "～是中国的第二大河。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 409,
+  "hanzi": "会议",
+  "pinyin": "huìyì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "meeting",
+    "examples": [
+     "我们下午有个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 410,
+  "hanzi": "或者",
+  "pinyin": "huòzhě",
+  "senses": [
+   {
+    "pos": "conj.",
+    "meaning": "or",
+    "examples": [
+     "你去，～我去，都可以。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 411,
+  "hanzi": "几乎",
+  "pinyin": "jīhū",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "nearly; almost",
+    "examples": [
+     "我感动得～要流泪了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 412,
+  "hanzi": "机会",
+  "pinyin": "jīhuì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "chance; opportunity",
+    "examples": [
+     "我希望有～参加比赛。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 413,
+  "hanzi": "极",
+  "pinyin": "jí",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "extremely; exceedingly",
+    "examples": [
+     "他对音乐～感兴趣。",
+     "今天的节目好看～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 414,
+  "hanzi": "记得",
+  "pinyin": "jìde",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "remember; learn by heart",
+    "examples": [
+     "我不～他住在哪儿了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 415,
+  "hanzi": "季节",
+  "pinyin": "jìjié",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "season",
+    "examples": [
+     "一年有四个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 416,
+  "hanzi": "检查",
+  "pinyin": "jiǎnchá",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "inspect; check; examine",
+    "examples": [
+     "你去医院～一下身体吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 417,
+  "hanzi": "简单",
+  "pinyin": "jiǎndān",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "easy; simple",
+    "examples": [
+     "这些题对他来说很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 418,
+  "hanzi": "见面",
+  "pinyin": "jiànmiàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "meet",
+    "examples": [
+     "上次和他～，已经是去年了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 419,
+  "hanzi": "健康",
+  "pinyin": "jiànkāng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "healthy",
+    "examples": [
+     "爸爸的身体特别～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 420,
+  "hanzi": "讲",
+  "pinyin": "jiǎng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "speak; tell",
+    "examples": [
+     "李老师的课～得很有趣。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 421,
+  "hanzi": "降落",
+  "pinyin": "jiàngluò",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "descend; land",
+    "examples": [
+     "飞机马上就要～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 422,
+  "hanzi": "角",
+  "pinyin": "jiǎo",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "tenth of one Yuan (money)",
+    "examples": [
+     "桌子上有五～钱。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 423,
+  "hanzi": "脚",
+  "pinyin": "jiǎo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "foot",
+    "examples": [
+     "妹妹～上穿着漂亮的红皮鞋。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 424,
+  "hanzi": "教",
+  "pinyin": "jiāo",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "teach",
+    "examples": [
+     "李老师～我们数学。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 425,
+  "hanzi": "接",
+  "pinyin": "jiē",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "accept; receive",
+    "examples": [
+     "下午我去机场～你。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "go on",
+    "examples": [
+     "他看了看表，躺下～着睡觉。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 426,
+  "hanzi": "街道",
+  "pinyin": "jiēdào",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "street",
+    "examples": [
+     "这条～很长，有四千多米。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 427,
+  "hanzi": "节目",
+  "pinyin": "jiémù",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "show; performance; program",
+    "examples": [
+     "今天我们一共演出 12 个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 428,
+  "hanzi": "节日",
+  "pinyin": "jiérì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "holiday; festival",
+    "examples": [
+     "祝大家～快乐！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 429,
+  "hanzi": "结婚",
+  "pinyin": "jiéhūn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "get married",
+    "examples": [
+     "我们～10 年了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 430,
+  "hanzi": "结束",
+  "pinyin": "jiéshù",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "stop; finish; end; terminate",
+    "examples": [
+     "会议马上就要～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 431,
+  "hanzi": "解决",
+  "pinyin": "jiějué",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "solve or resolve a problem or an issue",
+    "examples": [
+     "这个问题你打算怎么～？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 432,
+  "hanzi": "借",
+  "pinyin": "jiè",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "borrow; lend",
+    "examples": [
+     "我从图书馆～了三本书。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 433,
+  "hanzi": "经常",
+  "pinyin": "jīngcháng",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "often",
+    "examples": [
+     "我～在学校遇到他。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 434,
+  "hanzi": "经过",
+  "pinyin": "jīngguò",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "pass through / by",
+    "examples": [
+     "上下班的时候，我都要～这条街道。"
+    ]
+   },
+   {
+    "pos": "prep.",
+    "meaning": "through; under",
+    "examples": [
+     "～你这么一说，我终于明白了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 435,
+  "hanzi": "经理",
+  "pinyin": "jīnglǐ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "manager",
+    "examples": [
+     "他是我们公司的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 436,
+  "hanzi": "久",
+  "pinyin": "jiǔ",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "old; for a long time",
+    "examples": [
+     "这个问题我想了很～才明白。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 437,
+  "hanzi": "旧",
+  "pinyin": "jiù",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "old; worn",
+    "examples": [
+     "这件衣服穿了两年，已经～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 438,
+  "hanzi": "句子",
+  "pinyin": "jùzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "sentence",
+    "examples": [
+     "请用这些词语说几个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 439,
+  "hanzi": "决定",
+  "pinyin": "juédìng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "decide; determine",
+    "examples": [
+     "这件事是经理～的。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "decision; determination; resolution",
+    "examples": [
+     "他已经做出了～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 440,
+  "hanzi": "可爱",
+  "pinyin": "kě’ài",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "cute; lovable; likeable",
+    "examples": [
+     "你的儿子真～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 441,
+  "hanzi": "渴",
+  "pinyin": "kě",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "thirsty",
+    "examples": [
+     "我～了，想喝点儿水。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 442,
+  "hanzi": "刻",
+  "pinyin": "kè",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "quarter of an hour; 15 minutes",
+    "examples": [
+     "现在是三点一～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 443,
+  "hanzi": "客人",
+  "pinyin": "kèrén",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "guest",
+    "examples": [
+     "春节的时候，家里会来很多～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 444,
+  "hanzi": "空调",
+  "pinyin": "kōngtiáo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "air conditioner",
+    "examples": [
+     "太热了，请把～打开。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 445,
+  "hanzi": "口",
+  "pinyin": "kǒu",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "used for people and some animals",
+    "examples": [
+     "我们家一共三～人。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 446,
+  "hanzi": "哭",
+  "pinyin": "kū",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "cry; weep",
+    "examples": [
+     "孩子又～了起来。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 447,
+  "hanzi": "裤子",
+  "pinyin": "kùzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "trousers; pants",
+    "examples": [
+     "这条～有点儿短。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 448,
+  "hanzi": "筷子",
+  "pinyin": "kuàizi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "chopsticks",
+    "examples": [
+     "我来中国 1 个月了，已经会用～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 449,
+  "hanzi": "蓝",
+  "pinyin": "lán",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "blue",
+    "examples": [
+     "这条～裙子你喜欢吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 450,
+  "hanzi": "老",
+  "pinyin": "lǎo",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "aged; old",
+    "examples": [
+     "爷爷六十岁了，但是看起来一点儿也不～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 451,
+  "hanzi": "离开",
+  "pinyin": "líkāi",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "leave; to be away from; part from; separate from",
+    "examples": [
+     "下个月我要～一段时间，你好好照顾自己。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 452,
+  "hanzi": "礼物",
+  "pinyin": "lǐwù",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "present; gift",
+    "examples": [
+     "过生日的时候，我收到了很多～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 453,
+  "hanzi": "历史",
+  "pinyin": "lìshǐ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "history",
+    "examples": [
+     "这个房子差不多有 300 年的～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 454,
+  "hanzi": "脸",
+  "pinyin": "liǎn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "face",
+    "examples": [
+     "女儿的～圆圆的，很可爱。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 455,
+  "hanzi": "练习",
+  "pinyin": "liànxí",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "practice",
+    "examples": [
+     "学过的东西，要多～才能记住。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "exercise",
+    "examples": [
+     "同学们，下面我们开始做～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 456,
+  "hanzi": "辆",
+  "pinyin": "liàng",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "used for automobiles",
+    "examples": [
+     "这～车，是我新买的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 457,
+  "hanzi": "聊天",
+  "pinyin": "liáotiān",
+  "senses": [
+   {
+    "pos": "sv.",
+    "meaning": "chat",
+    "examples": [
+     "我们经常在网上～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 458,
+  "hanzi": "了解",
+  "pinyin": "liǎojiě",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "know; understand; comprehend",
+    "examples": [
+     "我对她～得不多。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 459,
+  "hanzi": "邻居",
+  "pinyin": "línjū",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "neighbor",
+    "examples": [
+     "我跟～们的关系非常好。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 460,
+  "hanzi": "留学",
+  "pinyin": "liúxué",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "study in a foreign country",
+    "examples": [
+     "我哥哥在中国～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 461,
+  "hanzi": "楼",
+  "pinyin": "lóu",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "building",
+    "examples": [
+     "我在你家～下等你。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 462,
+  "hanzi": "绿",
+  "pinyin": "lǜ",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "green",
+    "examples": [
+     "春天来了，树和草都～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 463,
+  "hanzi": "马",
+  "pinyin": "mǎ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "horse",
+    "examples": [
+     "我们学会骑～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 464,
+  "hanzi": "马上",
+  "pinyin": "mǎshàng",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "immediately; at once",
+    "examples": [
+     "我～就到学校，你再等我几分钟。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 465,
+  "hanzi": "满意",
+  "pinyin": "mǎnyì",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "be satisfied",
+    "examples": [
+     "经理对他很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 466,
+  "hanzi": "帽子",
+  "pinyin": "màozi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "hat; cap",
+    "examples": [
+     "这个～太小了，有大一点儿的吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 467,
+  "hanzi": "米",
+  "pinyin": "mǐ",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "meter",
+    "examples": [
+     "这张桌子有两～长。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 468,
+  "hanzi": "面包",
+  "pinyin": "miànbāo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "bread",
+    "examples": [
+     "～已经卖完了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 469,
+  "hanzi": "面条",
+  "pinyin": "miàntiáo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "noodle",
+    "examples": [
+     "服务员，我要一碗～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 470,
+  "hanzi": "明白",
+  "pinyin": "míngbai",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "know; understand",
+    "examples": [
+     "我～你的意思了。"
+    ]
+   },
+   {
+    "pos": "adj.",
+    "meaning": "plain; explicit; clear",
+    "examples": [
+     "他说得很～，我懂了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 471,
+  "hanzi": "拿",
+  "pinyin": "ná",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "hold; take",
+    "examples": [
+     "你手里～的是什么？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 472,
+  "hanzi": "奶奶",
+  "pinyin": "nǎinai",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "grandmother",
+    "examples": [
+     "我～住在北京。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 473,
+  "hanzi": "南",
+  "pinyin": "nán",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "south",
+    "examples": [
+     "我家在火车站的～边。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 474,
+  "hanzi": "难",
+  "pinyin": "nán",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "difficult; hard",
+    "examples": [
+     "这个题很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 475,
+  "hanzi": "难过",
+  "pinyin": "nánguò",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "have a hard time",
+    "examples": [
+     "他要离开了，我很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 476,
+  "hanzi": "年级",
+  "pinyin": "niánjí",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "grade (in the primary or middle school); year (in college or university)",
+    "examples": [
+     "我儿子现在上三～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 477,
+  "hanzi": "年轻",
+  "pinyin": "niánqīng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "young",
+    "examples": [
+     "妈妈 50 岁了，看起来还很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 478,
+  "hanzi": "鸟",
+  "pinyin": "niǎo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "bird",
+    "examples": [
+     "树上有很多～在唱歌。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 479,
+  "hanzi": "努力",
+  "pinyin": "nǔlì",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "hard-working; diligent",
+    "examples": [
+     "学生们学习很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 480,
+  "hanzi": "爬山",
+  "pinyin": "páshān",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "climb mountains",
+    "examples": [
+     "我们决定明天去～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 481,
+  "hanzi": "盘子",
+  "pinyin": "pánzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "tray; plate; dish",
+    "examples": [
+     "～里有鱼，请吃吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 482,
+  "hanzi": "胖",
+  "pinyin": "pàng",
+  "senses": [
+   {
+    "pos": "adj",
+    "meaning": "fat",
+    "examples": [
+     "熊猫很～，很可爱。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "get fat",
+    "examples": [
+     "这个月我～了五斤多。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 483,
+  "hanzi": "皮鞋",
+  "pinyin": "píxié",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "leather shoes",
+    "examples": [
+     "他穿着一双黑色的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 484,
+  "hanzi": "啤酒",
+  "pinyin": "píjiǔ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "beer",
+    "examples": [
+     "爸爸爱喝～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 485,
+  "hanzi": "普通话",
+  "pinyin": "pǔtōnghuà",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "Mandarin Chinese",
+    "examples": [
+     "你的～说得很好。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 486,
+  "hanzi": "其实",
+  "pinyin": "qíshí",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "actually; in fact; as a matter of fact",
+    "examples": [
+     "我～不太了解他。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 487,
+  "hanzi": "其他",
+  "pinyin": "qítā",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "other; else",
+    "examples": [
+     "只有小明在教室里，～人都回家了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 488,
+  "hanzi": "奇怪",
+  "pinyin": "qíguài",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "odd; queer; strange; unusual; peculiar",
+    "examples": [
+     "我觉得这个问题很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 489,
+  "hanzi": "骑",
+  "pinyin": "qí",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "ride (an animal or bicycle); sit on the back of",
+    "examples": [
+     "今天我～自行车去学校。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 490,
+  "hanzi": "起飞",
+  "pinyin": "qǐfēi",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "(of aircraft) take off; lift off; launch",
+    "examples": [
+     "各位乘客，飞机马上就要～了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 491,
+  "hanzi": "清楚",
+  "pinyin": "qīngchu",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "clear; distinct",
+    "examples": [
+     "他把这件事儿说得很～了。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "be clear about; understand",
+    "examples": [
+     "你～这句话的意思吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 492,
+  "hanzi": "秋",
+  "pinyin": "qiū",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "fall; autumn",
+    "examples": [
+     "～天最舒服，不冷也不热。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 493,
+  "hanzi": "裙子",
+  "pinyin": "qúnzi",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "skirt",
+    "examples": [
+     "姐姐穿着漂亮的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 494,
+  "hanzi": "然后",
+  "pinyin": "ránhòu",
+  "senses": [
+   {
+    "pos": "conj.",
+    "meaning": "then; after that; afterwards",
+    "examples": [
+     "我要先写完作业，～再看电视。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 495,
+  "hanzi": "热情",
+  "pinyin": "rèqíng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "fervent; warm",
+    "examples": [
+     "我们～地欢迎客人。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 496,
+  "hanzi": "认为",
+  "pinyin": "rènwéi",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "think; consider",
+    "examples": [
+     "你～他会来吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 497,
+  "hanzi": "认真",
+  "pinyin": "rènzhēn",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "conscientious; earnest; serious",
+    "examples": [
+     "这个同学学习很～，很努力。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 498,
+  "hanzi": "容易",
+  "pinyin": "róngyì",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "easy; ready",
+    "examples": [
+     "这个问题很～回答。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 499,
+  "hanzi": "如果",
+  "pinyin": "rúguǒ",
+  "senses": [
+   {
+    "pos": "conj.",
+    "meaning": "if; in case; in the event of; supposing that",
+    "examples": [
+     "～你去，我就和你一起去。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 500,
+  "hanzi": "伞",
+  "pinyin": "sǎn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "umbrella",
+    "examples": [
+     "下雨了，别忘了带～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 501,
+  "hanzi": "上网",
+  "pinyin": "shàngwǎng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "get online",
+    "examples": [
+     "我～去看看新闻。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 502,
+  "hanzi": "生气",
+  "pinyin": "shēngqì",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "take offence; be/get angry; be offended",
+    "examples": [
+     "请别～，是我错了，对不起。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 503,
+  "hanzi": "声音",
+  "pinyin": "shēngyīn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "sound; voice",
+    "examples": [
+     "你听，这是什么～？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 504,
+  "hanzi": "世界",
+  "pinyin": "shìjiè",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "the world; the earth; the globe; the universe",
+    "examples": [
+     "～上有很多国家。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 505,
+  "hanzi": "试",
+  "pinyin": "shì",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "try",
+    "examples": [
+     "我想～一下那件红色的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 506,
+  "hanzi": "瘦",
+  "pinyin": "shòu",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "thin; emaciated; lean",
+    "examples": [
+     "姐姐现在很～，只有 45 公斤。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "become thin",
+    "examples": [
+     "这个月我～了三斤。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 507,
+  "hanzi": "叔叔",
+  "pinyin": "shūshu",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "uncle (referring to a man younger than one’s father)",
+    "examples": [
+     "～，你喜欢这本书吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 508,
+  "hanzi": "舒服",
+  "pinyin": "shūfu",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "pleased; comfortable",
+    "examples": [
+     "坐在这里，真～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 509,
+  "hanzi": "树",
+  "pinyin": "shù",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "tree",
+    "examples": [
+     "我们学校里有很多～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 510,
+  "hanzi": "数学",
+  "pinyin": "shùxué",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "mathematics",
+    "examples": [
+     "我的～成绩很好。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 511,
+  "hanzi": "刷牙",
+  "pinyin": "shuāyá",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "clean one's teeth; brush one's teeth",
+    "examples": [
+     "睡觉前要～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 512,
+  "hanzi": "双",
+  "pinyin": "shuāng",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "pair; couple",
+    "examples": [
+     "我今天想去买～鞋。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 513,
+  "hanzi": "水平",
+  "pinyin": "shuǐpíng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "standard; level (of skill, ability and knowledge, etc.)",
+    "examples": [
+     "他的汉语～很高。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 514,
+  "hanzi": "司机",
+  "pinyin": "sījī",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "driver",
+    "examples": [
+     "这位～开出租车 5 年多了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 515,
+  "hanzi": "太阳",
+  "pinyin": "tàiyáng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "the Sun",
+    "examples": [
+     "你看，～出来了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 516,
+  "hanzi": "特别",
+  "pinyin": "tèbié",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "very; exceptionally; particularly; specially",
+    "examples": [
+     "我～想跟你一起去。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 517,
+  "hanzi": "疼",
+  "pinyin": "téng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "ache; hurt",
+    "examples": [
+     "我的腿有点儿～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 518,
+  "hanzi": "提高",
+  "pinyin": "tígāo",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "lift; raise; heighten; enhance; increase; improve; advance",
+    "examples": [
+     "你数学成绩～了不少。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "development; increase",
+    "examples": [
+     "人们的生活水平有了很大的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 519,
+  "hanzi": "体育",
+  "pinyin": "tǐyù",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "sports; sports activities",
+    "examples": [
+     "我很喜欢～运动。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 520,
+  "hanzi": "甜",
+  "pinyin": "tián",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "sweet",
+    "examples": [
+     "这个西瓜真～啊！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 521,
+  "hanzi": "条",
+  "pinyin": "tiáo",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "used for long and slender things",
+    "examples": [
+     "这～裤子有点儿长。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 522,
+  "hanzi": "同事",
+  "pinyin": "tóngshì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "colleague",
+    "examples": [
+     "这是我们的新～，李华。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 523,
+  "hanzi": "同意",
+  "pinyin": "tóngyì",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "agree; approve; assent to; consent to; accede to",
+    "examples": [
+     "我不太～他的想法。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 524,
+  "hanzi": "头发",
+  "pinyin": "tóufa",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "hair",
+    "examples": [
+     "妈妈的～又黑又亮。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 525,
+  "hanzi": "突然",
+  "pinyin": "tūrán",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "sudden; abrupt; unexpected",
+    "examples": [
+     "他～站了起来。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 526,
+  "hanzi": "图书馆",
+  "pinyin": "túshūguǎn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "library",
+    "examples": [
+     "我从～借来了两本书。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 527,
+  "hanzi": "腿",
+  "pinyin": "tuǐ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "leg",
+    "examples": [
+     "你的～还疼吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 528,
+  "hanzi": "完成",
+  "pinyin": "wánchéng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "accomplish; complete; finish; achieve; fulfill",
+    "examples": [
+     "这件事，在周末前必须～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 529,
+  "hanzi": "碗",
+  "pinyin": "wǎn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "bowl",
+    "examples": [
+     "把米饭放在这个～里吧。"
+    ]
+   },
+   {
+    "pos": "nm.",
+    "meaning": "a bowl of",
+    "examples": [
+     "我吃一～就可以了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 530,
+  "hanzi": "万",
+  "pinyin": "wàn",
+  "senses": [
+   {
+    "pos": "num.",
+    "meaning": "ten thousand",
+    "examples": [
+     "我们学校有一～名学生。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 531,
+  "hanzi": "忘记",
+  "pinyin": "wàngjì",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "forget; erase; drop (or fade, slip) from memory; go out of one's mind",
+    "examples": [
+     "我～今天是他的生日了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 532,
+  "hanzi": "为",
+  "pinyin": "wèi",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "for",
+    "examples": [
+     "这些菜都是～你准备的。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 533,
+  "hanzi": "为了",
+  "pinyin": "wèile",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "for",
+    "examples": [
+     "～身体健康，我每天都去运动。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 534,
+  "hanzi": "位",
+  "pinyin": "wèi",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "used for people",
+    "examples": [
+     "他真是一～好老师。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 535,
+  "hanzi": "文化",
+  "pinyin": "wénhuà",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "culture; civilization",
+    "examples": [
+     "我对中国～很感兴趣。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 536,
+  "hanzi": "西",
+  "pinyin": "xī",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "west",
+    "examples": [
+     "火车站在～边，你走错了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 537,
+  "hanzi": "习惯",
+  "pinyin": "xíguàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "be accustomed to; be/get used to",
+    "examples": [
+     "他已经～了一个人生活。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "habit; custom; usual practice",
+    "examples": [
+     "饭前洗手是好～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 538,
+  "hanzi": "洗手间",
+  "pinyin": "xǐshǒujiān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "toilet; washroom; bathroom",
+    "examples": [
+     "我去一下～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 539,
+  "hanzi": "洗澡",
+  "pinyin": "xǐzǎo",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "take a bath; bathe; take a shower",
+    "examples": [
+     "太热了，我先去～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 540,
+  "hanzi": "夏",
+  "pinyin": "xià",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "summer",
+    "examples": [
+     "今年～天太热了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 541,
+  "hanzi": "先",
+  "pinyin": "xiān",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "first",
+    "examples": [
+     "你～去，我一个小时后再去。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 542,
+  "hanzi": "相信",
+  "pinyin": "xiāngxìn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "believe in; be convinced of; have faith in; place reliance on; put one's trust in",
+    "examples": [
+     "我完全～你说的话。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 543,
+  "hanzi": "香蕉",
+  "pinyin": "xiāngjiāo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "banana",
+    "examples": [
+     "你想吃～吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 544,
+  "hanzi": "向",
+  "pinyin": "xiàng",
+  "senses": [
+   {
+    "pos": "prep.",
+    "meaning": "to; towards",
+    "examples": [
+     "～东走，就可以看到那个学校了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 545,
+  "hanzi": "像",
+  "pinyin": "xiàng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "look alike",
+    "examples": [
+     "他长得～他爸爸。"
+    ]
+   },
+   {
+    "pos": "prep.",
+    "meaning": "for example",
+    "examples": [
+     "～校长这样的人，到哪里都很受欢迎。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 546,
+  "hanzi": "小心",
+  "pinyin": "xiǎoxīn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "take care; look out",
+    "examples": [
+     "请～，路上有很多水。"
+    ]
+   },
+   {
+    "pos": "adj.",
+    "meaning": "careful",
+    "examples": [
+     "我很～地抱起了小猫。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 547,
+  "hanzi": "校长",
+  "pinyin": "xiàozhǎng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "(of a secondary or elementary school) principal; headmaster; (of a university or college) president; chancellor",
+    "examples": [
+     "～已经同意了我们的计划。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 548,
+  "hanzi": "新闻",
+  "pinyin": "xīnwén",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "news",
+    "examples": [
+     "我每天晚上七点都看～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 549,
+  "hanzi": "新鲜",
+  "pinyin": "xīnxiān",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "fresh",
+    "examples": [
+     "这些都是～水果。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 550,
+  "hanzi": "信用卡",
+  "pinyin": "xìnyòngkǎ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "credit card",
+    "examples": [
+     "我想去银行办一张～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 551,
+  "hanzi": "行李箱",
+  "pinyin": "xínglixiāng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "trunk; baggage",
+    "examples": [
+     "请把～打开。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 552,
+  "hanzi": "熊猫",
+  "pinyin": "xióngmāo",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "panda",
+    "examples": [
+     "我特别喜欢到动物园去看大～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 553,
+  "hanzi": "需要",
+  "pinyin": "xūyào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "need; claim; demand; want",
+    "examples": [
+     "我们～一些帮助。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 554,
+  "hanzi": "选择",
+  "pinyin": "xuǎnzé",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "choose; select; pick",
+    "examples": [
+     "今年夏天你～去哪儿旅游？"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "a choice; selection; option",
+    "examples": [
+     "我们需要自己做出～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 555,
+  "hanzi": "要求",
+  "pinyin": "yāoqiú",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "ask; request; demand",
+    "examples": [
+     "老师～我们把这些题做完。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "request; demand; need",
+    "examples": [
+     "这是爸爸对我的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 556,
+  "hanzi": "爷爷",
+  "pinyin": "yéye",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "grandfather, also used as a title of respect for an old man",
+    "examples": [
+     "～，请您坐这儿吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 557,
+  "hanzi": "一定",
+  "pinyin": "yídìng",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "surely; certainly; necessarily",
+    "examples": [
+     "明天的会议，请大家～要参加。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 558,
+  "hanzi": "一共",
+  "pinyin": "yígòng",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "altogether; in all; all told",
+    "examples": [
+     "我们班～有 20 名学生。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 559,
+  "hanzi": "一会儿",
+  "pinyin": "yíhuìr",
+  "senses": [
+   {
+    "pos": "",
+    "meaning": "a moment",
+    "examples": [
+     "我看～电视就睡觉。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 560,
+  "hanzi": "一样",
+  "pinyin": "yíyàng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "the same",
+    "examples": [
+     "他跟爸爸长得～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 561,
+  "hanzi": "一般",
+  "pinyin": "yìbān",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "usually; generally; habitually; ordinarily",
+    "examples": [
+     "我～7 点钟起床。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 562,
+  "hanzi": "一边",
+  "pinyin": "yìbiān",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "while; as; at the same time; simultaneously",
+    "examples": [
+     "他喜欢～看书，～听音乐。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 563,
+  "hanzi": "一直",
+  "pinyin": "yìzhí",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "all the time",
+    "examples": [
+     "我～不明白这句话的意思。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 564,
+  "hanzi": "以前",
+  "pinyin": "yǐqián",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "before (a point of time); back; ago; previously; formerly",
+    "examples": [
+     "我们看电影～，先去吃个饭吧。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 565,
+  "hanzi": "音乐",
+  "pinyin": "yīnyuè",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "music",
+    "examples": [
+     "她最喜欢看～节目。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 566,
+  "hanzi": "银行",
+  "pinyin": "yínháng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "bank",
+    "examples": [
+     "～下午 5 点关门。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 567,
+  "hanzi": "饮料",
+  "pinyin": "yǐnliào",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "beverage; drink",
+    "examples": [
+     "冰箱里还有～吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 568,
+  "hanzi": "应该",
+  "pinyin": "yīnggāi",
+  "senses": [
+   {
+    "pos": "aux.",
+    "meaning": "should; have to; ought to; must",
+    "examples": [
+     "8 点了，～去上班了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 569,
+  "hanzi": "影响",
+  "pinyin": "yǐngxiǎng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "influence; affect; concern; work upon",
+    "examples": [
+     "请不要～别人休息。"
+    ]
+   },
+   {
+    "pos": "n.",
+    "meaning": "influence; effect",
+    "examples": [
+     "环境对人有很大的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 570,
+  "hanzi": "用",
+  "pinyin": "yòng",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "use",
+    "examples": [
+     "我～了两个小时打扫房间。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 571,
+  "hanzi": "游戏",
+  "pinyin": "yóuxì",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "game; play; recreation",
+    "examples": [
+     "这是孩子们最喜欢玩儿的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 572,
+  "hanzi": "有名",
+  "pinyin": "yǒumíng",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "famous",
+    "examples": [
+     "这本书很～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 573,
+  "hanzi": "又",
+  "pinyin": "yòu",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "again; once more",
+    "examples": [
+     "我们休息了一会儿，～开始工作了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 574,
+  "hanzi": "遇到",
+  "pinyin": "yùdào",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "meet",
+    "examples": [
+     "刚才我在街上～了张先生。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 575,
+  "hanzi": "元",
+  "pinyin": "yuán",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "RMB Yuan",
+    "examples": [
+     "这块手表 600～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 576,
+  "hanzi": "愿意",
+  "pinyin": "yuànyì",
+  "senses": [
+   {
+    "pos": "aux.",
+    "meaning": "be willing; wish; like; want",
+    "examples": [
+     "他很～帮助别人。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 577,
+  "hanzi": "月亮",
+  "pinyin": "yuèliang",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "the Moon",
+    "examples": [
+     "今晚的～真圆！"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 578,
+  "hanzi": "越",
+  "pinyin": "yuè",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "the more…the more…",
+    "examples": [
+     "他～说～高兴。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 579,
+  "hanzi": "站",
+  "pinyin": "zhàn",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "stand",
+    "examples": [
+     "爸爸～在我的身边。"
+    ]
+   },
+   {
+    "pos": "nm.",
+    "meaning": "distance between two bus stops",
+    "examples": [
+     "去火车站，坐地铁 3～就到了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 580,
+  "hanzi": "张",
+  "pinyin": "zhāng",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "used for paper, bed, table,face, etc.",
+    "examples": [
+     "请给我一～纸。"
+    ]
+   },
+   {
+    "pos": "v.",
+    "meaning": "open up",
+    "examples": [
+     "小女孩儿～开嘴，笑了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 581,
+  "hanzi": "照顾",
+  "pinyin": "zhàogù",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "look after; take care",
+    "examples": [
+     "我生病了，妈妈一直～我。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 582,
+  "hanzi": "照片",
+  "pinyin": "zhàopiàn",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "photo",
+    "examples": [
+     "这是我小时候的～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 583,
+  "hanzi": "照相机",
+  "pinyin": "zhàoxiàngjī",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "camera",
+    "examples": [
+     "我新买了一个～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 584,
+  "hanzi": "只",
+  "pinyin": "zhī",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "one of a pair; for animals, furnitures, boats or ships",
+    "examples": [
+     "我有一～鞋找不到了。",
+     "树上有一～小猫。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 585,
+  "hanzi": "只",
+  "pinyin": "zhǐ",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "only; merely; just",
+    "examples": [
+     "房间里～有我一个人。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 586,
+  "hanzi": "中间",
+  "pinyin": "zhōngjiān",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "center; middle",
+    "examples": [
+     "我站在～，旁边的是我的同学。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 587,
+  "hanzi": "中文",
+  "pinyin": "Zhōngwén",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "Chinese language",
+    "examples": [
+     "我会用～写文章。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 588,
+  "hanzi": "终于",
+  "pinyin": "zhōngyú",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "at last; finally",
+    "examples": [
+     "春天～来了。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 589,
+  "hanzi": "种",
+  "pinyin": "zhǒng",
+  "senses": [
+   {
+    "pos": "nm.",
+    "meaning": "kind; sort; type",
+    "examples": [
+     "超市里有很多～新鲜水果。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 590,
+  "hanzi": "重要",
+  "pinyin": "zhòngyào",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "important",
+    "examples": [
+     "我忘了一件～的事情。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 591,
+  "hanzi": "周末",
+  "pinyin": "zhōumò",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "weekend",
+    "examples": [
+     "这个～你有什么安排？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 592,
+  "hanzi": "主要",
+  "pinyin": "zhǔyào",
+  "senses": [
+   {
+    "pos": "adj.",
+    "meaning": "major; main",
+    "examples": [
+     "这本书～讲了些什么？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 593,
+  "hanzi": "注意",
+  "pinyin": "zhùyì",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "pay attention to; to keep an eye on; take notice of",
+    "examples": [
+     "请～安全。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 594,
+  "hanzi": "着急",
+  "pinyin": "zháojí",
+  "senses": [
+   {
+    "pos": "v.",
+    "meaning": "worry; feel anxious",
+    "examples": [
+     "遇到事情，不要～。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 595,
+  "hanzi": "自己",
+  "pinyin": "zìjǐ",
+  "senses": [
+   {
+    "pos": "pron.",
+    "meaning": "oneself; self; one's own",
+    "examples": [
+     "我喜欢～一个人旅游。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 596,
+  "hanzi": "总是",
+  "pinyin": "zǒngshì",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "always",
+    "examples": [
+     "他～很早起床。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 597,
+  "hanzi": "嘴",
+  "pinyin": "zuǐ",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "mouth",
+    "examples": [
+     "妹妹的～边有一粒米。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 598,
+  "hanzi": "最近",
+  "pinyin": "zuìjìn",
+  "senses": [
+   {
+    "pos": "adv.",
+    "meaning": "recently; of late; lately",
+    "examples": [
+     "我～很忙。"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 599,
+  "hanzi": "作业",
+  "pinyin": "zuòyè",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "school assignment; study assignment",
+    "examples": [
+     "今天的～你写完了吗？"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 600,
+  "hanzi": "作用",
+  "pinyin": "zuòyòng",
+  "senses": [
+   {
+    "pos": "n.",
+    "meaning": "an effect; an influence",
+    "examples": [
+     "这种感冒药对我没什么～。"
+    ]
+   }
+  ]
+ }
+]
