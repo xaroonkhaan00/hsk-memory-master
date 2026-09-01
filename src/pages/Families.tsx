@@ -26,7 +26,7 @@ export default function Families() {
 
   return (
     <>
-      <TopBar title="Families" sub="Learn one, see the rest" />
+      <TopBar title="Word families" sub="Learn one, see the rest" back="/" backLabel="Home" />
       <div className="page stack">
         <Segmented
           value={tab}

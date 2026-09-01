@@ -5,7 +5,8 @@ import { judge } from '../services/quiz';
 import { useStore } from '../store';
 import { tryWord } from '../data';
 import { Speaker, Sentence, ToneMark } from './ui';
-import { speak, mandarinAvailable } from '../services/tts';
+import { mandarinAvailable } from '../services/tts';
+import { play } from '../services/audio';
 import { stripTones } from '../services/pinyin';
 import { shouldSlowDown } from '../services/session';
 
@@ -53,6 +54,7 @@ export default function QuizRunner({
   onSlowDown,
 }: Props) {
   const { record, state } = useStore();
+  const audio = state.settings.audio;
   const [queue, setQueue] = useState<QuizItem[]>(items);
   const [index, setIndex] = useState(0);
   const [answered, setAnswered] = useState<Answered[]>([]);
@@ -111,11 +113,13 @@ export default function QuizRunner({
   // Auto-play audio prompts.
   useEffect(() => {
     if (item?.promptFace === 'audio' && item.audioText && mandarinAvailable()) {
-      const t = setTimeout(() => speak(item.audioText!, { rate: 0.95 }), 220);
+      // Listening prompts go through the shared audio service, so they use the
+      // learner's chosen voice and speed and can only ever receive Hanzi.
+      const t = setTimeout(() => play(item.audioText!, audio, { repeat: 1 }), 220);
       return () => clearTimeout(t);
     }
     return undefined;
-  }, [item]);
+  }, [item, audio]);
 
   useEffect(() => {
     if (item?.kind === 'type' && !revealed) inputRef.current?.focus();

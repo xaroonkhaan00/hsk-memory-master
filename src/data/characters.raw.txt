@@ -651,3 +651,137 @@
 排|pái|row; to arrange; to line up
 粒|lì|grain; measure word for tiny things
 概|gài|general; approximate
+码|mǎ|code; number (in 号码)
+屋|wū|room; house
+吵|chǎo|noisy; to quarrel
+呀|ya|exclamation particle
+哦|ò|oh (realisation)
+嗯|èn|mm; yes
+哎|āi|hey; oh dear
+唉|āi|sigh
+嘿|hēi|hey
+嘛|ma|particle of obviousness
+啦|la|particle (了 + 啊)
+陪|péi|to accompany
+递|dì|to hand over; to pass
+装|zhuāng|to pack; to install; to pretend
+摆|bǎi|to arrange; to place
+抓|zhuā|to grab; to seize
+扔|rēng|to throw away
+抬|tái|to lift; to carry together
+推|tuī|to push
+拉|lā|to pull
+敲|qiāo|to knock
+挂|guà|to hang; to hang up
+剩|shèng|to be left over
+猜|cāi|to guess
+藏|cáng|to hide
+醒|xǐng|to wake up
+骗|piàn|to cheat; to fool
+吓|xià|to frighten
+闹|nào|to make a noise; noisy
+躲|duǒ|to hide; to dodge
+追|zhuī|to chase
+摸|mō|to touch; to feel
+拍|pāi|to pat; to take (a photo)
+抢|qiǎng|to grab; to rush for
+钥|yào|key (in 钥匙)
+匙|shi|key (in 钥匙)
+锁|suǒ|lock; to lock
+袋|dài|bag; sack
+柜|guì|cupboard; counter
+盒|hé|box; case
+瓶|píng|bottle
+锅|guō|pot; wok
+窗|chuāng|window
+墙|qiáng|wall
+顶|dǐng|top; measure word for hats
+桥|qiáo|bridge
+沙|shā|sand
+石|shí|stone
+暗|àn|dark; dim
+咸|xián|salty
+酸|suān|sour
+辣|là|spicy
+苦|kǔ|bitter
+臭|chòu|smelly
+软|ruǎn|soft
+硬|yìng|hard; firm
+厚|hòu|thick
+薄|báo|thin (of things)
+宽|kuān|wide
+深|shēn|deep
+浅|qiǎn|shallow; light (colour)
+群|qún|crowd; group
+堆|duī|heap; pile
+盆|pén|basin; pot
+镜|jìng|mirror; lens
+秒|miǎo|second (of time)
+偷|tōu|to steal
+趟|tàng|trip; measure word for trips
+闭|bì|to close (eyes, mouth)
+睁|zhēng|to open (the eyes)
+咳|ké|to cough
+嗽|sou|cough (in 咳嗽)
+胃|wèi|stomach
+背|bèi|back; to carry on the back
+肚|dù|belly
+疑|yí|to doubt
+怀|huái|bosom; to cherish
+念|niàn|to read aloud; to miss
+默|mò|silent
+辛|xīn|toilsome; bitter
+付|fù|to pay; to hand over
+户|hù|door; household
+赢|yíng|to win
+堵|dǔ|to block; congested
+麻|má|hemp; numb (in 麻烦)
+烦|fán|to bother; annoyed
+修|xiū|to repair; to build
+匹|pǐ|measure word for horses; bolt of cloth
+娘|niáng|mother; young woman
+紧|jǐn|tight; urgent
+弃|qì|to abandon
+厨|chú|kitchen
+言|yán|speech; word
+丢|diū|to lose; to throw
+价|jià|price; value
+扇|shàn|fan; measure word for doors
+另|lìng|other; another
+改|gǎi|to change; to correct
+勇|yǒng|brave
+汤|tāng|soup
+尝|cháng|to taste
+叶|yè|leaf
+凉|liáng|cool
+队|duì|team; queue
+管|guǎn|to manage; regardless
+座|zuò|seat; measure word for mountains and buildings
+窄|zhǎi|narrow
+往|wǎng|towards; to go
+整|zhěng|whole; neat
+币|bì|currency; coin
+够|gòu|enough
+度|dù|degree; measure of extent
+合|hé|to fit; to join
+适|shì|suitable
+订|dìng|to book; to order
+懒|lǎn|lazy
+青|qīng|green; blue-green
+强|qiáng|strong; powerful
+具|jù|tool; utensil (in 家具)
+停|tíng|to stop; to park
+光|guāng|light; bright
+线|xiàn|line; thread
+英|yīng|hero; England (in 英国)
+敢|gǎn|to dare
+永|yǒng|forever; always
+省|shěng|to save; province
+栋|dòng|measure word for buildings
+巧|qiǎo|skilful; coincidental
+童|tóng|child
+途|tú|way; journey
+愉|yú|pleased; happy
+怜|lián|to pity
+消|xiāo|to vanish; news (in 消息)
+许|xǔ|to allow; perhaps

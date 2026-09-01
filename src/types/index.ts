@@ -10,6 +10,8 @@ export interface Syllable {
 export interface ExampleToken {
   z: string;
   p?: string;
+  /** id of the vocabulary entry this token is, when it is one of the 600. */
+  w?: number;
 }
 
 /** An example sentence. `cloze` keeps the PDF's original ～ placeholder. */
@@ -61,6 +63,10 @@ export interface Word {
   allMeanings: string[];
   pos: string[];
   related: { id: number; via: string[] }[];
+  /** Ids of the Story Mode episodes and Conversation Cinema episodes using it. */
+  inStories: string[];
+  inConversations: string[];
+  matchForms: string[];
   /** Other entries in the PDF that print the same characters. */
   alsoListedAs: number[];
   confusable: number[];
@@ -157,6 +163,36 @@ export interface Dialogue {
   allWords: number[];
 }
 
+export interface SceneLine {
+  zh: string;
+  en: string;
+  pinyin: string;
+  tokens: ExampleToken[];
+  speaker?: string;
+}
+
+export interface Scene {
+  id: string;
+  title: string;
+  emoji: string;
+  topic: string;
+  lines: SceneLine[];
+  targets: number[];
+  chars: number;
+  level: 1 | 2 | 3;
+}
+
+/** The light record used by lists and word pages, without the scene text. */
+export interface SceneRef {
+  id: string;
+  title: string;
+  emoji: string;
+  topic: string;
+  lines: number;
+  words: number;
+  first: string;
+}
+
 export interface StoryChain {
   packId: string;
   title: string;
@@ -175,6 +211,12 @@ export interface Meta {
   toneTwins: number;
   measureWords: number;
   dialogues: number;
+  storyEpisodes: number;
+  conversationEpisodes: number;
+  storyCoverage: number;
+  conversationCoverage: number;
+  storyMissing: number[];
+  conversationMissing: number[];
   idsCovered: number;
   duplicateIds: number[];
   missingIds: number[];
@@ -272,18 +314,61 @@ export interface DayLog {
   ms: number;
 }
 
+export type CaptionMode = 'beginner' | 'intermediate' | 'recall' | 'listening';
+export type StoryDifficulty = 'easy' | 'normal' | 'challenge';
+
+export interface AudioSettings {
+  /** voiceURI of the preferred Mandarin voice, or null to let the app choose. */
+  voiceId: string | null;
+  /** Voices for the two speakers in Conversation Cinema. */
+  speakerAVoiceId: string | null;
+  speakerBVoiceId: string | null;
+  /** 0.65 | 0.75 | 0.85 | 1.0 — slower than conversation by default. */
+  rate: number;
+  /** 1, 2 or 3 plays per tap. */
+  repeat: 1 | 2 | 3;
+  autoWord: boolean;
+  autoSentence: boolean;
+  autoStory: boolean;
+  autoConversation: boolean;
+}
+
+export interface CaptionSettings {
+  hanzi: boolean;
+  pinyin: boolean;
+  english: boolean;
+  highlightTargets: boolean;
+}
+
 export interface Settings {
   dailyMinutes: 5 | 10 | 20 | 30;
   selfReportedWeakness: Dimension | 'all';
   theme: 'system' | 'light' | 'dark';
+  /** Kept for backwards compatibility with v1 exports; audio.rate supersedes it. */
   audioRate: number;
   onboarded: boolean;
   showPinyinDefault: boolean;
+  audio: AudioSettings;
+  captions: CaptionSettings;
+  storyDifficulty: StoryDifficulty;
 }
 
 export interface Achievement {
   key: string;
   at: number;
+}
+
+export interface SceneProgress {
+  /** ids of stories/episodes the learner has played to the end */
+  completed: string[];
+  /** times each has been replayed */
+  replays: Record<string, number>;
+  /** quiz accuracy per scene, most recent */
+  scores: Record<string, number>;
+  /** completions with English captions off */
+  hiddenEnglish: string[];
+  /** completions in listening-only mode */
+  listening: string[];
 }
 
 export interface AppState {
@@ -297,6 +382,10 @@ export interface AppState {
   achievements: Achievement[];
   customLists: Record<string, number[]>;
   confusionLosses: Record<string, number>;
+  stories: SceneProgress;
+  conversations: SceneProgress;
+  /** Saved stories, episodes and individual lines. */
+  saved: { stories: string[]; conversations: string[]; lines: string[] };
   createdAt: number;
 }
 

@@ -69,3 +69,110 @@
 女孩儿|nǚháir
 大概|dàgài
 难怪|nánguài
+号码|hàomǎ
+同屋|tóngwū
+楼下|lóuxià
+楼上|lóushàng
+纸条|zhǐtiáo
+第二天|dì-èr tiān
+钥匙|yàoshi
+咳嗽|késou
+下课|xiàkè
+上课|shàngkè
+女生|nǚshēng
+男生|nánshēng
+本子|běnzi
+房子|fángzi
+辛苦|xīnkǔ
+窗户|chuānghu
+上海|Shànghǎi
+早饭|zǎofàn
+午饭|wǔfàn
+晚饭|wǎnfàn
+白色|báisè
+黑色|hēisè
+红色|hóngsè
+蓝色|lánsè
+绿色|lǜsè
+全家|quánjiā
+下班|xiàbān
+走路|zǒulù
+天空|tiānkōng
+一路平安|yílù píng'ān
+麻烦|máfan
+新娘|xīnniáng
+紧张|jǐnzhāng
+散步|sànbù
+放弃|fàngqì
+厨房|chúfáng
+楼梯|lóutī
+开心|kāixīn
+生词|shēngcí
+太极|tàijí
+婚礼|hūnlǐ
+男孩儿|nánháir
+小孩子|xiǎo háizi
+第一名|dì-yī míng
+语言|yǔyán
+价钱|jiàqian
+电风扇|diànfēngshàn
+勇气|yǒngqì
+树叶|shùyè
+不管|bùguǎn
+接受|jiēshòu
+修理|xiūlǐ
+学年|xuénián
+数字|shùzì
+空气|kōngqì
+越来越|yuèláiyuè
+一下子|yíxiàzi
+门口|ménkǒu
+饭馆|fànguǎn
+硬币|yìngbì
+热闹|rènao
+市场|shìchǎng
+山顶|shāndǐng
+活动|huódòng
+整个|zhěnggè
+合适|héshì
+青菜|qīngcài
+主意|zhǔyi
+周到|zhōudào
+大概|dàgài
+公里|gōnglǐ
+体育馆|tǐyùguǎn
+小学生|xiǎoxuéshēng
+大学|dàxué
+过节|guòjié
+英语|Yīngyǔ
+中文歌|Zhōngwén gē
+李强|Lǐ Qiáng
+家具|jiājù
+停车|tíngchē
+光线|guāngxiàn
+英国|Yīngguó
+法国|Fǎguó
+中秋节|Zhōngqiūjié
+下山|xiàshān
+名次|míngcì
+有空|yǒukòng
+写下来|xiě xiàlái
+永远|yǒngyuǎn
+怪不得|guàibude
+好处|hǎochù
+有道理|yǒu dàolǐ
+市中心|shì zhōngxīn
+进城|jìnchéng
+差不多|chàbuduō
+好久不见|hǎojiǔ bújiàn
+吃得惯|chī de guàn
+睡不着|shuì bu zháo
+旅途|lǚtú
+愉快|yúkuài
+可怜|kělián
+消息|xiāoxi
+也许|yěxǔ
+教练|jiàoliàn
+感动|gǎndòng
+场次|chǎngcì
+直接|zhíjiē

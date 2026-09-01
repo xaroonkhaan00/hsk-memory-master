@@ -1,13 +1,25 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { MEASURE_WORDS, ROOMS, categoryLabel, confusionsFor, getPack, tryWord } from '../data';
+import {
+  MEASURE_WORDS,
+  ROOMS,
+  categoryLabel,
+  confusionsFor,
+  conversationsWith,
+  getPack,
+  storiesWith,
+  tryWord,
+} from '../data';
 import { useStore } from '../store';
 import { progressOf } from '../services/progress';
+import { playWord } from '../services/audio';
 import { DIMENSIONS } from '../types';
 import {
   AudioRow,
   Meter,
   Sentence,
+  NoVoiceNote,
+  Speaker,
   StatusChip,
   Syllables,
   TopBar,
@@ -23,6 +35,29 @@ const DIM_LABEL: Record<string, string> = {
   usage: 'Usage',
 };
 
+/** A card that can be folded away, so the page opens on what matters most. */
+function Section({
+  title,
+  hint,
+  open,
+  children,
+}: {
+  title: string;
+  hint?: string;
+  open?: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <details className="disclosure" open={open}>
+      <summary>
+        {title}
+        {hint && <span className="hint">{hint}</span>}
+      </summary>
+      <div className="disclosure__body">{children}</div>
+    </details>
+  );
+}
+
 export default function WordPage() {
   const { id = '' } = useParams();
   const word = tryWord(Number(id));
@@ -36,13 +71,21 @@ export default function WordPage() {
     () => (word ? MEASURE_WORDS.find((m) => m.wordId === word.id) : undefined),
     [word],
   );
+  const stories = useMemo(() => (word ? storiesWith(word.id) : []), [word]);
+  const episodes = useMemo(() => (word ? conversationsWith(word.id) : []), [word]);
+
+  const autoWord = state.settings.audio.autoWord;
+  useEffect(() => {
+    if (word && autoWord) playWord(word, state.settings.audio);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [word?.id, autoWord]);
 
   if (!word) {
     return (
       <>
-        <TopBar title="Word not found" back="/browse" />
+        <TopBar title="Word not found" back="/browse" backLabel="Words" />
         <div className="page">
-          <Link className="btn" to="/browse">
+          <Link className="btn btn--soft" to="/browse">
             Back to search
           </Link>
         </div>
@@ -58,13 +101,15 @@ export default function WordPage() {
   return (
     <>
       <TopBar
-        title={`#${word.id}`}
+        title={word.plain}
         sub={pack?.title}
         back
         right={
           <button
-            className="btn btn--icon btn--ghost"
+            className={`btn btn--icon btn--soft${p.starred ? ' is-on' : ''}`}
+            type="button"
             aria-label={p.starred ? 'Remove star' : 'Star this word'}
+            aria-pressed={p.starred}
             onClick={() => {
               toggleStar(word.id);
               showToast(p.starred ? 'Star removed' : 'Starred for extra review');
@@ -75,11 +120,18 @@ export default function WordPage() {
         }
       />
       <div className="page stack">
-        {/* A. large hanzi, B. tone-marked pinyin, C. simple meaning, D. part of speech */}
+        {/* 1 the word · 2 the sound · 3 the pinyin · 4 the meaning */}
         <div className="card">
           <div className="word-hero">
-            <div className="hz hanzi" lang="zh">{word.hanzi}</div>
-            <div className="py">{word.syllables.map((s) => s.raw).join(' · ')}</div>
+            <div className="hz hanzi" lang="zh">
+              {word.hanzi}
+            </div>
+            <div className="row center" style={{ marginTop: 10, marginBottom: 6 }}>
+              <Speaker text={word.plain} label="Listen" />
+              <Speaker text={word.plain} label="Slower" rate={0.65} />
+              <NoVoiceNote />
+            </div>
+            <div className="py">{word.pinyin}</div>
             <div className="mn">{word.primaryMeaning}</div>
           </div>
           <Syllables word={word} size={28} />
@@ -98,186 +150,131 @@ export default function WordPage() {
               </Link>
             )}
           </div>
-          {word.pos.length === 0 && (
-            <p className="tiny muted center" style={{ marginTop: 8 }}>
-              The source PDF gives no part of speech for this entry.
-            </p>
-          )}
-          {word.alsoListedAs.length > 0 && (
-            <p className="tiny muted center" style={{ marginTop: 8 }}>
-              The PDF lists these characters again as{' '}
-              {word.alsoListedAs.map((id, i) => {
-                const other = tryWord(id);
-                return other ? (
-                  <span key={id}>
-                    {i > 0 && ', '}
-                    <Link to={`/word/${id}`}>
-                      #{id} {other.pinyin} — {other.primaryMeaning}
-                    </Link>
-                  </span>
-                ) : null;
-              })}
-              . Both entries are kept exactly as printed.
-            </p>
-          )}
-          <div style={{ marginTop: 12 }}>
-            <AudioRow text={word.plain} />
-          </div>
         </div>
 
-        {/* All meanings */}
-        {word.allMeanings.length > 1 && (
-          <div className="card stack--sm stack">
-            <h3>All meanings in the PDF</h3>
-            {word.senses.map((s, i) => (
-              <div key={i} className="row" style={{ alignItems: 'baseline' }}>
-                {s.pos && <span className="chip">{s.pos}</span>}
-                <span style={{ flex: 1 }}>{s.meaning}</span>
-              </div>
-            ))}
+        {/* 5 the memory connection */}
+        <div className="card stack--sm">
+          <h3>Your memory connection</h3>
+          <div className="fact">
+            <span className="label">See · what the characters mean</span>
+            {word.charLogic ?? word.chars.map((c) => `${c.char} = ${c.gloss}`).join(' · ')}
           </div>
-        )}
-
-        {/* E. character logic */}
-        <div className="card stack--sm stack">
-          <h3>Character logic</h3>
           <div className="chars">
             {word.chars.map((c, i) => (
               <Link className="charbox" to={`/families/char/${encodeURIComponent(c.char)}`} key={i}>
-                <div className="c hanzi">{c.char}</div>
+                <div className="c hanzi" lang="zh">
+                  {c.char}
+                </div>
                 <div className="p">{c.pinyin}</div>
                 <div className="g">{c.gloss}</div>
               </Link>
             ))}
           </div>
-          {word.charLogic ? (
-            <div className="fact">
-              <span className="label">Fact · what each character means</span>
-              {word.charLogic}
-            </div>
-          ) : (
-            <div className="fact">
-              <span className="label">Fact</span>
-              {word.chars.length === 1
-                ? `${word.chars[0]!.char} ${word.chars[0]!.pinyin} — ${word.chars[0]!.gloss}`
-                : 'Single-character meanings are listed above.'}
-            </div>
-          )}
-        </div>
-
-        {/* F+G+I. mnemonic, sound hook, memory movie */}
-        <div className="card stack--sm stack">
-          <h3>Why I will remember this</h3>
-          <div className="fact">
-            <span className="label">See · the characters</span>
-            {word.charLogic ?? word.chars.map((c) => `${c.char} = ${c.gloss}`).join(' · ')}
-          </div>
           <div className="trick">
-            <span className="label">Hear · memory sound hook, NOT real pronunciation</span>
+            <span className="label">Hear · a memory hook, not the real pronunciation</span>
             <ul style={{ margin: '4px 0 0', paddingLeft: '1.1em' }}>
               {word.soundHooks.map((h, i) => (
                 <li key={i}>
-                  <b>{h.syllable}</b> ({h.base}, tone {h.tone === 5 ? 'neutral' : h.tone}) →{' '}
-                  {h.hook}
+                  <b>{h.syllable}</b> ({h.base}, tone {h.tone === 5 ? 'neutral' : h.tone}) → {h.hook}
                 </li>
               ))}
             </ul>
             <p className="tiny" style={{ marginTop: 6 }}>
-              These English words only point at the sound. The real pronunciation is the audio
-              button above — always trust that over the hook.
+              These English words only point at the sound and are never spoken aloud. For the real
+              pronunciation, use the listen button above.
             </p>
           </div>
           <div className="trick">
-            <span className="label">Imagine · memory movie, not historical origin</span>
+            <span className="label">Imagine · a scene to hang it on</span>
             {word.story}
-          </div>
-          <div className="fact">
-            <span className="label">Remember · the meaning</span>
-            {word.allMeanings.slice(0, 4).join(' · ')}
           </div>
         </div>
 
-        {measure && (
-          <div className="card stack--sm stack">
-            <h3>📏 Measure word</h3>
-            <div className="fact">
-              <span className="label">Rule</span>
-              {measure.rule}
-            </div>
-            <div className="trick">
-              <span className="label">Common trap</span>
-              {measure.trap}
-            </div>
-            <Link className="btn btn--soft btn--sm" to="/measure-words">
-              Full measure-word guide
-            </Link>
+        {/* 6 where the word actually lives */}
+        {(stories.length > 0 || episodes.length > 0) && (
+          <div className="card stack--sm">
+            <h3>See it in use</h3>
+            {stories.length > 0 && (
+              <>
+                <div className="section-title" style={{ marginTop: 0 }}>
+                  See in stories <span className="chip">{stories.length}</span>
+                </div>
+                <div className="row row--wrap">
+                  {stories.slice(0, 6).map((s) => (
+                    <Link key={s.id} className="chip chip--button" to={`/stories/${s.id}`}>
+                      {s.emoji} {s.title}
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
+            {episodes.length > 0 && (
+              <>
+                <div className="section-title">
+                  See in conversations <span className="chip">{episodes.length}</span>
+                </div>
+                <div className="row row--wrap">
+                  {episodes.slice(0, 6).map((s) => (
+                    <Link key={s.id} className="chip chip--button" to={`/cinema/${s.id}`}>
+                      {s.emoji} {s.title}
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         )}
 
-        {/* J. original PDF example */}
-        <div className="card stack--sm stack">
-          <h3>Example sentences from the PDF</h3>
+        {/* 7 example sentences */}
+        <div className="card stack--sm">
+          <h3>Example sentences</h3>
           {word.senses.map((s, si) =>
             s.examples.map((ex, xi) => (
-              <div key={`${si}-${xi}`} className="stack--sm stack" style={{ paddingBottom: 6 }}>
+              <div key={`${si}-${xi}`} className="stack--sm" style={{ paddingBottom: 6 }}>
                 <Sentence tokens={ex.tokens} target={word.plain} />
                 <div className="small muted">{ex.en}</div>
-                <div className="row">
-                  <span className="tiny muted">Original PDF example</span>
-                  <span className="spacer" />
-                  <AudioRow text={ex.zh} />
-                </div>
+                <AudioRow text={ex.zh} />
               </div>
             )),
           )}
+          {word.senses.every((s) => s.examples.length === 0) && (
+            <p className="small muted">
+              This word has no example sentence of its own yet — meet it in a story instead.
+            </p>
+          )}
         </div>
 
-        {/* K. the learner's own example — elaboration in your own words beats a
-            generated sentence, and it is never mistaken for source material. */}
-        <div className="card stack--sm stack">
-          <h3>My own sentence</h3>
-          <p className="tiny muted">
-            Write one short sentence of your own using {word.hanzi}, or your own memory hook.
-            Making it personal is one of the strongest things you can do for recall — and it shows
-            up again when you get this word wrong.
-          </p>
-          <textarea
-            value={draft ?? p.note}
-            onChange={(e) => setDraft(e.target.value)}
-            placeholder={`e.g. 我每天都用${word.plain}。`}
-            style={{ minHeight: 72 }}
-            aria-label={`Your own sentence for ${word.hanzi}`}
-          />
-          <div className="row">
-            <button
-              className="btn btn--soft btn--sm"
-              disabled={draft === null || draft === p.note}
-              onClick={() => {
-                setNote(word.id, (draft ?? '').trim());
-                setDraft(null);
-                showToast('Saved to this word');
-              }}
-            >
-              Save
-            </button>
-            {p.note && (
-              <button
-                className="btn btn--ghost btn--sm"
-                onClick={() => {
-                  setNote(word.id, '');
-                  setDraft(null);
-                  showToast('Cleared');
-                }}
-              >
-                Clear
-              </button>
-            )}
+        {/* 8 related words */}
+        {word.related.length > 0 && (
+          <div className="card stack--sm">
+            <h3>Related words</h3>
+            <p className="tiny muted">These share a character with {word.hanzi}.</p>
+            <div className="list">
+              {word.related.map((r) => {
+                const x = tryWord(r.id);
+                if (!x) return null;
+                return (
+                  <Link className="list__item" to={`/word/${x.id}`} key={x.id}>
+                    <span className="list__hz hanzi" lang="zh">
+                      {x.hanzi}
+                    </span>
+                    <span className="list__mid">
+                      <span className="py">{x.pinyin}</span>
+                      <div className="mn">{x.primaryMeaning}</div>
+                    </span>
+                    <span className="chip hanzi" lang="zh">
+                      {r.via.join('')}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Confusions */}
+        {/* 9 words it is easy to mix up */}
         {confusions.length > 0 && (
-          <div className="card stack--sm stack">
+          <div className="card stack--sm">
             <h3>Easy to mix up</h3>
             {confusions.map((c) => (
               <div className="fact" key={c.key}>
@@ -293,7 +290,10 @@ export default function WordPage() {
                         className={`chip chip--button${x.id === word.id ? ' chip--accent' : ''}`}
                         to={`/word/${x.id}`}
                       >
-                        <span className="hanzi">{x.hanzi}</span> {x.pinyin}
+                        <span className="hanzi" lang="zh">
+                          {x.hanzi}
+                        </span>{' '}
+                        {x.pinyin}
                       </Link>
                     ))}
                 </div>
@@ -305,33 +305,97 @@ export default function WordPage() {
           </div>
         )}
 
-        {/* Related */}
-        {word.related.length > 0 && (
-          <div className="card stack--sm stack">
-            <h3>Its word family</h3>
-            <p className="tiny muted">Words in this list share a character with {word.hanzi}.</p>
-            <div className="list">
-              {word.related.map((r) => {
-                const x = tryWord(r.id);
-                if (!x) return null;
-                return (
-                  <Link className="list__item" to={`/word/${x.id}`} key={x.id}>
-                    <span className="list__hz hanzi">{x.hanzi}</span>
-                    <span className="list__mid">
-                      <span className="py">{x.pinyin}</span>
-                      <div className="mn">{x.primaryMeaning}</div>
+        {/* everything else folds away */}
+        {word.allMeanings.length > 1 && (
+          <Section title="All its meanings" hint={`${word.senses.length} senses`}>
+            {word.senses.map((s, i) => (
+              <div key={i} className="row" style={{ alignItems: 'baseline' }}>
+                {s.pos && <span className="chip">{s.pos}</span>}
+                <span style={{ flex: 1 }}>{s.meaning}</span>
+              </div>
+            ))}
+            {word.alsoListedAs.length > 0 && (
+              <p className="tiny muted">
+                These characters also appear as a separate entry:{' '}
+                {word.alsoListedAs.map((other, i) => {
+                  const o = tryWord(other);
+                  return o ? (
+                    <span key={other}>
+                      {i > 0 && ', '}
+                      <Link to={`/word/${other}`}>
+                        {o.pinyin} — {o.primaryMeaning}
+                      </Link>
                     </span>
-                    <span className="chip hanzi">{r.via.join('')}</span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
+                  ) : null;
+                })}
+                .
+              </p>
+            )}
+          </Section>
         )}
 
-        {/* Progress */}
-        <div className="card stack--sm stack">
-          <h3>Your memory of this word</h3>
+        {measure && (
+          <Section title="Measure word" hint="which one, and when">
+            <div className="fact">
+              <span className="label">Rule</span>
+              {measure.rule}
+            </div>
+            <div className="trick">
+              <span className="label">Common trap</span>
+              {measure.trap}
+            </div>
+            <Link className="btn btn--soft btn--sm" to="/measure-words">
+              Full measure-word guide
+            </Link>
+          </Section>
+        )}
+
+        <Section title="My own sentence" hint={p.note ? 'written' : 'strongest recall trick'}>
+          <p className="tiny muted">
+            Write one short sentence of your own using {word.hanzi}, or your own memory hook. Making
+            it personal is one of the strongest things you can do for recall — and it comes back to
+            you whenever you get this word wrong.
+          </p>
+          <textarea
+            value={draft ?? p.note}
+            onChange={(e) => setDraft(e.target.value)}
+            placeholder={`e.g. 我每天都用${word.plain}。`}
+            style={{ minHeight: 72 }}
+            aria-label={`Your own sentence for ${word.hanzi}`}
+          />
+          <div className="row">
+            <button
+              className="btn btn--soft btn--sm"
+              type="button"
+              disabled={draft === null || draft === p.note}
+              onClick={() => {
+                setNote(word.id, (draft ?? '').trim());
+                setDraft(null);
+                showToast('Saved to this word');
+              }}
+            >
+              Save
+            </button>
+            {p.note && (
+              <button
+                className="btn btn--ghost btn--sm"
+                type="button"
+                onClick={() => {
+                  setNote(word.id, '');
+                  setDraft(null);
+                  showToast('Cleared');
+                }}
+              >
+                Clear
+              </button>
+            )}
+          </div>
+        </Section>
+
+        <Section
+          title="Your memory of this word"
+          hint={p.attempts ? `${p.attempts} answers` : 'not practised yet'}
+        >
           {DIMENSIONS.map((d) => (
             <Meter
               key={d}
@@ -340,7 +404,7 @@ export default function WordPage() {
               tone={p.scores[d] < 0.4 ? 'bad' : p.scores[d] < 0.7 ? 'warn' : 'good'}
             />
           ))}
-          <div className="row row--wrap tiny muted" style={{ marginTop: 4 }}>
+          <div className="row row--wrap tiny muted">
             <span>{p.attempts} answers</span>
             <span>· {p.attempts ? Math.round((p.correct / p.attempts) * 100) : 0}% right</span>
             <span>· {p.lapses} lapses</span>
@@ -350,20 +414,31 @@ export default function WordPage() {
           {p.errors.length > 0 && (
             <div className="trick">
               <span className="label">Last mistake</span>
-              {p.errors[0]!.kind} error — you answered “{p.errors[0]!.given || '(nothing)'}” when the
-              answer was “{p.errors[0]!.expected}”.
+              You answered “{p.errors[0]!.given || '(nothing)'}” when the answer was “
+              {p.errors[0]!.expected}”.
             </div>
           )}
-        </div>
+          <button
+            className="btn btn--danger btn--sm"
+            type="button"
+            onClick={() => {
+              resetWord(word.id);
+              showToast('This word starts again');
+            }}
+          >
+            Start this word again
+          </button>
+        </Section>
 
-        {/* Lists */}
-        <div className="card stack--sm stack">
-          <h3>Lists</h3>
+        <Section title="Lists" hint={listNames.length ? `${listNames.length} lists` : 'make one'}>
           <div className="row row--wrap">
             {listNames.map((n) => (
               <button
                 key={n}
-                className={`chip chip--button${state.customLists[n]!.includes(word.id) ? ' chip--on' : ''}`}
+                type="button"
+                className={`chip chip--button${
+                  state.customLists[n]!.includes(word.id) ? ' chip--on' : ''
+                }`}
                 onClick={() => {
                   addToList(n, word.id);
                   showToast(`Added to “${n}”`);
@@ -393,24 +468,15 @@ export default function WordPage() {
               Add
             </button>
           </form>
-        </div>
+        </Section>
 
         <div className="row">
-          <button
-            className="btn btn--danger"
-            onClick={() => {
-              resetWord(word.id);
-              showToast('Progress for this word reset');
-            }}
-          >
-            Reset this word
-          </button>
-          <span className="spacer" />
           <Link className="btn btn--soft" to={`/word/${Math.max(1, word.id - 1)}`}>
-            ← #{Math.max(1, word.id - 1)}
+            ‹ Previous word
           </Link>
+          <span className="spacer" />
           <Link className="btn btn--soft" to={`/word/${Math.min(600, word.id + 1)}`}>
-            #{Math.min(600, word.id + 1)} →
+            Next word ›
           </Link>
         </div>
       </div>

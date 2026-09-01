@@ -49,7 +49,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <TopBar title="Progress dashboard" sub={`${ov.seen} of ${TOTAL} words met`} />
+      <TopBar title="Progress" sub={`${ov.seen} of ${TOTAL} words met`} />
       <div className="page stack">
         <div className="card row" style={{ gap: 16 }}>
           <Ring value={(ov.strong + ov.mastered) / TOTAL} label="strong+" />
@@ -147,7 +147,7 @@ export default function Dashboard() {
         <div className="grid grid--2">
           <Link className="btn btn--soft" to="/notebook">📓 Mistake notebook</Link>
           <Link className="btn btn--soft" to="/achievements">🏅 Achievements</Link>
-          <Link className="btn btn--soft" to="/qa">🧪 Data validation</Link>
+          <Link className="btn btn--soft" to="/qa">Content check</Link>
           <Link className="btn btn--soft" to="/settings">⚙️ Settings & backup</Link>
         </div>
       </div>

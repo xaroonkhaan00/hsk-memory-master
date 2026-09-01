@@ -1,0 +1,23 @@
+{
+  "appId": "com.mfb.learnhsk3",
+  "appName": "Learn HSK 3",
+  "webDir": "dist",
+  "android": {
+    "backgroundColor": "#0E1017"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 600,
+      "backgroundColor": "#0E1017",
+      "androidSplashResourceName": "splash",
+      "showSpinner": false,
+      "splashFullScreen": true,
+      "splashImmersive": false
+    },
+    "StatusBar": {
+      "overlaysWebView": false,
+      "style": "DARK",
+      "backgroundColor": "#0E1017"
+    }
+  }
+}

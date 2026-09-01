@@ -7,6 +7,7 @@ import confusionsJson from './generated/confusions.json';
 import measureJson from './generated/measurewords.json';
 import palaceJson from './generated/palace.json';
 import dialoguesJson from './generated/dialogues.json';
+import sceneIndexJson from './generated/scene-index.json';
 import storiesJson from './generated/stories.json';
 import metaJson from './generated/meta.json';
 
@@ -22,6 +23,8 @@ import type {
   Room,
   SoundFamily,
   SoundGroup,
+  Scene,
+  SceneRef,
   StoryChain,
   ToneTwin,
   Word,
@@ -54,6 +57,80 @@ export const JOURNEY = (palaceJson as unknown as { rooms: Room[]; journey: Journ
   .journey;
 export const DIALOGUES = dialoguesJson as unknown as Dialogue[];
 export const STORIES = storiesJson as unknown as StoryChain[];
+
+/* ------------------------------------------------------- stories & cinema */
+
+/**
+ * Scene text is the largest thing in the app, and the home screen never shows
+ * it. Only the light index ships in the first chunk; the full stories and
+ * episodes are fetched the moment a player or a word page actually needs them.
+ */
+export const STORY_INDEX = (sceneIndexJson as unknown as {
+  stories: SceneRef[];
+  conversations: SceneRef[];
+}).stories;
+export const CONVERSATION_INDEX = (sceneIndexJson as unknown as {
+  stories: SceneRef[];
+  conversations: SceneRef[];
+}).conversations;
+
+const refById = new Map<string, SceneRef>();
+for (const r of STORY_INDEX) refById.set(`story:${r.id}`, r);
+for (const r of CONVERSATION_INDEX) refById.set(`conv:${r.id}`, r);
+
+export function storyRef(id: string): SceneRef | undefined {
+  return refById.get(`story:${id}`);
+}
+export function conversationRef(id: string): SceneRef | undefined {
+  return refById.get(`conv:${id}`);
+}
+
+let storyLoad: Promise<Map<string, Scene>> | null = null;
+let convLoad: Promise<Map<string, Scene>> | null = null;
+
+function index(list: Scene[]): Map<string, Scene> {
+  const m = new Map<string, Scene>();
+  for (const s of list) m.set(s.id, s);
+  return m;
+}
+
+export function loadStories(): Promise<Map<string, Scene>> {
+  storyLoad ??= import('./generated/story-mode.json').then((m) =>
+    index(m.default as unknown as Scene[]),
+  );
+  return storyLoad;
+}
+
+export function loadConversations(): Promise<Map<string, Scene>> {
+  convLoad ??= import('./generated/conversations.json').then((m) =>
+    index(m.default as unknown as Scene[]),
+  );
+  return convLoad;
+}
+
+export async function loadStory(id: string): Promise<Scene | undefined> {
+  return (await loadStories()).get(id);
+}
+export async function loadConversation(id: string): Promise<Scene | undefined> {
+  return (await loadConversations()).get(id);
+}
+
+/** Stories a word appears in, as light references. */
+export function storiesWith(wordId: number): SceneRef[] {
+  return (tryWord(wordId)?.inStories ?? [])
+    .map(storyRef)
+    .filter((s): s is SceneRef => !!s);
+}
+export function conversationsWith(wordId: number): SceneRef[] {
+  return (tryWord(wordId)?.inConversations ?? [])
+    .map(conversationRef)
+    .filter((s): s is SceneRef => !!s);
+}
+
+/** Word ids a scene teaches, in the order they first appear in its text. */
+export function sceneWords(scene: Scene): number[] {
+  return scene.targets;
+}
 export const META = metaJson as unknown as Meta;
 
 export const TOTAL = WORDS.length;

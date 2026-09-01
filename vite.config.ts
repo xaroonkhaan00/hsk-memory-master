@@ -11,6 +11,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
+          // Story and conversation text is fetched on demand, so it must stay
+          // out of the chunk the first screen waits for.
+          if (id.includes('story-mode.json')) return 'story-text';
+          if (id.includes('conversations.json')) return 'conversation-text';
           if (id.includes('src/data/generated')) return 'vocab-data';
           if (id.includes('node_modules')) return 'vendor';
           return undefined;

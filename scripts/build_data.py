@@ -258,7 +258,9 @@ for e in source:
         parts = ' + '.join('%s (%s)' % (c['char'], short(c['gloss'])) for c in charinfo)
         primary = senses[0]['meanings'][0] if senses and senses[0]['meanings'] else ''
         logic = '%s  →  %s' % (parts, primary)
+    frame = [x for x in hz.split('……') if x] if '……' in hz else []
     words.append({
+        'matchForms': frame if len(frame) > 1 else [plain],
         'id': eid,
         'level': level_of(eid),
         'hanzi': hz,
@@ -531,14 +533,16 @@ for line in raw('measurewords.raw.txt'):
     measure.append({'mw': mw, 'pinyin': py, 'wordId': int(wid), 'counts': counts,
                     'rule': rule, 'examples': exs, 'trap': trap})
 
-# ---------------------------------------------------------------- dialogues
-# Target words are derived from the text so the list can never drift from what
-# the dialogue actually says.
 word_by_hanzi = {}
 for w in words:
     word_by_hanzi.setdefault(w['plain'], w['id'])
+    for f in w['matchForms']:
+        word_by_hanzi.setdefault(f, w['id'])
 MAXWORD = max(len(k) for k in word_by_hanzi)
 
+# ---------------------------------------------------------------- dialogues
+# Target words are derived from the text so the list can never drift from what
+# the dialogue actually says.
 def targets_in(text):
     found, i = [], 0
     while i < len(text):
@@ -554,7 +558,20 @@ def targets_in(text):
             i += len(hit[0])
         else:
             i += 1
-    return found
+    # A split frame word (虽然……但是……) is only taught when both halves are
+    # there; matching one half is not the same as meeting the word.
+    seen = set()
+    j = 0
+    while j < len(text):
+        for L in range(min(MAXWORD, len(text) - j), 0, -1):
+            sub = text[j:j + L]
+            if sub in word_by_hanzi:
+                seen.add(sub)
+                j += L
+                break
+        else:
+            j += 1
+    return [i for i in found if all(f in seen for f in byid[i]['matchForms'])]
 
 dialogues = []
 for idx, line in enumerate(raw('dialogues.raw.txt')):
@@ -575,6 +592,109 @@ for idx, line in enumerate(raw('dialogues.raw.txt')):
     found.sort(key=lambda i: (-len(byid[i]['plain']), byid[i]['id']))
     dialogues.append({'id': 'dlg-%02d' % (idx + 1), 'title': title.strip(),
                       'lines': lines, 'targets': found[:8], 'allWords': found})
+
+# ------------------------------------------------------- story & conversation
+# Every line of authored Chinese runs through the same tokenizer the PDF's own
+# examples use, so pinyin, word segmentation and tone sandhi are identical
+# across the whole app and any unknown character fails the build.
+
+CJK_PUNCT = re.compile('[\u3000-\u303f\uff00-\uffef]')
+
+
+def build_lines(entries, key_prefix, with_speaker):
+    out = []
+    for idx, chunk in enumerate(entries):
+        parts = [p.strip() for p in chunk.split('~')]
+        if with_speaker:
+            speaker, zh, en = parts
+        else:
+            speaker, (zh, en) = '', parts
+        toks = tokenize(zh, '%s.%d' % (key_prefix, idx))
+        pin = ' '.join(t['p'] for t in toks if 'p' in t)
+        if '?' in pin:
+            unknown = ''.join(t['z'] for t in toks if t.get('p') == '?')
+            warnings.append('%s line %d: no reading for %s' % (key_prefix, idx, unknown))
+        if CJK_PUNCT.search(en) or any('\u4e00' <= c <= '\u9fff' for c in en):
+            warnings.append('%s line %d: english caption contains Chinese text' % (key_prefix, idx))
+        if not any('\u4e00' <= c <= '\u9fff' for c in zh):
+            warnings.append('%s line %d: chinese line has no Hanzi' % (key_prefix, idx))
+        # Tokens that are themselves headwords carry their id, so the player can
+        # link a tapped word straight to its entry without guessing.
+        for t in toks:
+            hit = word_by_hanzi.get(t['z'])
+            if hit is not None:
+                t['w'] = hit
+        line = {'zh': zh, 'en': en, 'tokens': toks, 'pinyin': pin}
+        if with_speaker:
+            line['speaker'] = speaker
+        out.append(line)
+    return out
+
+
+def covered_ids(lines):
+    """Word ids a learner actually meets here.
+
+    Coverage is decided by the segmenter, not by substring search: 只有 does not
+    count as having taught 只. Split frame words (虽然……但是……) count only when
+    every half is present."""
+    seen = set()
+    for line in lines:
+        for t in line['tokens']:
+            if t['z'] in word_by_hanzi:
+                seen.add(t['z'])
+    ids = []
+    for w in words:
+        forms = w['matchForms']
+        if all(f in seen for f in forms):
+            ids.append(w['id'])
+    return ids
+
+
+def parse_scenes(filename, with_speaker):
+    scenes = []
+    for line in raw(filename):
+        parts = line.split('|')
+        sid, title, emoji, topic, body = parts[0], parts[1], parts[2], parts[3], '|'.join(parts[4:])
+        key = '%s.%s' % (filename[:3], sid)
+        lines = build_lines(body.split(';;'), key, with_speaker)
+        ids = covered_ids(lines)
+        chars = sum(len([c for c in l['zh'] if '一' <= c <= '鿿']) for l in lines)
+        scenes.append({
+            'id': sid.strip(), 'title': title.strip(), 'emoji': emoji.strip(),
+            'topic': topic.strip(), 'lines': lines, 'targets': ids,
+            'chars': chars,
+            'level': 1 if chars < 110 else (2 if chars < 200 else 3),
+        })
+    return scenes
+
+
+stories_mode = parse_scenes('stories.raw.txt', False)
+conversations = parse_scenes('conversations.raw.txt', True)
+
+def coverage_report(scenes):
+    seen = {}
+    for sc in scenes:
+        for i in sc['targets']:
+            seen.setdefault(i, []).append(sc['id'])
+    missing = [w['id'] for w in words if w['id'] not in seen]
+    return seen, missing
+
+story_index, story_missing = coverage_report(stories_mode)
+conv_index, conv_missing = coverage_report(conversations)
+
+# A light index so the story and cinema lists — and every word page — can render
+# without pulling the full scene text into the first paint.
+def scene_index(scenes):
+    return [{
+        'id': sc['id'], 'title': sc['title'], 'emoji': sc['emoji'], 'topic': sc['topic'],
+        'lines': len(sc['lines']), 'words': len(sc['targets']),
+        'first': sc['lines'][0]['zh'] if sc['lines'] else '',
+    } for sc in scenes]
+
+
+for w in words:
+    w['inStories'] = story_index.get(w['id'], [])
+    w['inConversations'] = conv_index.get(w['id'], [])
 
 # ---------------------------------------------------------------- stories
 STORY_SIZE = 10
@@ -608,6 +728,12 @@ meta = {
     'toneTwins': len(tone_twins),
     'measureWords': len(measure),
     'dialogues': len(dialogues),
+    'storyEpisodes': len(stories_mode),
+    'conversationEpisodes': len(conversations),
+    'storyCoverage': len(words) - len(story_missing),
+    'conversationCoverage': len(words) - len(conv_missing),
+    'storyMissing': story_missing,
+    'conversationMissing': conv_missing,
     'idsCovered': len(set(ids)),
     'duplicateIds': dupes,
     'missingIds': missing_ids,
@@ -640,11 +766,23 @@ dump('confusions.json', {'sets': confusions, 'homophones': auto_homophones,
 dump('measurewords.json', measure)
 dump('palace.json', {'rooms': palace, 'journey': journey})
 dump('dialogues.json', dialogues)
+dump('story-mode.json', stories_mode)
+dump('conversations.json', conversations)
+dump('scene-index.json', {'stories': scene_index(stories_mode), 'conversations': scene_index(conversations)})
 dump('stories.json', story_chains)
 dump('meta.json', meta)
 print()
 print('words %d | examples %d | packs %d | chars %d | syllables %d'
       % (len(words), meta['totalExamples'], len(packs), len(char_hubs), len(sounds)))
+print('stories %d covering %d/%d | conversations %d covering %d/%d'
+      % (len(stories_mode), len(words) - len(story_missing), len(words),
+         len(conversations), len(words) - len(conv_missing), len(words)))
+if story_missing:
+    print('  story gaps  (%d):' % len(story_missing),
+          ' '.join('%d%s' % (i, byid[i]['hanzi']) for i in story_missing[:60]))
+if conv_missing:
+    print('  conv gaps   (%d):' % len(conv_missing),
+          ' '.join('%d%s' % (i, byid[i]['hanzi']) for i in conv_missing[:60]))
 if warnings:
     print('WARNINGS:')
     for w in warnings[:20]:

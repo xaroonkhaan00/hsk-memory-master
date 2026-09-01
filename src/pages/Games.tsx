@@ -7,7 +7,7 @@ export default function Games() {
   const audio = mandarinAvailable();
   return (
     <>
-      <TopBar title="Training modes" sub={`${MODES.length} modes`} />
+      <TopBar title="Training modes" sub={`${MODES.length} modes`} back="/" backLabel="Home" />
       <div className="page stack">
         {!audio && (
           <div className="card">
