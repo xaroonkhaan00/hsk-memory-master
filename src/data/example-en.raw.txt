@@ -1,0 +1,722 @@
+0|Mum, I love you.
+1|I love eating rice.
+2|His son turned eight this year.
+3|My dad is a doctor.
+4|There is tea in the cup.
+5|I live in Beijing.
+6|There is a book on the table.
+7|A: Thank you! B: You're welcome.
+8|I am not a student.
+9|I'm going to the supermarket to buy some vegetables.
+10|I made three dishes today.
+11|Please have a cup of tea.
+12|Please have some rice.
+13|We take a taxi to the train station.
+14|He is making a phone call.
+15|This apple is very big.
+16|This is my book.
+17|I came to China by plane.
+18|There's nothing to eat at home; let's go and buy some.
+19|It is now 3:20 in the afternoon.
+20|Sir, when would you like to start ordering?
+21|I bought a computer.
+22|Mum is watching television.
+23|I like watching films.
+24|I bought a lot of things at the shop.
+25|We have all arrived.
+26|I have almost finished eating.
+27|It's already three o'clock — we're going to be late.
+28|Can you read this Chinese character?
+29|Do you like reading?
+30|A: I'm sorry. B: That's all right.
+31|There are a lot of people here.
+32|How old is your son?
+33|How many students does your school have?
+34|My son is three years old.
+35|It is twelve o'clock now.
+36|Let's go and eat at a restaurant at noon.
+37|I'm flying to Beijing.
+38|I'd like to rest for a few minutes.
+39|I am very happy today.
+40|I am a student.
+41|I like my current job very much.
+42|I work at a hospital.
+43|He is studying Chinese.
+44|The weather is very good today.
+45|Listen to me, all right?
+46|Your clothes are so pretty!
+47|Today is 1 January 2002.
+48|What is your room number?
+49|I'd like to drink some water.
+50|Dad and Mum are both at home.
+51|Miss Li is very pretty.
+52|The shop is behind the school.
+53|I will explain this question in detail later.
+54|I go home at eight o'clock.
+55|I have been to Beijing once.
+56|I can drive.
+57|I have learnt Chinese.
+58|It is not going to rain tomorrow.
+59|How many sons do you have?
+60|A few people came to my house.
+61|My home is in Beijing.
+62|My elder brother started a company.
+63|My name is Li Ming.
+64|I am going to Beijing today.
+65|Today is the ninth of August.
+66|I have been driving a taxi for three years.
+67|My dad started a small company.
+68|Please open the door and let me in.
+69|Our school holds a sports meeting every summer.
+70|Look — that book is on the table.
+71|I am reading.
+72|I didn't see him.
+73|This book costs thirty yuan.
+74|Come and have a piece of watermelon.
+75|I am together with my friends.
+76|He came here yesterday.
+77|How about some more fruit?
+78|He is exactly our Chinese teacher.
+79|It rained yesterday.
+80|I'll come to your place as soon as I've eaten.
+81|It is too cold today.
+82|We are all at school.
+83|This year is 2012.
+84|There are six cups on the table.
+85|My mum is not at home.
+86|Are you Chinese?
+87|I bought some apples.
+88|A: I'm sorry! B: That's all right.
+89|There is nobody at my home.
+90|I am not as tall as him.
+91|I love eating rice.
+92|Today is Sunday, tomorrow is Monday.
+93|My name is Li Ming.
+94|Which cup is yours?
+95|Where is your home?
+96|I don't know that person.
+97|Our car is over there.
+98|How many people are there in your family?
+99|I am sleeping.
+100|May I sit here?
+101|Do you know this person?
+102|I lived in China for three years.
+103|I have two daughters.
+104|He is my good friend.
+105|Your clothes are really pretty.
+106|Would you like to eat an apple?
+107|There are seven days in a week.
+108|One apple costs three yuan.
+109|That person in front is my classmate.
+110|Please sit on the chair.
+111|I'll go and ask the teacher for help.
+112|He wants to invite me for a meal.
+113|I am going to China on Wednesday.
+114|The kitten ran into the room.
+115|Remove this character and the sentence will be correct.
+116|It is very hot today.
+117|I'll go and heat up the rice.
+118|There are a lot of people in the shop.
+119|Nice to meet you.
+120|I have three books.
+121|She went to the shop to buy things.
+122|The fruit is on the table.
+123|We go to school at eight o'clock.
+124|We take the lift upstairs.
+125|It is now ten in the morning.
+126|There is very little water in the cup.
+127|I am still one book short.
+128|Who is that person?
+129|What did you see?
+130|You're great — you can do everything!
+131|It is October now.
+132|When I got home, he was sleeping.
+133|He is not a student.
+134|A: Are you Chinese?
+135|B: Yes, I am Chinese.
+136|I like reading.
+137|Is there still water in the cup?
+138|I want to go to the shop to buy fruit.
+139|My son is sleeping.
+140|What are you saying?
+141|They are talking.
+142|The four of us are going to see a film.
+143|Doctor Li is forty this year.
+144|He is our teacher.
+145|I know her mother.
+146|This school is too big.
+147|This apple is too big — I can't finish it.
+148|The weather is extremely good today.
+149|Listen — who's coming?
+150|On this matter, I'll do as you say.
+151|Hello, classmates!
+152|Hello, is Teacher Li there?
+153|I am a student.
+154|We are all students.
+155|Today is Friday.
+156|I like studying Chinese.
+157|The kitten is under the table.
+158|It rained today.
+159|I am going to Beijing next month.
+160|He is getting off the plane.
+161|We finish work at eight.
+162|I'm not going to school this afternoon.
+163|It rained yesterday.
+164|You know Mr Wang too?
+165|It is twelve o'clock now.
+166|I'd like to go to Beijing on Saturday.
+167|Mum, what are you thinking about?
+168|This apple is too small.
+169|The rain has eased — let's go now.
+170|Miss, what is your name?
+171|I bought some apples.
+172|My illness has got a bit better.
+173|The characters you write are very pretty.
+174|A: Thank you. B: You're welcome!
+175|There are seven days in a week.
+176|There are a lot of students in our school.
+177|Do you like studying Chinese?
+178|Our school is very big.
+179|There is not a single person here.
+180|Please let me have a look.
+181|I only have a little money.
+182|I bought a lot of clothes at the shop.
+183|He is a doctor in this hospital.
+184|This is a big hospital.
+185|The puppy is under the chair.
+186|I have one daughter.
+187|There are twelve months in a year.
+188|Mum, I'm off to school. Goodbye.
+189|The book is on the table.
+190|I am eating.
+191|How are you getting to Beijing?
+192|How about we go and see a film?
+193|This person is my classmate.
+194|May I sit here?
+195|I study Chinese in China.
+196|I'm going to the train station at noon today.
+197|He lived in Beijing for many years.
+198|The computer is on the desk.
+199|Do you know this character?
+200|He didn't go to school yesterday.
+201|He sat in front of the TV the whole afternoon.
+202|I fly to China.
+203|Mum cooked a lot of dishes today.
+204|What work do you do?
+205|You're a student, aren't you?
+206|Please go away!
+207|I love wearing that white outfit.
+208|This bicycle costs over five hundred yuan.
+209|Could you help me find a removals company?
+210|I read the newspaper every morning.
+211|My child is taller than me.
+212|It's too late — stop watching TV.
+213|My elder sister has long legs, and she runs fast.
+214|I love singing most of all — let me sing you one.
+215|I have already walked out of the train station.
+216|It has got cold — put on some more clothes.
+217|I have been to Beijing once.
+218|It takes twenty minutes to drive from my home to the company.
+219|Sorry, I was wrong.
+220|I go and play basketball every afternoon.
+221|Please don't wait for me, everyone.
+222|I get to the company at nine in the morning.
+223|You walk too fast.
+224|You'll have to wait another ten minutes for me.
+225|In our family I'm the eldest; I have two younger brothers below me.
+226|This is the first time I have met him.
+227|I understand what you mean.
+228|You are right and I am wrong.
+229|The child said to his mother, "Mum, I love you."
+230|The two of us share one room.
+231|Grandma loved the present we gave her.
+232|I work as a waiter in a restaurant.
+233|I am even taller than my dad.
+234|Can you tell me how to get to the school?
+235|My elder brother is three years older than me.
+236|Please give this book to him.
+237|This was bought for you.
+238|It takes twenty minutes to go by bus.
+239|I work at a company.
+240|My daughter really likes puppies.
+241|This watch is very expensive.
+242|I have never read this book.
+243|He hasn't come yet.
+244|I have three children.
+245|Here we have more girls than boys.
+246|The rice you cooked is really delicious.
+247|I don't like black clothes.
+248|My bicycle is red.
+249|Welcome to our home.
+250|I can answer this question.
+251|I'm going to the train station at three this afternoon.
+252|I have worked at the airport for three years.
+253|I eat an egg every morning.
+254|The colour of this piece of clothing is really nice.
+255|Everyone please go to the classroom for the lesson.
+256|I have two elder sisters.
+257|Let me introduce my friend.
+258|I read a review of this film in the newspaper.
+259|I am about to enter the airport.
+260|Our home is very close to the company.
+261|I knew he would come.
+262|I'll call him as soon as I get home.
+263|What do you think of this book?
+264|Would you like coffee or tea?
+265|We start studying from Lesson Ten.
+266|At the beginning, learning Chinese characters may feel a bit hard.
+267|To prepare for the exam, he studies until very late every day.
+268|I may not be able to go to work.
+269|You can drive my car to work.
+270|This dish is not bad.
+271|Today we study Lesson One.
+272|Now let's start the lesson.
+273|He runs really fast.
+274|It's 7:50 — class is about to start.
+275|Happy birthday to you!
+276|I'm tired and want to rest.
+277|My home is very close to the school.
+278|Apples are two yuan per jin.
+279|I walk to school every day.
+280|We can take the number 10 bus.
+281|We are driving there for our trip.
+282|The things this shop sells are fairly cheap.
+283|We are walking very slowly.
+284|I am very busy this week.
+285|What are you busy with?
+286|Where has your kitten gone?
+287|Do you read the newspaper every day?
+288|I have two younger sisters.
+289|I'll wait for you outside the door.
+290|I have five courses this year.
+291|I don't know that man.
+292|Hello, teacher!
+293|Have a glass of milk before you go to bed.
+294|Do you know that woman?
+295|Dad is beside me.
+296|I go running every morning.
+297|Apples are very cheap — let's buy some.
+298|I'm going to the train station to buy a ticket.
+299|My wife has gone to work.
+300|I get up at seven in the morning.
+301|This mobile phone costs one thousand yuan.
+302|Have you seen my pencil?
+303|It is a fine day today.
+304|I came to Beijing last August.
+305|His dad won't let him come.
+306|Today is 26 February 2012.
+307|I go to work at half past seven.
+308|I don't feel very well today.
+309|I've fallen ill and can't go to work.
+310|Happy birthday to you!
+311|I don't have time to go to Beijing.
+312|Do you have anything on this afternoon?
+313|This watch is extremely beautiful.
+314|Look, I've just bought a new mobile phone.
+315|I'm giving you a book.
+316|I'm going to see a friend off.
+317|Although it is raining, we still want to go and see a film.
+318|I know where the kitten is — it's under the table.
+319|My classmates and I are playing football.
+320|I can't do this question.
+321|My younger sister can sing and dance too.
+322|It is raining outside.
+323|I have finished reading this book.
+324|He is playing, not studying.
+325|I can't watch TV this evening.
+326|Why don't you drink some water?
+327|Teacher, may I ask you a question?
+328|This problem is too difficult!
+329|Please have a piece of watermelon.
+330|I hope you won't leave.
+331|Children are the hope of their parents.
+332|I have a lot of clothes to wash today.
+333|The photos will take three days to be developed.
+334|I read for an hour.
+335|We all laughed when we heard him say that.
+336|These are the new clothes I bought.
+337|A Chinese person's surname comes before their given name.
+338|My surname is Zhang.
+339|I'm so tired — let me rest for a bit.
+340|It snowed heavily several times this winter.
+341|Which colour do you like?
+342|My eyes are black.
+343|Some people don't like eating mutton.
+344|Take this medicine three times a day.
+345|I want to go to Beijing.
+346|Mum wants me to go and buy vegetables.
+347|You must do this carefully.
+348|It's about to rain.
+349|One jin of vegetables costs two yuan.
+350|If you go, I'll go too.
+351|Please wait a moment for me.
+352|I'm going to Beijing with you.
+353|We have already finished eating.
+354|What does this word mean?
+355|Tell me what you mean.
+356|This film is really interesting.
+357|Because it was raining, I didn't go running.
+358|It is overcast today.
+359|I can swim now.
+360|Who is that person to the right of Doctor Wang?
+361|There are a lot of fish in the water.
+362|My home is very far from the company.
+363|We all like sport very much.
+364|I'll go to the shop after I've eaten.
+365|A bit higher — it's too low now.
+366|I saw him this morning.
+367|My husband works at a hospital.
+368|He wants to find a job.
+369|He said with a smile, "You don't know me, but I know you."
+370|This person is really tall.
+371|My younger brother is playing basketball.
+372|I don't know where he is now.
+373|I plan to go to Beijing on Sunday.
+374|I am preparing for the exam.
+375|This is the bicycle I have just bought.
+376|My daughter could walk at nine months old.
+377|I'm off — goodbye!
+378|She is my best friend.
+379|The cup on the left is yours and the one on the right is mine.
+380|Auntie, is there a subway station nearby?
+381|Ah, how nice the environment is here!
+382|Where does your family live?
+383|Ah, all right, I'll go right now.
+384|My younger brother is shorter than me.
+385|My biggest hobby is playing basketball.
+386|I have loved music since I was little.
+387|Because there was hardly anyone in the classroom, it was very quiet.
+388|The children have all fallen asleep and the house has gone quiet.
+389|Please pass me the pencil on the table.
+390|There are four chairs in the room.
+391|I'm in Class Two of Year Three.
+392|Could you help me carry this table downstairs?
+393|Don't worry — let's think of another way.
+394|Excuse me, how do I get to the principal's office?
+395|It is half past three now.
+396|Thanks to your help, this matter was handled very well.
+397|I left my bag in the room.
+398|I am already full.
+399|In winter the north is much colder than the south.
+400|The dictionary was taken away by Teacher Wang.
+401|My elder sister has a high, beautiful nose.
+402|The weather is fairly cold today.
+403|There is a football match this evening.
+404|Let's have a running race.
+405|I wrote down everything the teacher said in my notebook.
+406|Look, this is the notebook I just bought.
+407|I have to go to work today.
+408|We haven't met for ten years, and he doesn't seem to have changed much.
+409|The city is changing so fast.
+410|Everyone else has left — why are you still here?
+411|This is the biggest hotel around here; it can take 300 guests.
+412|Mum put the fish she had just bought into the fridge.
+413|My younger sister not only likes singing, she also loves dancing.
+414|He only finished university at thirty.
+415|Only he can do this job well.
+416|Waiter, could you bring me the menu?
+417|More than two hundred people attended this meeting.
+418|Spring has come and the grass has turned green.
+419|I live on the third floor, room 306.
+420|I did very badly in this exam.
+421|It is now five to twelve.
+422|My elder sister's hair is both black and long.
+423|The things in this supermarket are fairly cheap.
+424|I'm wearing this shirt today.
+425|We can check our exam results online.
+426|I have come to love this city.
+427|Sorry, I'm late again today.
+428|We waited an hour for him and he still didn't show up.
+429|Quite a few problems came up in our work.
+430|Everyone came except Xiao Wang.
+431|You can go to Shanghai by boat.
+432|Spring is the beginning of the year.
+433|This dictionary is a great help to my studies.
+434|My younger brother is not only clever, he also loves studying.
+435|I plan to clean the room at the weekend.
+436|I plan to travel next week.
+437|I have no plans to get married yet.
+438|I forgot to bring my wallet today.
+439|Grandpa is in hospital and I'm very worried.
+440|Are you hungry? Have a piece of cake first.
+441|You're ill, so of course I've come to see you.
+442|Why has the light in the room gone out?
+443|The sky slowly grew dark.
+444|I have been to this place three times.
+445|We take the subway three stops and then walk a little and we're there.
+446|There is an electronic map on my phone.
+447|Let's take the lift up.
+448|I'll send you an email this evening.
+449|Keep walking east and you'll get there.
+450|Winters in the north are very cold.
+451|There are more than a hundred kinds of animal in the zoo.
+452|It is hard to finish this in a short time.
+453|I have been very busy during this period.
+454|I go and exercise every morning.
+455|How beautiful it is here!
+456|I'm hungry and want to eat something.
+457|My ear hurts a bit; I need to go to the hospital.
+458|Did you send me an email?
+459|I don't feel well — I have a fever.
+460|I noticed that he has lost a lot of weight.
+461|It is very convenient for me to take the subway to work.
+462|Put the book on the table.
+463|Don't worry, I'll get it done properly.
+464|It is 8:30 now.
+465|I got 85 marks in this exam.
+466|This apple was divided into two pieces.
+467|He lives right near the company.
+468|You should revise thoroughly before the exam.
+469|I have washed the clothes clean.
+470|I've caught a cold and need to take some medicine.
+471|Xiao Wang is very interested in music.
+472|Who was on the phone just now?
+473|My elder brother is taller than me.
+474|Please talk about your own thoughts on the basis of this article.
+475|There are grounds for what he says.
+476|While I was out walking, the puppy followed right behind me.
+477|My elder sister went to the park with Mum.
+478|He likes swimming even more than I do.
+479|I bought a kilogram of eggs.
+480|There is a park near my home and I often go for a walk there.
+481|I tell my daughter a story every night before bed.
+482|It's windy today — don't ride your bike.
+483|He closed the door.
+484|I turned off the television.
+485|This has nothing to do with her.
+486|Dad cares a lot about my studies.
+487|Thank you for your concern; I'm feeling much better.
+488|We need to think about this question a bit more.
+489|I love travelling; I have been to dozens of countries.
+490|Today is my birthday and all my friends have come.
+491|Time really flies — Spring Festival is nearly here.
+492|Grandma often tells me about things in the past.
+493|I am still in Beijing; I haven't been anywhere else.
+494|You'd better eat some fruit instead of drinking beer.
+495|Are you driving or taking the bus?
+496|I'm afraid of going out alone at night.
+497|Passengers, welcome aboard our flight.
+498|Everyone please look at the blackboard.
+499|I never saw him again afterwards.
+500|Have you got your passport sorted out?
+501|I spent quite a lot of money today.
+502|Today is Mum's birthday — let's give her some flowers.
+503|I have loved drawing since I was little.
+504|The bread is fresh; it hasn't gone bad.
+505|I returned the book to the library.
+506|The environment here is very good and it's comfortable to live here.
+507|Wait a moment — I'm going to change my clothes.
+508|I'm going to the bank to change some money.
+509|The Yellow River is China's second longest river.
+510|We have a meeting this afternoon.
+511|Either you go or I go — both are fine.
+512|I was so moved I almost cried.
+513|I hope I'll have a chance to take part in the competition.
+514|He is extremely interested in music.
+515|Today's programme was extremely good.
+516|I don't remember where he lives.
+517|There are four seasons in a year.
+518|Go to the hospital for a check-up.
+519|These questions are very simple for him.
+520|The last time I met him was already last year.
+521|My dad is especially healthy.
+522|Teacher Li teaches his lessons very interestingly.
+523|The plane is about to land.
+524|There is fifty cents on the table.
+525|My younger sister is wearing pretty red leather shoes.
+526|Teacher Li teaches us maths.
+527|I'll pick you up at the airport this afternoon.
+528|He glanced at his watch, lay down and went back to sleep.
+529|This street is very long — more than four thousand metres.
+530|Today we are performing twelve items altogether.
+531|Happy holidays, everyone!
+532|We have been married for ten years.
+533|The meeting is about to end.
+534|How do you plan to solve this problem?
+535|I borrowed three books from the library.
+536|I often run into him at school.
+537|I pass along this street on my way to and from work.
+538|Now that you've put it that way, I finally understand.
+539|He is the manager of our company.
+540|I thought about this problem for a long time before I understood it.
+541|I've worn these clothes for two years; they're old now.
+542|Please make a few sentences using these words.
+543|This was decided by the manager.
+544|He has already made a decision.
+545|Your son is really cute.
+546|I'm thirsty and want to drink some water.
+547|It is a quarter past three.
+548|At Spring Festival a lot of guests come to the house.
+549|It's too hot — please turn on the air conditioning.
+550|There are three people in our family altogether.
+551|The child started crying again.
+552|These trousers are a bit short.
+553|I've been in China a month and I can already use chopsticks.
+554|Do you like this blue skirt?
+555|Grandpa is sixty, but he doesn't look old at all.
+556|I'm going away for a while next month — take good care of yourself.
+557|I received a lot of presents on my birthday.
+558|This house has almost three hundred years of history.
+559|My daughter has a lovely round face.
+560|You have to practise a lot to remember what you've learnt.
+561|Class, now let's start the exercises.
+562|This car is the one I've just bought.
+563|We often chat online.
+564|I don't know her very well.
+565|I get on very well with my neighbours.
+566|My elder brother is studying abroad in China.
+567|I'll wait for you downstairs at your building.
+568|Spring has come, and the trees and grass have all turned green.
+569|We have learnt to ride a horse.
+570|I'll be at school right away — wait a few more minutes.
+571|The manager is very satisfied with him.
+572|This hat is too small; do you have a bigger one?
+573|This table is two metres long.
+574|The bread has already sold out.
+575|Waiter, I'd like a bowl of noodles.
+576|I understand what you mean.
+577|He explained it very clearly and I understood.
+578|What are you holding in your hand?
+579|My grandma lives in Beijing.
+580|My home is south of the train station.
+581|This question is very difficult.
+582|He is leaving and I feel very sad.
+583|My son is in Year Three now.
+584|Mum is fifty, but she still looks very young.
+585|There are lots of birds singing in the tree.
+586|The students study very hard.
+587|We have decided to go mountain climbing tomorrow.
+588|There is fish on the plate — please help yourself.
+589|Pandas are fat and very cute.
+590|I've put on more than five jin this month.
+591|He is wearing a pair of black leather shoes.
+592|Dad loves drinking beer.
+593|You speak Mandarin very well.
+594|Actually, I don't know him very well.
+595|Only Xiao Ming is in the classroom; everyone else has gone home.
+596|I find this question very strange.
+597|I'm riding my bike to school today.
+598|Passengers, the plane is about to take off.
+599|He explained this matter very clearly.
+600|Are you clear about the meaning of this sentence?
+601|Autumn is the most comfortable — neither cold nor hot.
+602|My elder sister is wearing a pretty skirt.
+603|I'll finish my homework first and then watch TV.
+604|We warmly welcomed our guests.
+605|Do you think he will come?
+606|This student studies very conscientiously and works hard.
+607|This question is very easy to answer.
+608|If you go, I'll go with you.
+609|It's raining — don't forget to take an umbrella.
+610|I'm going online to look at the news.
+611|Please don't be angry; it was my fault, I'm sorry.
+612|Listen — what is that sound?
+613|There are many countries in the world.
+614|I'd like to try that red one.
+615|My elder sister is very thin now — only 45 kilos.
+616|I've lost three jin this month.
+617|Uncle, do you like this book?
+618|It's really comfortable sitting here.
+619|There are a lot of trees in our school.
+620|My maths results are very good.
+621|You should brush your teeth before going to bed.
+622|I want to go and buy a pair of shoes today.
+623|His level of Chinese is very high.
+624|This driver has been driving a taxi for more than five years.
+625|Look, the sun has come out.
+626|I especially want to go with you.
+627|My leg hurts a bit.
+628|Your maths results have improved a lot.
+629|People's standard of living has risen greatly.
+630|I like sports very much.
+631|This watermelon is really sweet!
+632|These trousers are a bit long.
+633|This is our new colleague, Li Hua.
+634|I don't quite agree with his idea.
+635|Mum's hair is black and shiny.
+636|He suddenly stood up.
+637|I borrowed two books from the library.
+638|Does your leg still hurt?
+639|This must be finished before the weekend.
+640|Put the rice in this bowl.
+641|One bowl is enough for me.
+642|Our school has ten thousand students.
+643|I forgot that today is his birthday.
+644|These dishes were all prepared for you.
+645|For the sake of my health, I go and exercise every day.
+646|He really is a good teacher.
+647|I am very interested in Chinese culture.
+648|The train station is to the west; you've gone the wrong way.
+649|He has already got used to living alone.
+650|Washing your hands before a meal is a good habit.
+651|I'm just going to the toilet.
+652|It's too hot — I'm going to have a shower first.
+653|It is far too hot this summer.
+654|You go first; I'll come an hour later.
+655|I completely believe what you say.
+656|Would you like a banana?
+657|Walk east and you'll see that school.
+658|He looks like his dad.
+659|People like the principal are welcome everywhere.
+660|Be careful — there's a lot of water on the road.
+661|I picked the kitten up very carefully.
+662|The principal has already agreed to our plan.
+663|I watch the news at seven every evening.
+664|These are all fresh fruit.
+665|I want to go to the bank to get a credit card.
+666|Please open the suitcase.
+667|I especially like going to the zoo to see the giant pandas.
+668|We need some help.
+669|Where are you choosing to travel this summer?
+670|We need to make our own choice.
+671|The teacher asked us to finish these questions.
+672|This is what my dad asks of me.
+673|Grandpa, please sit here.
+674|Everyone must attend tomorrow's meeting.
+675|There are twenty students in our class altogether.
+676|I'll watch TV for a while and then go to bed.
+677|He looks just like his dad.
+678|I usually get up at seven o'clock.
+679|He likes reading and listening to music at the same time.
+680|I have never understood what this sentence means.
+681|Let's go and eat before we see the film.
+682|Her favourite programmes are music ones.
+683|The bank closes at five in the afternoon.
+684|Is there still a drink in the fridge?
+685|It's eight o'clock — I should go to work.
+686|Please don't disturb other people's rest.
+687|The environment has a big influence on people.
+688|I spent two hours cleaning the room.
+689|This is the children's favourite game.
+690|This book is very famous.
+691|We rested for a while and then started work again.
+692|I ran into Mr Zhang in the street just now.
+693|This watch costs 600 yuan.
+694|He is very willing to help other people.
+695|The moon is so round tonight!
+696|The more he talked, the happier he got.
+697|Dad is standing beside me.
+698|To get to the train station, it's three stops on the subway.
+699|Please give me a sheet of paper.
+700|The little girl opened her mouth and smiled.
+701|When I was ill, Mum looked after me the whole time.
+702|This is a photo of me when I was little.
+703|I have just bought a camera.
+704|I can't find one of my shoes.
+705|There is a kitten in the tree.
+706|I am the only person in the room.
+707|I'm standing in the middle, and the one beside me is my classmate.
+708|I can write articles in Chinese.
+709|Spring has finally arrived.
+710|The supermarket has many kinds of fresh fruit.
+711|I forgot an important thing.
+712|What are your plans for this weekend?
+713|What is this book mainly about?
+714|Please pay attention to safety.
+715|When something happens, don't panic.
+716|I like travelling on my own.
+717|He always gets up very early.
+718|My younger sister has a grain of rice by her mouth.
+719|I have been very busy recently.
+720|Have you finished today's homework?
+721|This cold medicine doesn't have much effect on me.

@@ -1,0 +1,74 @@
+# ids (comma) | kind | title | the ONE rule that separates them
+288,139|char|再 vs 在|在 = WHERE something is (我在家). 再 = AGAIN, and always in the future (再见).
+61,218|char|买 vs 卖|卖 has an extra 十 on top — that lid is the shop sign, so goods go OUT. No lid = 买, goods come IN.
+104,105,251|char|他 vs 她 vs 它|Same sound tā, different left side: 亻person = he, 女woman = she, 宀roof = it. Nobody can hear the difference; only writing shows it.
+15,168,352|grammar|的 vs 得 vs 地|的 + noun (我的书). 得 + how well (跑得快). 地 + verb (慢慢地走).
+42,71,209|grammar|会 vs 能 vs 可以|会 = learned skill (我会开车). 能 = physically able right now (我今天不能开车). 可以 = allowed (你可以开我的车).
+295,85|meaning|知道 vs 认识|知道 = know a FACT. 认识 = know a PERSON or a character by sight. 我知道他，但是我不认识他。
+204,496|meaning|觉得 vs 认为|觉得 = a feeling, softer, personal. 认为 = a considered opinion, used in writing and arguments.
+203,327|grammar|就 vs 才|就 = sooner/easier than expected (他七点就来了). 才 = later/harder than expected (他九点才来).
+136,139|grammar|有 vs 在|有 puts the THING second (桌子上有书). 在 puts the PLACE second (书在桌子上).
+584,585|tone|只 zhī vs 只 zhǐ|Same character, two jobs. zhī (1st tone) = measure word for animals. zhǐ (3rd tone) = only.
+187,405|tone|还 hái vs 还 huán|hái = still, yet (他还没来). huán = to give back (我把书还给图书馆).
+573,288|grammar|又 vs 再|又 for something that already happened again (他又迟到了). 再 for something that will happen again (明天再来).
+278,558|meaning|一起 vs 一共|一起 = together, side by side. 一共 = altogether, a total count.
+563,557|meaning|一直 vs 一定|一直 = continuously, the whole time. 一定 = definitely, for sure.
+410,395|grammar|或者 vs 还是|Use 还是 when you are ASKING (茶还是咖啡?). Use 或者 when you are TELLING (茶或者咖啡都可以).
+256,257|char|完 vs 玩|Identical sound wán. 完 has a roof (宀) = finished. 玩 has jade (王) = playing with a toy.
+152,153|char|白 vs 百|百 is 白 with a lid (一) on top: one hundred. Without the lid it is white.
+14,106|char|大 vs 太|太 is 大 with a dot underneath. The dot is the extra bit that makes it "too much".
+99,204|tone|睡觉 jiào vs 觉得 jué|Same character 觉. In 睡觉 it is jiào (sleep). In 觉得 it is jué (to sense).
+565,212|tone|音乐 yuè vs 快乐 lè|Same character 乐. Music = yuè. Happy = lè.
+566,551|tone|银行 háng vs 行李 xíng|Same character 行. háng = a line of business (bank). xíng = to go/travel (luggage).
+198,424|tone|教室 jiào vs 教 jiāo|jiāo (1st tone) = the act of teaching. jiào (4th tone) = education, as in classroom/teacher.
+81,491,237,246|sound|请 / 清楚 / 晴 / 事情|All built on 青 qīng. The left side tells you the meaning: 讠speech=ask, 氵water=clear, 日sun=fine weather, 忄heart=feeling.
+95,93,94,505,85|sound|是 shì / 十 shí / 时候 shí / 试 shì / 认识 shí|The shi family. Only the tone separates them: 是 and 试 are 4th tone, 十 时 识 are 2nd tone.
+88,115|opposite|上 vs 下|上 = the line ABOVE the base. 下 = the line BELOW. Everything else (上班/下班, 上午/下午, 上车/下车) follows from that picture.
+300,284|opposite|左边 vs 右边|左 has 工 (work) inside; 右 has 口 (mouth) inside. Your mouth is on the right when you speak into a phone.
+178,303|opposite|高 vs 矮|高 is a tall tower. 矮 has 矢 (a short arrow) — it never grew.
+482,506|opposite|胖 vs 瘦|胖 has 月 (flesh) plus 半. 瘦 wears the sickness radical 疒 — too thin.
+158,361|opposite|长 vs 短|长 is flowing hair. 短 has 矢, the arrow that fell short.
+267,437|opposite|新 vs 旧|新 has 斤 (an axe) — freshly cut. 旧 is worn out. For PEOPLE use 老, never 旧.
+211,219|opposite|快 vs 慢|Both have the heart radical 忄. A racing heart is 快; a heavy heart is 慢.
+24,90|opposite|多 vs 少|多 is two piles stacked. 少 is 小 with a stroke taken away.
+55,83|opposite|冷 vs 热|冷 has two ice drops 冫. 热 has four fire dots 灬.
+48,388|opposite|开 vs 关|开 = two hands throwing the doors open. 关 = a bolt across the gate. Also 开灯/关灯, 开机/关机.
+201,160|opposite|进 vs 出|进 walks (辶) in. 出 is a foot stepping out of a cave, twice.
+474,498,417|opposite|难 vs 容易 vs 简单|难 = hard. 容易 = easy to do. 简单 = simple in structure. A question can be 简单 but still 难 if you never studied.
+231,185|opposite|便宜 vs 贵|贵 has the shell 贝 (old money) at the bottom — it costs a lot.
+289,258|opposite|早上 vs 晚上|早 = the sun just above the horizon. 晚 = the sun already gone.
+80,40|opposite|前面 vs 后面|前 is what your feet face; 后 is what your back faces.
+225,228|opposite|男 vs 女|男 = 田 field + 力 strength. 女 = a kneeling figure with crossed arms.
+260,193|opposite|问 vs 回答|问 = a mouth 口 inside a gate 门. 回答 = the answer coming back 回.
+432,405|meaning|借 vs 还|借 covers BOTH borrow and lend — the direction comes from the sentence. 还 (huán) is always giving back.
+531,414|opposite|忘记 vs 记得|Both contain 记 (to record). 忘 adds 亡 (lost) over 心 (heart) — the record fell out of your heart.
+525,350,494|sound|突然 vs 当然 vs 然后|All end in 然. 突然 = suddenly. 当然 = of course. 然后 = and then.
+327,379|meaning|才 vs 刚才|才 = only then, later than expected. 刚才 = a moment ago. 刚才 is a time word; 才 is an adverb.
+561,562|char|一般 vs 一边|般 bān = a sort/kind (usually). 边 biān = a side (一边…一边… = at the same time).
+486,487|char|其实 vs 其他|实 = reality → actually. 他 = other → the others.
+439,431|char|决定 vs 解决|Both use 决. 决定 = to decide. 解决 = to un-tie (解) a problem.
+429,430|char|结婚 vs 结束|Both use 结 (to tie). 婚 = marriage. 束 = to bind up, so 结束 = to wrap it up, to end.
+389,390,391|char|关系 vs 关心 vs 关于|All start with 关. 系 = connection (a relationship). 心 = heart (to care). 于 = at (about, concerning).
+502,107|char|生气 vs 天气|Both end in 气 (air). 生气 = the air you generate = anger. 天气 = the air of the sky = weather.
+569,19|char|影响 vs 电影|Both use 影 (shadow). 电影 = electric shadow = film. 影响 = shadow + echo = influence.
+590,592,553,555|char|重要 vs 主要 vs 需要 vs 要求|All contain 要. 重要 = heavy → important. 主要 = main. 需要 = to need. 要求 = to demand.
+593,280,523,465,576|char|注意 / 意思 / 同意 / 满意 / 愿意|All contain 意 (idea). 注意 = pour your attention. 意思 = meaning. 同意 = same idea = agree. 满意 = full idea = satisfied. 愿意 = wish + idea = willing.
+594,348|meaning|着急 vs 担心|着急 = anxious about time, right now. 担心 = worried about someone or something, over a longer period.
+595,297|char|自己 vs 自行车|Both start with 自 (self). 己 = self. 行车 = a going vehicle → the bicycle you power yourself.
+598,374|char|最近 vs 附近|Both use 近 (near). 最近 = nearest in TIME = recently. 附近 = nearby in SPACE.
+599,600,33|char|作业 vs 作用 vs 工作|All use 作 (to do). 业 = task → homework. 用 = use → effect. 工 = labour → work.
+198,310,538|char|教室 vs 办公室 vs 洗手间|室 = a room for a purpose. 间 = a space between walls. Both are rooms; 室 sounds more institutional.
+586,245,175,538|char|中间 / 时间 / 房间 / 洗手间|All use 间 (a gap between two things). Middle, a gap of time, a gap in a house, the washing room.
+581,582,583|char|照顾 vs 照片 vs 照相机|All start with 照 (to shine). 顾 = to look after. 片 = a flat slice = photo. 相机 = image machine = camera.
+522,386,246|char|同事 vs 故事 vs 事情|All contain 事 (matter). 同事 = same-matter person = colleague. 故事 = old matters = a story.
+132,508|sound|衣服 vs 舒服|Both end in 服 fu. 衣服 = clothes. 舒服 = comfortable. 服 originally means "to wear / to submit to".
+376,305|sound|干净 vs 安静|jìng vs jìng — same sound, different characters. 净 = clean (water radical). 静 = quiet.
+119,294|grammar|现在 vs 正在|现在 is a TIME WORD (now). 正在 is an ADVERB placed before a verb (他正在吃饭 = he is eating right now).
+120,275,553,576|grammar|想 vs 要 vs 需要 vs 愿意|想 = would like to. 要 = want / must (stronger). 需要 = need. 愿意 = willing to.
+52,82|opposite|来 vs 去|来 = toward the speaker. 去 = away from the speaker. The speaker's position decides, not the map.
+579,149|meaning|站 vs 坐|站 = to stand (and a bus stop). 坐 = to sit (and to travel by vehicle: 坐飞机).
+518,31|char|提高 vs 高兴|Both contain 高. 提高 = to lift up = to improve. 高兴 = high spirits = happy.
+443,323|char|客人 vs 别人|客 = guest. 别 = other. 别人 also means "somebody else" in general.
+588,143|char|终于 vs 中国|终 (end) and 中 (middle) look and sound close: zhōng both. 终于 = at last; 中 = middle.
+6,96|meaning|本 vs 书|书 is the book itself (a noun). 本 is how you COUNT books (一本书).
+151,306|char|吧 vs 把|吧 has the mouth 口 — it is a spoken particle. 把 has the hand 扌 — it grabs the object.

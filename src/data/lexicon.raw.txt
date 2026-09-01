@@ -1,0 +1,71 @@
+# Supplementary lexicon: multi-character words that appear in the PDF example
+# sentences but are not themselves HSK-3 headwords. Used only to group syllables
+# and to pick the right reading for polyphonic characters.
+今年|jīnnián
+明年|míngnián
+你们|nǐmen
+他们|tāmen
+她们|tāmen
+它们|tāmen
+但是|dànshì
+虽然|suīrán
+因为|yīnwèi
+所以|suǒyǐ
+而且|érqiě
+不但|búdàn
+这里|zhèli
+那里|nàli
+哪里|nǎli
+这儿|zhèr
+那儿|nàr
+春天|chūntiān
+夏天|xiàtiān
+秋天|qiūtiān
+冬天|dōngtiān
+起来|qǐlái
+下面|xiàmiàn
+上面|shàngmiàn
+里面|lǐmiàn
+外面|wàimiàn
+只有|zhǐyǒu
+有点儿|yǒudiǎnr
+开车|kāichē
+回家|huíjiā
+每天|měitiān
+一些|yìxiē
+处理|chǔlǐ
+内容|nèiróng
+详细|xiángxì
+散步|sànbù
+生活|shēnghuó
+计划|jìhuà
+安排|ānpái
+文章|wénzhāng
+流泪|liúlèi
+接着|jiēzhe
+收到|shōudào
+中国人|Zhōngguórén
+教师|jiàoshī
+一样|yíyàng
+北京人|Běijīngrén
+李明|Lǐ Míng
+小明|Xiǎo Míng
+小王|Xiǎo Wáng
+李华|Lǐ Huá
+李老师|Lǐ lǎoshī
+王老师|Wáng lǎoshī
+李医生|Lǐ yīshēng
+王医生|Wáng yīshēng
+张先生|Zhāng xiānsheng
+王先生|Wáng xiānsheng
+我姓张|wǒ xìng Zhāng
+上海|Shànghǎi
+春节|Chūnjié
+点儿|diǎnr
+块儿|kuàir
+事儿|shìr
+画儿|huàr
+玩儿|wánr
+女孩儿|nǚháir
+大概|dàgài
+难怪|nánguài

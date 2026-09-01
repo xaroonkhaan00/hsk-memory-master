@@ -1,0 +1,600 @@
+1|emotion|home|A giant red heart says "AYE!" like a sailor swearing loyalty — ài, the loudest yes your heart can shout.
+2|number|classroom|Two fat "8"s stacked into a snowman shout "BAH!" like sheep — eight woolly sheep in a row.
+3|family|home|Dad drops his coffee twice: "BAH-bah!" Two identical grumpy syllables, two identical slippers by the door.
+4|home|kitchen|A cup made of a BAY horse's hoof — "BAY-dzuh" — sits on the kitchen shelf, full of hot tea.
+5|places|street|A giant BAY of BEIJING duck lands in the north (北 north + 京 capital) — the northern capital.
+6|grammar|classroom|Every BEN in the library carries one book on his head: 本 is the counter that stamps books.
+7|communication|shop|"BOO! KUH-chee!" – you sneeze at the shopkeeper, he says don't be polite (不 not + 客气 politeness).
+8|grammar|classroom|A ghost yells "BOO!" and everything vanishes — 不 is the great eraser: not, no, don't.
+9|food|restaurant|A cat's eye ("TSAI") stares up from your plate of green vegetables — the dish is watching you.
+10|food|restaurant|A cup of CHAI tea — 茶 is literally the tea plant with a person under grass.
+11|action|restaurant|You "CHURR" like a cricket while eating: 口 mouth on the left, food going in.
+12|transport|street|A CHOO-DZOO-CHUH train-taxi: 出 go out + 租 rent + 车 vehicle = the vehicle you rent to go out.
+13|communication|home|"DAH! DYEN-HWAH!" you HIT (打) the electric speech (电话) — Chinese phones get punched, not dialled.
+14|adjective|home|"DAH!" a huge man spreads his arms wide — 大 is a person stretched as big as possible.
+15|grammar|classroom|A tiny "DUH" hook that clips owner to thing: 我的书 = me-hook-book.
+16|time|home|A DYEN clock face where every hour is one glowing dot — 点 is the dot, the o'clock, the little bit.
+17|tech|office|"DYEN-NOW" — electric (电) brain (脑) plugged into the desk, humming.
+18|tech|home|"DYEN-SHIRR" — electric (电) looking (视): the box that looks back at you.
+19|entertainment|home|"DYEN-YING" — electric (电) shadow (影) dancing on a wall: the movie.
+20|abstract|shop|"DONG-shee" — east (东) + west (西): grab everything from east to west and you have stuff.
+21|grammar|classroom|"DOE!" — a whole tray of dough, every single one, all of them.
+22|action|classroom|"DOO!" you read aloud so loudly the words fall out: 读 = speech radical + selling your voice.
+23|communication|street|"DWAY-boo-CHEE" — you cannot (不) face (对) someone, so you bow: I'm sorry.
+24|adjective|shop|"DWOR!" — one field of grain piled on another (夕+夕): more and more and more.
+25|question|shop|"DWOR-shao" — many (多) + few (少) side by side: the question is how many?
+26|family|home|"ARR-dzuh" — your son the little pirate: 儿 child + 子 son-suffix.
+27|number|classroom|Two flat lines "ARR" — two chopsticks laid side by side.
+28|restaurant|restaurant|"FAHN-DYEN" — rice (饭) shop (店): the place where rice is sold, a restaurant.
+29|transport|airport|"FAY-JEE" — a fairy (飞 fly) machine (机) taking off from the runway.
+30|time|classroom|"FUN-JONG" — a divided (分) clock (钟): the minute is a slice of the clock.
+31|emotion|home|"GOW-SHING" — high (高) mood (兴): your happiness rises like a tower.
+32|grammar|shop|"GUH" — the universal counter. When you don't know the measure word, 个 saves you.
+33|work|office|"GONG-DZWOR" — labour (工) + doing (作): the work you do.
+34|school|classroom|"HAHN-YU" — Han (汉) language (语): what Chinese people call their own tongue.
+35|adjective|home|"HOW" — a woman (女) with a child (子) beside her: that is good.
+36|dates|classroom|"HOW!" — you shout the date on the calendar; 号 is number and day-of-month.
+37|action|restaurant|"HUH" — a mouth (口) drinking, saying "huh" after a big gulp of water.
+38|connector|classroom|"HUH" — grain (禾) plus mouth (口): everyone eats together, so 和 means and.
+39|adverb|classroom|"HUN" — a Hun warrior is VERY strong. 很 sits before every adjective in Chinese.
+40|direction|street|"HOE-MYEN" — behind (后) face (面): the side of things you can't see.
+41|action|street|"HWAY" — a spiral drawn on the ground; you walk the spiral and come back.
+42|grammar|classroom|"HWAY" — you can do it because you learned it: 会 is skill-can, not permission-can.
+43|question|classroom|"JEE?" — a tiny hand holding up a few fingers: how many?
+44|family|home|"JYAH" — a pig (豕) under a roof (宀): where the pig lives is home.
+45|communication|street|"JYOW!" — a mouth (口) shouting your name across the street.
+46|dates|home|"JIN-TYEN" — now (今) day (天): today.
+47|number|classroom|"JYOH" — a hook shape like a 9 curling round.
+48|action|home|"KYE!" — two hands throwing a door open wide.
+49|action|home|"KAHN" — a hand (手) shading the eye (目): looking into the distance.
+50|action|street|"KAHN-JYEN" — look (看) + perceive (见): looking succeeded, so you saw it.
+51|money|shop|"KWY" — a lump of clay, a lump of money: the everyday word for yuan.
+52|action|street|"LYE" — someone walking towards you down a lane.
+53|people|classroom|"LOW-SHIRR" — venerable (老) master (师): the teacher.
+54|grammar|classroom|"LUH" — a tiny full stop that means: done, changed, finished.
+55|weather|street|"LUNG" — two ice drops (冫) on the left: your lungs hurt in the cold.
+56|direction|home|"LEE" — inside the village, inside the box, inside everything.
+57|number|classroom|"LING" — a raindrop falling into nothing: zero.
+58|number|classroom|"LYOH" — a little roof with two legs: six.
+59|family|home|"MAH-mah" — you call for Ma twice; 女 woman + 马 horse (the sound).
+60|grammar|classroom|"MAH?" — a mouth (口) plus horse (马): the little sound that turns a statement into a question.
+61|shopping|shop|"MY!" — you point and shout "MY!" — that is buying. Note 买 has no cross on top.
+62|communication|street|"MAY-GWAHN-shee" — no (没) connection (关系): it doesn't matter.
+63|grammar|classroom|"MAY-YOH" — the not (没) that kills 有: don't have.
+64|food|restaurant|"MEE-FAHN" — rice grain (米) + cooked meal (饭): a bowl of white rice.
+65|dates|home|"MING-TYEN" — bright (明) day (天): the day that is going to light up next.
+66|people|classroom|"MING-dzuh" — name (名) + character (字): the characters of your name.
+67|question|shop|"NAH?" — a mouth (口) plus that (那): which one?
+68|question|street|"NAR?" — mouth (口) + that + -er: where?
+69|direction|street|"NAH" — you point far away: that, there, over yonder.
+70|grammar|classroom|"NUH?" — mouth (口) + a soft nudge: "and you?"
+71|grammar|classroom|"NUNG" — a bear-strong body: 能 is physical ability and possibility.
+72|people|home|"KNEE" — you point at someone's knee to say: you.
+73|time|classroom|"NYEN" — a grain harvest; one harvest is one year.
+74|family|home|"NU-ARR" — woman (女) child (儿): daughter.
+75|people|street|"PUNG-yo" — two moons (月月) side by side: friends stick together.
+76|adjective|home|"PYOW-lyang" — bleached (漂) bright (亮): pretty.
+77|food|kitchen|"PING-GWOR" — the ping of an apple falling and the guo (fruit 果) on the tree.
+78|number|classroom|"CHEE" — like a 7 with a hook: seven.
+79|money|shop|"CHYEN" — metal (钅) on the left: money is metal.
+80|direction|street|"CHYEN-MYEN" — front (前) face (面): what's ahead.
+81|communication|restaurant|"CHING" — speech (讠) + blue-clear (青): please, said politely.
+82|action|street|"CHYU" — a person walking away over the earth: to go.
+83|weather|street|"RUH" — four fire dots (灬) underneath: hot.
+84|people|street|"RUN" — two legs walking: the simplest picture of a person.
+85|communication|classroom|"RUN-SHIRR" — to recognise (认) and know (识) a person's face.
+86|number|classroom|"SAHN" — three flat lines: three.
+87|shopping|shop|"SHAHNG-DYEN" — commerce (商) shop (店).
+88|direction|classroom|"SHAHNG" — a line above the base line: up, on, previous.
+89|time|classroom|"SHAHNG-WU" — up (上) noon (午): before noon, the morning.
+90|adjective|shop|"SHAO" — a few small strokes: few, little.
+91|question|street|"SHAY?" — speech (讠) asking: who?
+92|question|classroom|"SHUN-muh" — 什 what + 么 the question tail: what?
+93|number|classroom|"SHIRR" — a perfect cross: ten.
+94|time|classroom|"SHIRR-hoe" — time (时) + waiting (候): the moment when.
+95|grammar|classroom|"SHIRR" — sun (日) on top of correct (正): it is so.
+96|school|classroom|"SHOE" — a hand holding a brush writing a book.
+97|nature|kitchen|"SHWAY" — a river with splashes on both sides.
+98|food|shop|"SHWAY-GWOR" — water (水) fruit (果): juicy fruit.
+99|daily|bedroom|"SHWAY-JYOW" — sleep (睡) + the sleep-sense (觉): eyes drop, you're gone.
+100|communication|classroom|"SHWOR" — speech radical (讠) plus a mouth exchanging words.
+101|communication|street|"SHWOR-HWAH" — say (说) words (话): to talk.
+102|number|classroom|"SUH" — a box with legs inside: four.
+103|time|home|"SWAY" — mountain (山) over a step: each year of age is one step up.
+104|people|home|"TAH" — person (亻) + also (也): he.
+105|people|home|"TAH" — woman (女) + also (也): she. Same sound, different left side.
+106|adverb|home|"TIE" — 大 big with an extra dot: too big, extremely.
+107|weather|street|"TYEN-CHEE" — sky (天) air (气): weather.
+108|school|classroom|"TONG-SHYU-EH" — same (同) study (学): classmate.
+109|action|classroom|"TING" — an ear (耳) on the left doing the work.
+110|communication|home|"WAY?" — mouth (口) shouting into a phone: hello?
+111|people|home|"WOR" — a hand holding a spear, claiming: me, mine.
+112|people|classroom|"WOR-men" — me (我) + the people-plural (们): us.
+113|number|classroom|"WU" — a criss-cross between two lines: five.
+114|emotion|home|"SHEE-hwan" — joy (喜) + merry (欢): to like.
+115|direction|classroom|"SHYAH" — a line below the base line: down, next, below.
+116|time|classroom|"SHYAH-WU" — down (下) noon (午): afternoon.
+117|weather|street|"SHYAH-YU" — falling (下) rain (雨): the 雨 character is literally raindrops in a window.
+118|people|street|"SHYEN-shung" — first (先) born (生): the respectful Mr.
+119|time|classroom|"SHYEN-DZAI" — appearing (现) at (在): right now.
+120|action|home|"SHYAHNG" — tree (木) + eye (目) + heart (心): your heart looking at something it wants.
+121|adjective|home|"SHYOW" — one stroke split by two tiny wings: something shrinking to nothing.
+122|people|restaurant|"SHYOW-JYEH" — little (小) sister (姐): Miss, said to a young woman.
+123|grammar|shop|"SHYEH" — a handful of loose things scattered on the counter: some.
+124|action|classroom|"SHYEH" — a roof (宀) over a moving hand: writing under shelter.
+125|communication|street|"SHYEH-shyeh" — you say thanks twice, bowing twice: 谢谢.
+126|dates|classroom|"SHING-CHEE" — star (星) period (期): a week is one turn of the stars.
+127|school|classroom|"SHYU-EH-shung" — study (学) + born (生): one born to study.
+128|school|classroom|"SHYU-EH-SHEE" — study (学) + practise (习): learning is study plus repetition.
+129|school|classroom|"SHYU-EH-SHYOW" — study (学) + school building (校).
+130|number|classroom|"EE" — a single flat line. The very first stroke you ever draw.
+131|grammar|shop|"EE-DYEN-ARR" — one (一) dot (点) with a little -r: just a little bit.
+132|clothing|bedroom|"EE-foo" — garment (衣) + what you put on (服): clothes.
+133|health|hospital|"EE-SHUNG" — medicine (医) + born/live (生): the one who keeps you alive.
+134|health|hospital|"EE-YU-AN" — medicine (医) + courtyard (院): the medicine courtyard.
+135|home|home|"EE-dzuh" — wood (木) on the left, a thing you sit on: a chair.
+136|grammar|home|"YO" — a hand holding a piece of meat (月): if it's in your hand, you have it.
+137|dates|classroom|"YU-EH" — the moon (月) drawn as a crescent: one moon is one month.
+138|communication|street|"DZAI-JYEN" — again (再) see (见): see you again.
+139|grammar|home|"DZAI" — earth (土) at the bottom: to be located somewhere.
+140|question|classroom|"DZUN-muh" — 怎 with a heart (心) below: how does your heart do it?
+141|question|street|"DZUN-muh-YAHNG" — how (怎么) + kind (样): how about it?
+142|direction|home|"JUH" — a walking radical (辶) pointing at your feet: this, here.
+143|places|street|"JONG-GWOR" — middle (中) kingdom (国): China.
+144|time|restaurant|"JONG-WU" — middle (中) noon (午): midday.
+145|action|home|"JOO" — person (亻) + master (主): the person who owns the place lives there.
+146|home|kitchen|"JWOR-dzuh" — wood (木) with a table top: a desk.
+147|school|classroom|"DZUH" — a child (子) under a roof (宀): a written character, born in a house.
+148|dates|home|"DZWOR-TYEN" — sun (日) plus 乍: the day that just was.
+149|action|restaurant|"DZWOR" — two people (人人) on the earth (土): both sitting.
+150|action|kitchen|"DZWOR" — person (亻) + old (故 shortened): people making things.
+151|grammar|classroom|"BAH" — mouth (口) + 巴: a soft nudge — let's, shall we?
+152|adjective|home|"BYE" — a sun (日) with one ray on top: white light.
+153|number|shop|"BY" — one (一) over white (白): one hundred.
+154|action|street|"BAHNG-JOO" — help (帮) + assist (助): two helping hands.
+155|communication|home|"BOW-JIRR" — report (报) + paper (纸): the newspaper.
+156|grammar|classroom|"BEE" — two identical spoons side by side: comparing A with B.
+157|grammar|street|"BYEH" — a knife (刂) cutting things apart: don't!
+158|adjective|street|"CHAHNG" — a picture of long flowing hair: long. Same character means 'grow' as zhǎng.
+159|entertainment|home|"CHAHNG-GUH" — sing (唱) song (歌): two mouths (口口) in 唱.
+160|action|street|"CHOO" — a foot stepping out of a cave, twice: going out.
+161|clothing|bedroom|"CHWAN" — a cave (穴) with teeth (牙): you push your body through the hole in the clothes.
+162|grammar|classroom|"TSUH" — ice (冫) + lack: counting repeated times.
+163|grammar|street|"TSONG" — two people (从) walking one behind the other: from here to there.
+164|adjective|classroom|"TSWOR" — metal (钅) plus 昔: a wrong casting, an error.
+165|sport|park|"DAH-LAHN-CHYOH" — hit (打) basket (篮) ball (球).
+166|people|classroom|"DAH-JYAH" — big (大) family (家): everyone.
+167|action|street|"DOW" — arriving at a knife-sharp destination: to reach.
+168|grammar|classroom|"DUH" — the 得 that links a verb to how well you do it: 说得好.
+169|action|busstop|"DUNG" — bamboo (竹) on top: waiting in a bamboo queue.
+170|family|home|"DEE-dee" — a bow wound with string: the little brother tied below.
+171|number|classroom|"DEE-EE" — the ordinal 第 (bamboo tag) + one: number one.
+172|action|classroom|"DONG" — heart (忄) plus 董: when your heart gets it, you understand.
+173|adjective|classroom|"DWAY" — two hands measuring against each other: correct.
+174|grammar|classroom|"DWAY" — the same 对 aimed at someone: toward, to.
+175|home|home|"FAHNG-JYEN" — house (房) + space between (间): a room.
+176|adverb|classroom|"FAY-CHAHNG" — not (非) ordinary (常): extraordinarily, very.
+177|work|restaurant|"FOO-WU-YU-AN" — serve (服) duty (务) member (员): waiter.
+178|adjective|street|"GOW" — a picture of a tall tower with a roof: high.
+179|communication|home|"GOW-soo" — announce (告) + tell (诉): to tell.
+180|family|home|"GUH-guh" — two mouths (可可) stacked: big brother talking twice.
+181|action|shop|"GAY" — silk thread (纟) handed over: to give.
+182|transport|busstop|"GONG-GONG-CHEE-CHUH" — public (公共) steam (汽) vehicle (车): the bus.
+183|work|office|"GONG-SUH" — public (公) manager (司): a company.
+184|animal|park|"GO" — a dog radical (犭) on the left: 狗.
+185|shopping|shop|"GWAY" — a shell (贝) at the bottom: shells were money, so it is expensive.
+186|grammar|classroom|"GWOR" — walking (辶) past something: the marker for "have experienced".
+187|adverb|home|"HIGH" — walking (辶) back: still, yet, also.
+188|family|home|"HIGH-dzuh" — child (孩) + child-suffix (子).
+189|food|restaurant|"HOW-CHIRR" — good (好) to eat (吃): delicious.
+190|adjective|street|"HAY" — four fire dots (灬) under a chimney: soot black.
+191|adjective|street|"HONG" — silk (纟) plus work (工): dyed red thread.
+192|communication|restaurant|"HWAHN-YING" — joy (欢) + to greet (迎): welcome.
+193|communication|classroom|"HWAY-DAH" — return (回) + answer (答): to answer back.
+194|transport|street|"HWOR-CHUH-JAHN" — fire (火) vehicle (车) station (站): the steam-train station.
+195|transport|airport|"JEE-CHAHNG" — machine (机) field (场): where the flying machines park.
+196|food|kitchen|"JEE-DAHN" — chicken (鸡) egg (蛋).
+197|grammar|shop|"JYEN" — person (亻) + cow (牛): the counter for clothes and matters.
+198|school|classroom|"JYOW-SHIRR" — teach (教) room (室): the classroom.
+199|family|home|"JYEH-jyeh" — woman (女) + 且: your elder sister, twice.
+200|communication|office|"JYEH-SHAO" — to bring in (介) and continue (绍): to introduce.
+201|action|home|"JIN" — walking (辶) forward into a doorway: to enter.
+202|direction|street|"JIN" — walking (辶) a short distance: near.
+203|adverb|classroom|"JYOH" — the 就 that snaps things together: then, at once.
+204|emotion|home|"JYU-EH-duh" — the sense (觉) + the degree marker (得): to feel, to think.
+205|food|restaurant|"KAH-FAY" — the two 口 mouths in 咖啡 drink it: coffee.
+206|action|classroom|"KYE-SHIRR" — open (开) + begin (始): to start.
+207|school|classroom|"KOW-SHIRR" — to examine (考) + test (试): the exam.
+208|grammar|classroom|"KUH-NUNG" — can (可) + able (能): maybe, possible.
+209|grammar|classroom|"KUH-EE" — can (可) + use (以): permission-can, allowed.
+210|school|classroom|"KUH" — speech (讠) plus fruit (果): the lesson bears fruit.
+211|adjective|street|"KWY" — heart (忄) racing: fast.
+212|emotion|park|"KWY-LUH" — fast (快) + joy (乐): happy.
+213|body|bedroom|"LAY" — a field (田) over silk (糸): dragging a heavy field, you are tired.
+214|grammar|busstop|"LEE" — the distance separating two things: away from.
+215|number|shop|"LYAHNG" — two things hanging inside one frame: the counting two.
+216|places|street|"LOO" — foot (足) on the left: the road your feet take.
+217|travel|airport|"LU-YO" — travel (旅) + roam (游).
+218|shopping|shop|"MY" — 买 buy with a cross ⼗ on top: the extra stroke pushes goods OUT.
+219|adjective|street|"MAHN" — heart (忄) on the left: your heart is slow.
+220|adjective|office|"MAHNG" — heart (忄) + death (亡): so busy your heart dies.
+221|animal|home|"MAO" — dog radical (犭) plus 苗: the animal that says "mao".
+222|grammar|home|"MAY" — a mother shape: every, each.
+223|family|home|"MAY-may" — woman (女) + not-yet (未): the sister not yet grown.
+224|home|home|"MUN" — a picture of two swinging doors: 门.
+225|people|street|"NAHN" — field (田) plus strength (力): the one who works the field.
+226|people|office|"NEEN" — you (你) with a heart (心) underneath: polite you.
+227|food|kitchen|"NYOH-NIGH" — cow (牛) milk (奶).
+228|people|street|"NU" — a woman kneeling, arms crossed: 女.
+229|direction|classroom|"PAHNG-BYEN" — side (旁) + edge (边): beside.
+230|sport|park|"POW-BOO" — run (跑) + step (步): jogging.
+231|shopping|shop|"PYEN-yee" — convenient (便) + suitable (宜): cheap.
+232|travel|busstop|"PYOW" — a ticket that flies away in the wind if you don't hold it.
+233|family|home|"CHEE-dzuh" — the wife (妻) + suffix (子).
+234|daily|bedroom|"CHEE-CHWAHNG" — rise (起) from bed (床).
+235|number|shop|"CHYEN" — a tiny stroke over ten (十): a thousand.
+236|school|classroom|"CHYEN-BEE" — lead (铅) + pen (笔): the pencil.
+237|weather|street|"CHING" — sun (日) plus blue-green (青): a clear sky.
+238|dates|classroom|"CHYU-NYEN" — gone (去) year (年): last year.
+239|grammar|home|"RAHNG" — speech (讠) stepping aside: to let, to allow.
+240|dates|classroom|"RIRR" — a box with a line inside: the sun, a day.
+241|work|office|"SHAHNG-BAHN" — go up (上) to your shift (班): start work.
+242|body|hospital|"SHUN-TEE" — body (身) + form (体).
+243|health|hospital|"SHUNG-BING" — to develop (生) illness (病): to fall ill.
+244|dates|home|"SHUNG-RIRR" — born (生) day (日): birthday.
+245|time|classroom|"SHIRR-JYEN" — time (时) + interval (间).
+246|abstract|office|"SHIRR-ching" — affair (事) + feeling (情): a matter.
+247|clothing|bedroom|"SHOH-BYOW" — hand (手) + watch/dial (表).
+248|tech|street|"SHOH-JEE" — hand (手) machine (机): the mobile phone.
+249|action|street|"SONG" — walking (辶) while carrying: to give or see off.
+250|connector|classroom|"SWAY-RAHN…DAHN-SHIRR" — although…but…: Chinese keeps BOTH halves.
+251|people|park|"TAH" — a roof (宀) over a curl: it, the animal or thing.
+252|sport|park|"TEE-DZOO-CHYOH" — kick (踢) foot (足) ball (球).
+253|school|classroom|"TEE" — page (页) on the right: the question on the page.
+254|entertainment|park|"TYOW-WU" — jump (跳) dance (舞).
+255|direction|street|"WHY" — evening (夕) plus divination (卜): outside.
+256|grammar|home|"WAN" — a roof (宀) plus first (元): completely done.
+257|action|park|"WAN" — jade (王) plus 元: playing with a jade toy.
+258|time|home|"WAHN-shahng" — evening (晚) + up (上): in the evening.
+259|question|classroom|"WAY-SHUN-muh" — for (为) what (什么): why?
+260|communication|classroom|"WUN" — a mouth (口) inside a gate (门): asking at the door.
+261|school|classroom|"WUN-TEE" — question (问) + topic (题): a problem.
+262|food|kitchen|"SHEE-GWAH" — west (西) melon (瓜): the watermelon.
+263|emotion|park|"SHEE-WAHNG" — rare (希) + to look out (望): to hope.
+264|daily|bathroom|"SHEE" — water (氵) on the left: to wash.
+265|time|classroom|"SHYOW-SHIRR" — small (小) time (时): one hour.
+266|emotion|park|"SHYOW" — bamboo (竹) over a bending person: laughing until you bend.
+267|adjective|shop|"SHIN" — an axe (斤) on the right: freshly cut, new.
+268|people|office|"SHING" — woman (女) + born (生): the family name comes from the mother's line.
+269|daily|park|"SHYOH-shee" — a person (亻) resting against a tree (木): to rest.
+270|weather|street|"SHYU-EH" — rain (雨) over a hand: snow you can hold.
+271|adjective|shop|"YEN-SUH" — face (颜) + colour (色).
+272|body|hospital|"YEN-jing" — eye (眼) + eyeball (睛): both have the 目 eye radical.
+273|food|restaurant|"YAHNG-ROH" — sheep (羊) meat (肉): mutton.
+274|health|hospital|"YOW" — grass (艹) on top: medicine came from plants.
+275|grammar|shop|"YOW" — the 要 that demands: to want, must.
+276|adverb|classroom|"YEH" — a simple hook: also, too.
+277|grammar|home|"EE-SHYAH" — one (一) down (下): just once, briefly.
+278|adverb|park|"EE-CHEE" — one (一) rising (起): together.
+279|adverb|classroom|"EE-JING" — already (已) passed through (经).
+280|abstract|classroom|"EE-suh" — meaning (意) + thought (思): both contain 心 heart.
+281|connector|classroom|"YIN-WAY…SWOR-EE" — because…so…: Chinese keeps BOTH halves.
+282|weather|street|"YIN" — the hill radical (阝) blocking the sun: overcast.
+283|sport|park|"YO-YONG" — swim (游) + swim (泳): both have the water radical 氵.
+284|direction|street|"YO-byen" — right (右) side (边).
+285|animal|kitchen|"YU" — a picture of a fish standing on its tail: 鱼.
+286|direction|street|"YU-AN" — walking (辶) a long way: far.
+287|sport|park|"YUN-DONG" — to transport (运) + to move (动): exercise.
+288|adverb|classroom|"DZAI" — one more line added on top: again.
+289|time|bedroom|"DZAO-shahng" — early (早) + up (上): the morning.
+290|family|home|"JAHNG-foo" — an elder (丈) man (夫): the husband.
+291|action|home|"JAO" — a hand (扌) sweeping around: to look for.
+292|grammar|classroom|"JUH" — the marker glued onto a verb: the action is continuing.
+293|adverb|classroom|"JUN" — ten (十) eyes (目) confirming: really true.
+294|grammar|classroom|"JUNG-DZAI" — just (正) at (在): right in the middle of doing it.
+295|action|classroom|"JIRR-DAO" — to know (知) the way (道).
+296|action|office|"JWUN-BAY" — accurate (准) + equipment (备): to prepare.
+297|transport|street|"DZUH-SHING-CHUH" — self (自) going (行) vehicle (车): the bicycle.
+298|action|street|"DZOH" — two feet in motion: to walk.
+299|adverb|shop|"DZWAY" — the superlative cap: the most.
+300|direction|street|"DZWOR-byen" — left (左) side (边).
+301|family|home|"AH-YEE" — the 阿 prefix Chinese families put before kin names + 姨 mother's sister: auntie.
+302|grammar|home|"AH!" — mouth (口) plus 阿: the sound of surprise falling out of you.
+303|adjective|classroom|"EYE!" — an arrow (矢) that never grew tall: short in height. Opposite of 高.
+304|abstract|park|"EYE-HOW" — love (爱) + good (好): the thing you love doing, your hobby.
+305|adjective|classroom|"AHN-JING" — safe (安) + still (静): a woman under a roof, perfectly quiet.
+306|grammar|kitchen|"BAH" — a hand (扌) grabbing the object and shoving it before the verb: 把书放在桌子上。
+307|school|classroom|"BAHN" — jade (王王) split by a knife (刂): the group cut out of the whole.
+308|action|home|"BAHN" — a hand (扌) plus 般: hands carrying furniture out of the flat.
+309|abstract|office|"BAHN-FAH" — to handle (办) + method (法): the way to get it done.
+310|work|office|"BAHN-GONG-SHIRR" — handle (办) public (公) room (室): the office.
+311|number|kitchen|"BAHN" — 八 eight split down the middle by a knife: half.
+312|action|street|"BAHNG-MAHNG" — help (帮) with the busy-ness (忙): to lend a hand.
+313|home|shop|"BAO" — a wrapping stroke curling around a body: a bag holds everything.
+314|food|restaurant|"BAO" — food radical (饣) plus 包: your stomach is a full bag.
+315|direction|street|"BAY-FAHNG" — north (北) direction (方).
+316|grammar|classroom|"BAY" — clothes radical (衤) + 皮: the passive marker. 我被雨淋了。
+317|body|bathroom|"BEE-dzuh" — the character 鼻 is a nose drawn above a field: 鼻子.
+318|grammar|shop|"BEE-JYOW" — compare (比) + compare (较): fairly, comparatively.
+319|sport|park|"BEE-SIGH" — compare (比) + match (赛): the competition.
+320|school|classroom|"BEE-JEE-BEN" — pen (笔) note (记) book (本): the notebook.
+321|grammar|classroom|"BEE-SHYU" — must (必) + need (须): no escape.
+322|abstract|classroom|"BYEN-HWAH" — to change (变) + to transform (化).
+323|people|street|"BYEH-run" — other (别) person (人).
+324|travel|street|"BIN-GWAHN" — guest (宾) building (馆): a hotel.
+325|home|kitchen|"BING-SHYAHNG" — ice (冰) box (箱): the fridge.
+326|connector|classroom|"BOO-DAHN…ARR-CHYEH" — not only… but also…: keep BOTH halves in the sentence.
+327|adverb|classroom|"TSAI" — the 才 that means 'only then, later than expected': 他八点才来。
+328|restaurant|restaurant|"TSAI-DAHN" — dish (菜) list (单): the menu.
+329|action|office|"TSAHN-JYAH" — to participate (参) + to add (加): to join in.
+330|nature|park|"TSAO" — the grass radical (艹) doubled: grass everywhere.
+331|grammar|home|"TSUNG" — the counter for floors and layers: 我住三层。
+332|adjective|classroom|"CHAH" — sheep (羊) plus a slip: falling short, poor quality.
+333|adjective|street|"CHAHNG" — long flowing hair again. (Same character as #158; the PDF lists it twice.)
+334|shopping|shop|"CHAO-SHIRR" — super (超) market (市).
+335|clothing|shop|"CHUN-SHAHN" — both have the clothing radical (衤): the shirt.
+336|school|classroom|"CHUNG-JEE" — to accomplish (成) + achievement (绩): your score.
+337|places|street|"CHUNG-SHIRR" — city wall (城) + market (市).
+338|time|classroom|"CHIRR-DOW" — late (迟) + arrive (到): to arrive late.
+339|action|street|"CHOO-SHYEN" — come out (出) + appear (现).
+340|grammar|classroom|"CHOO-luh" — to remove (除) + the 了: everything except.
+341|transport|street|"CHWAHN" — a boat radical (舟) on the left: a ship.
+342|dates|park|"CHWUN" — the sun (日) under sprouting grass: spring.
+343|school|classroom|"TSUH-DYEN" — word (词) + standard book (典): the dictionary.
+344|adjective|classroom|"TSONG-ming" — sharp ears (聪 has 耳) + bright (明): clever.
+345|daily|home|"DAH-SAO" — hit (打) + sweep (扫): to clean up.
+346|abstract|office|"DAH-SWAN" — to hit (打) + calculate (算): to plan.
+347|action|street|"DIE" — a belt with things hanging from it: to carry, to bring.
+348|emotion|home|"DAHN-SHIN" — to carry (担) your heart (心) around: to worry.
+349|food|kitchen|"DAHN-GAO" — egg (蛋) cake (糕).
+350|adverb|classroom|"DAHNG-RAHN" — to be so (当) + like that (然): of course.
+351|home|home|"DUNG" — fire (火) plus 丁: the lamp.
+352|grammar|classroom|"DUH" — the 地 that hooks an adverb onto a verb: 慢慢地走。
+353|places|street|"DEE-fahng" — earth (地) + direction (方): a place.
+354|transport|street|"DEE-TYEH" — earth (地) iron (铁): the underground iron road.
+355|travel|street|"DEE-TOO" — earth (地) picture (图): the map.
+356|home|office|"DYEN-TEE" — electric (电) ladder (梯): the lift.
+357|tech|office|"DYEN-DZUH-YO-JYEN" — electric (电子) mail (邮件).
+358|direction|street|"DONG" — the sun rising behind a tree: east.
+359|dates|street|"DONG" — two ice drops (冫) at the bottom: winter.
+360|places|park|"DONG-WU-YU-AN" — moving (动) things (物) garden (园): the zoo.
+361|adjective|classroom|"DWAN" — an arrow (矢) that fell short: short in length.
+362|grammar|classroom|"DWAN" — the counter for paragraphs, stretches of time and road.
+363|sport|park|"DWAN-LYEN" — to forge (锻) + to temper (炼): both metal radicals — you forge your body.
+364|question|classroom|"DWOR-muh" — many (多) + the question tail (么): how (big, beautiful)!
+365|body|kitchen|"UH" — the food radical (饣) plus 我: your stomach growls "uhh".
+366|body|hospital|"ARR-dwor" — ear (耳) + a flower/lobe (朵): the ear.
+367|communication|office|"FAH" — to send out, to emit, to issue.
+368|health|hospital|"FAH-SHAO" — to emit (发) burning (烧): to run a fever.
+369|action|street|"FAH-SHYEN" — to emit (发) + to appear (现): to discover.
+370|adjective|street|"FAHNG-byen" — direction (方) + convenient (便).
+371|action|kitchen|"FAHNG" — to put down, to release, to let go.
+372|emotion|home|"FAHNG-SHIN" — to put down (放) your heart (心): stop worrying.
+373|number|classroom|"FUN" — the eight (八) split by a knife (刀): the minute, the mark, the cent.
+374|direction|street|"FOO-JIN" — attached (附) + near (近): the neighbourhood.
+375|school|classroom|"FOO-SHEE" — again (复) + practise (习): to revise.
+376|adjective|bathroom|"GAHN-JING" — dry (干) + clean (净).
+377|health|hospital|"GAHN-MAO" — to feel (感) + to emit (冒): a cold.
+378|emotion|classroom|"GAHN-SHING-CHYU" — to feel (感) interest (兴趣). Use it as 对…感兴趣.
+379|time|classroom|"GAHNG-TSAI" — just (刚) + only then (才): a moment ago.
+380|body|classroom|"GUH-dzuh" — the 个 measure word + 子: how tall you measure.
+381|grammar|office|"GUN-JYU" — root (根) + evidence (据): according to.
+382|grammar|street|"GUN" — a foot (足) on the left: to follow, with.
+383|adverb|classroom|"GUNG" — one more line added: even more.
+384|number|shop|"GONG-JIN" — public (公) jin (斤): the metric kilogram.
+385|places|park|"GONG-YU-AN" — public (公) garden (园).
+386|entertainment|classroom|"GOO-shirr" — old (故) matters (事): a story.
+387|weather|street|"GWAH-FUNG" — to scrape (刮) wind (风): the wind blows.
+388|action|classroom|"GWAHN" — a gate with a bolt across: to close, to switch off.
+389|abstract|office|"GWAHN-shee" — to shut (关) + connection (系): a relationship.
+390|emotion|home|"GWAHN-SHIN" — to close (关) around a heart (心): to care.
+391|grammar|classroom|"GWAHN-YU" — concerning (关) at (于): about.
+392|places|classroom|"GWOR-JYAH" — country (国) + family (家).
+393|action|home|"GWOR" — the same 过 as the experience marker, here meaning to live or spend time.
+394|time|classroom|"GWOR-CHYU" — passed (过) + gone (去): the past.
+395|connector|classroom|"HIGH-shirr" — still (还) + is (是): or / had better.
+396|emotion|street|"HIGH-PAH" — harm (害) + fear (怕): the heart radical (忄) is shaking.
+397|travel|airport|"HAHNG-BAHN" — sailing (航) + scheduled run (班): the flight number.
+398|school|classroom|"HAY-BAHN" — black (黑) board (板).
+399|time|classroom|"HOE-LYE" — behind (后) + come (来): later on.
+400|travel|airport|"HOO-JAO" — to protect (护) + a photo/permit (照): the passport.
+401|money|shop|"HWAH" — to spend money — the same character as flower, money petals blowing away.
+402|nature|park|"HWAH" — grass (艹) on top of 化: a flower.
+403|entertainment|classroom|"HWAH" — a field (田) framed by strokes: drawing lines.
+404|adjective|street|"HWY" — earth (土) plus 不: bad, broken, spoiled.
+405|action|shop|"HWAHN" — the same 还 as "still", now read huán: to give back.
+406|abstract|park|"HWAHN-JING" — ring (环) + border (境): your surroundings.
+407|shopping|shop|"HWAHN" — a hand (扌) swapping things: to change.
+408|places|park|"HWAHNG-HUH" — yellow (黄) river (河): China's Yellow River.
+409|work|office|"HWAY-EE" — to meet (会) + to discuss (议).
+410|connector|classroom|"HWOR-JUH" — or (或) + one-who (者). Use 或者 in statements, 还是 in questions.
+411|adverb|classroom|"JEE-HOO" — a few (几) + a doubting particle (乎): nearly.
+412|abstract|office|"JEE-HWAY" — machine (机) + meeting (会): an opportunity.
+413|adverb|classroom|"JEE" — a wooden pole (木) at the pole of the world: extremely.
+414|action|classroom|"JEE-duh" — to record (记) + the 得: it stayed recorded, you remember.
+415|dates|park|"JEE-JYEH" — season (季) + segment (节).
+416|health|hospital|"JYEN-CHAH" — to inspect (检) + to examine (查).
+417|adjective|classroom|"JYEN-DAHN" — brief (简) + single (单): simple.
+418|action|street|"JYEN-MYEN" — to see (见) a face (面): to meet.
+419|health|hospital|"JYEN-KAHNG" — strong (健) + well (康).
+420|communication|classroom|"JYAHNG" — speech (讠) plus 井-like strokes: to explain.
+421|travel|airport|"JYAHNG-LWOR" — to descend (降) + to fall (落): the plane lands.
+422|money|shop|"JYOW" — a horn (角): the 10-cent coin, one tenth of a yuan.
+423|body|hospital|"JYOW" — the flesh radical (月) plus 却: your foot.
+424|school|classroom|"JYOW" — the same 教 as in 教室, read jiāo when it means to teach.
+425|action|airport|"JYEH" — a hand (扌) reaching out: to receive, to meet someone.
+426|places|street|"JYEH-DOW" — street (街) + road (道).
+427|entertainment|home|"JYEH-MOO" — section (节) + item (目): a TV programme.
+428|dates|home|"JYEH-RIRR" — festival (节) day (日).
+429|abstract|home|"JYEH-HWUN" — to tie (结) + marriage (婚): to get married.
+430|action|classroom|"JYEH-SHOO" — to tie (结) + to bind (束): to wrap it up, to end.
+431|action|office|"JYEH-JYU-EH" — to untie (解) + to decide (决): to solve.
+432|action|classroom|"JYEH" — a person (亻) plus 昔: 借 covers BOTH borrow and lend — the direction comes from 给/向.
+433|adverb|classroom|"JING-CHAHNG" — passing through (经) + constantly (常): often.
+434|action|busstop|"JING-GWOR" — to pass through (经) + to pass (过).
+435|work|office|"JING-LEE" — to manage (经) + to order (理): the manager.
+436|time|classroom|"JYOH" — a stroke leaning on time: a long time.
+437|adjective|shop|"JYOH" — the sun (日) under a shelter for years: old and worn. Use 旧 for things, 老 for people.
+438|school|classroom|"JYU-dzuh" — sentence (句) + suffix (子).
+439|action|office|"JYU-EH-DING" — to settle (决) + to fix (定): to decide.
+440|adjective|home|"KUH-EYE" — can (可) + love (爱): loveable, cute.
+441|body|kitchen|"KUH" — water radical (氵) plus 曷: your body wants water.
+442|time|classroom|"KUH" — a knife (刂) carving the clock into quarters: 15 minutes.
+443|people|home|"KUH-run" — guest (客) person (人).
+444|home|home|"KONG-TYOW" — air (空) + to adjust (调): air conditioning.
+445|grammar|home|"KOH" — a drawn mouth (口): the measure word for people in a household.
+446|emotion|home|"KOO" — two mouths (口口) over a bent body: crying out loud.
+447|clothing|bedroom|"KOO-dzuh" — clothing radical (衤) + 库: trousers.
+448|home|restaurant|"KWY-dzuh" — bamboo (⺮) on top + 快: two fast bamboo sticks.
+449|adjective|shop|"LAHN" — grass (艹) plus 监: the indigo plant that gives blue dye.
+450|adjective|home|"LAO" — a stooped figure with a stick: old, and the respectful prefix 老师/老板.
+451|action|street|"LEE-KYE" — to separate (离) + to open (开): to leave.
+452|abstract|shop|"LEE-WU" — ceremony (礼) + object (物): a gift.
+453|school|classroom|"LEE-SHIRR" — to experience (历) + record (史): history.
+454|body|bathroom|"LYEN" — the flesh radical (月) plus 佥: your face.
+455|school|classroom|"LYEN-SHEE" — to drill (练) + to practise (习).
+456|grammar|street|"LYAHNG" — the vehicle radical (车) on the left: the counter for cars.
+457|communication|home|"LYOW-TYEN" — to chat (聊) about the sky (天): small talk.
+458|action|classroom|"LYOW-JYEH" — to grasp (了) + to untie (解): to understand deeply. Note 了 is read liǎo here, not le.
+459|people|street|"LIN-JYU" — neighbouring (邻) + to reside (居).
+460|school|university|"LYOH-SHYU-EH" — to stay (留) + to study (学): studying abroad.
+461|places|street|"LOH" — wood (木) plus 娄: a multi-storey building.
+462|adjective|park|"LU (pursed lips)" — silk (纟) plus 录: green dyed thread.
+463|animal|park|"MAH" — a picture of a horse with a flying mane and four dot legs (灬).
+464|adverb|street|"MAH-SHAHNG" — on (上) a horse (马): immediately, because horses are fast.
+465|emotion|restaurant|"MAHN-EE" — full (满) + intention (意): satisfied.
+466|clothing|shop|"MAO-dzuh" — a cloth radical (巾) plus 冒: the hat.
+467|number|shop|"MEE" — the same 米 as rice: also the metre.
+468|food|kitchen|"MYEN-BAO" — flour (面) + wrapped (包): bread.
+469|food|restaurant|"MYEN-TYOW" — flour (面) + long strips (条): noodles.
+470|action|classroom|"MING-buy" — bright (明) + white (白): when it's bright and white, you understand.
+471|action|kitchen|"NAH" — a hand (手) under 合: two hands closing on something.
+472|family|home|"NIGH-nigh" — milk (奶) said twice: father's mother.
+473|direction|street|"NAHN" — the character 南 like a bell tower facing south.
+474|adjective|classroom|"NAHN" — a bird (隹) that is hard to catch: difficult.
+475|emotion|home|"NAHN-GWOR" — hard (难) + to pass (过): a hard time to get through, so, sad.
+476|school|classroom|"NYEN-JEE" — year (年) + level (级): the school grade.
+477|adjective|street|"NYEN-CHING" — years (年) that are light (轻): young.
+478|animal|park|"NYOW" — a picture of a bird with an eye and four dot claws (灬).
+479|abstract|classroom|"NOO-LEE" — to exert (努) + strength (力): hard-working.
+480|sport|park|"PAH-SHAHN" — to climb (爬) a mountain (山).
+481|home|kitchen|"PAHN-dzuh" — a plate; 盘 has a dish (皿) at the bottom.
+482|adjective|home|"PAHNG" — flesh (月) plus 半: fat. Opposite of 瘦.
+483|clothing|shop|"PEE-SHYEH" — leather (皮) shoe (鞋).
+484|food|restaurant|"PEE-JYOH" — the 啤 that only exists for beer + alcohol (酒).
+485|communication|classroom|"POO-TONG-HWAH" — common (普通) speech (话): standard Mandarin.
+486|adverb|classroom|"CHEE-SHIRR" — its (其) reality (实): actually.
+487|grammar|classroom|"CHEE-TAH" — its (其) other (他): the rest.
+488|adjective|street|"CHEE-GWY" — strange (奇) + strange (怪): odd.
+489|transport|street|"CHEE" — the horse radical (马) on the left: you ride astride.
+490|travel|airport|"CHEE-FAY" — to rise (起) + to fly (飞): take-off.
+491|adjective|classroom|"CHING-choo" — clear (清) + distinct (楚).
+492|dates|park|"CHYOH" — grain (禾) plus fire (火): the harvest burns gold.
+493|clothing|shop|"CHYUN-dzuh" — clothing radical (衤) plus 君: the skirt.
+494|connector|classroom|"RAHN-HOE" — like that (然) + after (后): then.
+495|adjective|restaurant|"RUH-CHING" — hot (热) + feeling (情): warm-hearted, enthusiastic.
+496|action|office|"RUN-WAY" — to recognise (认) + to be (为): to hold an opinion.
+497|adjective|classroom|"RUN-JUN" — to recognise (认) + true (真): serious, conscientious.
+498|adjective|classroom|"RONG-EE" — to allow (容) + easy (易).
+499|connector|classroom|"ROO-GWOR" — as (如) + result (果): if.
+500|home|street|"SAHN" — the character 伞 IS a picture of an open umbrella with people sheltering under it.
+501|tech|office|"SHAHNG-WAHNG" — to get on (上) the net (网).
+502|emotion|home|"SHUNG-CHEE" — to generate (生) air/anger (气): to get angry.
+503|abstract|home|"SHUNG-YIN" — sound (声) + tone (音).
+504|places|classroom|"SHIRR-JYEH" — generation (世) + boundary (界): the world.
+505|action|shop|"SHIRR" — speech (讠) plus 式: to try, to test.
+506|adjective|home|"SHOH" — the sickness radical (疒) around 叟: thin. Opposite of 胖.
+507|family|home|"SHOO-shoo" — 叔 twice: father's younger brother.
+508|adjective|bedroom|"SHOO-foo" — to stretch out (舒) + comfortable clothes (服): comfortable.
+509|nature|park|"SHOO" — wood (木) on the left: a tree.
+510|school|classroom|"SHOO-SHYU-EH" — number (数) study (学): maths.
+511|daily|bathroom|"SHWAH-YAH" — to brush (刷) teeth (牙).
+512|grammar|shop|"SHWAHNG" — two 又 hands under one roof: a pair.
+513|abstract|classroom|"SHWAY-PING" — water (水) level (平): your standard or ability.
+514|work|street|"SUH-JEE" — to manage (司) the machine (机): the driver.
+515|nature|park|"TIE-YAHNG" — the great (太) yang (阳): the Sun.
+516|adverb|shop|"TUH-BYEH" — special (特) + separate (别): particularly.
+517|body|hospital|"TUNG" — the sickness radical (疒) plus 冬: it aches.
+518|action|classroom|"TEE-GOW" — to lift (提) + high (高): to improve.
+519|sport|park|"TEE-YU" — body (体) + to raise (育): physical education.
+520|adjective|kitchen|"TYEN" — a tongue (舌) plus sweet strokes: sweet.
+521|grammar|restaurant|"TYOW" — the counter for long thin things: fish, roads, trousers, rivers.
+522|work|office|"TONG-SHIRR" — same (同) work (事): a colleague.
+523|action|office|"TONG-EE" — same (同) idea (意): to agree.
+524|body|bathroom|"TOE-fah" — head (头) + what grows out (发): hair.
+525|adverb|street|"TOO-RAHN" — sudden (突) + like that (然): abruptly.
+526|places|university|"TOO-SHOO-GWAHN" — picture (图) book (书) building (馆): the library.
+527|body|hospital|"TWAY" — flesh (月) plus 退: your leg.
+528|action|office|"WAN-CHUNG" — to finish (完) + to become (成): to complete.
+529|home|kitchen|"WAHN" — stone (石) plus 宛: a bowl.
+530|number|shop|"WAHN" — a tiny character for a huge number: ten thousand.
+531|action|classroom|"WAHNG-JEE" — to forget (忘 = lost 亡 heart 心) + to record (记).
+532|grammar|classroom|"WAY" — the 为 that means "for the benefit of": 为你.
+533|grammar|classroom|"WAY-luh" — for (为) + the 了: in order to.
+534|grammar|restaurant|"WAY" — person (亻) plus 立: the polite counter for people.
+535|abstract|classroom|"WUN-HWAH" — writing (文) + transformation (化): culture.
+536|direction|street|"SHEE" — a bird settling in its nest at sunset: west.
+537|abstract|home|"SHEE-GWAHN" — practice (习) + accustomed heart (惯): a habit.
+538|home|bathroom|"SHEE-SHOH-JYEN" — wash (洗) hand (手) room (间): the toilet.
+539|daily|bathroom|"SHEE-DZAO" — to wash (洗) + bath (澡): both have the water radical (氵).
+540|dates|park|"SHYAH" — a figure walking slowly in the heat: summer.
+541|adverb|classroom|"SHYEN" — the same 先 as 先生: first, before.
+542|action|classroom|"SHYAHNG-SHIN" — mutual (相) + trust (信): to believe.
+543|food|kitchen|"SHYAHNG-JYOW" — fragrant (香) + the banana character (蕉).
+544|grammar|street|"SHYAHNG" — an arrow of direction: towards.
+545|grammar|home|"SHYAHNG" — person (亻) plus 象 elephant: to resemble.
+546|adverb|street|"SHYOW-SHIN" — small (小) heart (心): keep your heart small and careful.
+547|school|university|"SHYOW-JAHNG" — school (校) + elder (长, read zhǎng): the principal.
+548|communication|home|"SHIN-WUN" — new (新) + heard (闻): the news.
+549|adjective|shop|"SHIN-SHYEN" — new (新) + fresh (鲜, fish 鱼 + sheep 羊).
+550|money|shop|"SHIN-YONG-KAH" — trust (信用) card (卡): the credit card.
+551|travel|airport|"SHING-lee-SHYAHNG" — luggage (行李) box (箱): the suitcase.
+552|animal|park|"SHYONG-MAO" — bear (熊) cat (猫): the panda.
+553|grammar|shop|"SHYU-YAO" — to need (需) + to want (要).
+554|action|shop|"SHYU-AN-DZUH" — to choose (选) + to pick (择).
+555|communication|office|"YAO-CHYOH" — to demand (要) + to seek (求): a requirement.
+556|family|home|"YEH-yeh" — 爷 twice: father's father.
+557|adverb|classroom|"EE-DING" — one (一) fixed (定): definitely.
+558|adverb|shop|"EE-GONG" — one (一) total (共): altogether.
+559|time|home|"EE-HWAY-ARR" — one (一) meeting (会) + -r: a short while.
+560|grammar|shop|"EE-YAHNG" — one (一) kind (样): the same.
+561|adverb|classroom|"EE-BAHN" — one (一) sort (般): generally, ordinary.
+562|connector|classroom|"EE-BYEN" — one (一) side (边). Doubled: 一边…一边… = doing two things at once.
+563|adverb|street|"EE-JIRR" — one (一) straight (直): continuously, all the way.
+564|time|classroom|"EE-CHYEN" — using (以) the front (前): before, ago.
+565|entertainment|home|"YIN-YU-EH" — sound (音) + 乐 read yuè: music.
+566|money|street|"YIN-HAHNG" — silver (银) + 行 read háng (a line of business): the bank.
+567|food|shop|"YIN-LYOW" — to drink (饮) + material (料): a beverage.
+568|grammar|classroom|"YING-GUY" — ought (应) + should (该).
+569|abstract|classroom|"YING-SHYAHNG" — shadow (影) + echo (响): influence.
+570|action|office|"YONG" — a simple grid: to use.
+571|entertainment|home|"YO-SHEE" — to roam (游) + drama (戏): a game.
+572|adjective|street|"YO-MING" — to have (有) a name (名): famous.
+573|adverb|classroom|"YO" — a hand drawn simply: again. Use 又 for the past, 再 for the future.
+574|action|street|"YU-DOW" — to encounter (遇) + to arrive (到): to run into someone.
+575|money|shop|"YU-AN" — the formal written yuan; 块 is what people say out loud.
+576|emotion|home|"YU-AN-EE" — a wish (愿) + intention (意): willing.
+577|nature|park|"YU-EH-lyang" — moon (月) + bright (亮).
+578|grammar|classroom|"YU-EH" — the 越…越… frame: the more X, the more Y.
+579|action|busstop|"JAHN" — to stand up (立) plus 占: standing, and the place where buses stand.
+580|grammar|home|"JAHNG" — the bow (弓) that opens: the counter for flat things — paper, beds, tables.
+581|action|hospital|"JAO-GOO" — to shine on (照) + to look after (顾): to care for.
+582|home|home|"JAO-PYEN" — to shine (照) + a flat slice (片): a photo.
+583|tech|street|"JAO-SHYAHNG-JEE" — to shine (照) image (相) machine (机): the camera.
+584|grammar|park|"JIRR" — read zhī: the counter for animals, birds, one of a pair.
+585|adverb|classroom|"JIRR" — same character 只, read zhǐ: only, merely.
+586|direction|classroom|"JONG-JYEN" — middle (中) + interval (间).
+587|school|classroom|"JONG-WUN" — middle-kingdom (中) writing (文): written Chinese.
+588|adverb|classroom|"JONG-YU" — the end (终) at (于): finally.
+589|grammar|shop|"JONG" — grain (禾) plus 中: a seed, hence a kind or type.
+590|adjective|office|"JONG-YAO" — heavy (重) + wanted (要): important.
+591|dates|home|"JOE-MWOR" — week (周) + end (末).
+592|adjective|office|"JOO-YAO" — main (主) + wanted (要).
+593|action|street|"JOO-EE" — to concentrate (注) + intention (意): to pay attention.
+594|emotion|street|"JAO-JEE" — 着 read zháo + urgent (急): to be anxious.
+595|people|home|"DZUH-JEE" — self (自) + self (己): oneself.
+596|adverb|classroom|"DZONG-SHIRR" — always (总) + is (是).
+597|body|bathroom|"DZWAY" — the mouth radical (口) plus 此+角: the mouth.
+598|time|classroom|"DZWAY-JIN" — most (最) near (近): recently.
+599|school|classroom|"DZWOR-YEH" — to do (作) + task (业): homework.
+600|abstract|classroom|"DZWOR-YONG" — to act (作) + to use (用): an effect.
