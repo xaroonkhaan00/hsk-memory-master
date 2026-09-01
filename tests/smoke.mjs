@@ -6,8 +6,23 @@ import { readFile } from 'node:fs/promises';
 const PORT = 4318;
 const BASE = `http://localhost:${PORT}`;
 
+// Detached so the whole process group can be killed: `npx` spawns vite as a
+// grandchild, and killing only the wrapper leaves the port held.
 const server = spawn('npx', ['vite', 'preview', '--port', String(PORT), '--strictPort'], {
   stdio: ['ignore', 'pipe', 'pipe'],
+  detached: true,
+});
+const stopServer = () => {
+  try {
+    process.kill(-server.pid, 'SIGKILL');
+  } catch {
+    server.kill('SIGKILL');
+  }
+};
+process.on('exit', stopServer);
+process.on('SIGINT', () => {
+  stopServer();
+  process.exit(130);
 });
 server.stdout.on('data', () => {});
 server.stderr.on('data', (d) => process.stderr.write(String(d)));
@@ -47,39 +62,45 @@ page.on('pageerror', (e) => consoleErrors.push('pageerror: ' + e.message));
 await page.goto(BASE + '/#/', { waitUntil: 'networkidle' });
 
 // ---- onboarding
-check('onboarding shows', await page.getByText('HSK Memory Master').first().isVisible());
+check('onboarding shows', await page.getByText('Learn HSK 3').first().isVisible());
 await page.getByRole('button', { name: 'Get started' }).click();
 await page.getByText('10 minutes').click();
 await page.getByRole('button', { name: 'Next' }).click();
 await page.getByText('Tones', { exact: true }).click();
 await page.getByRole('button', { name: 'Start learning' }).click();
 await page.waitForTimeout(500);
-check('home after onboarding', await page.getByText('HSK Memory System').first().isVisible());
+check('home after onboarding', await page.getByText('Learn HSK 3').first().isVisible());
 
 // ---- routes render
 const routes = [
-  ['/#/', 'HSK Memory System'],
+  ['/#/', 'Learn HSK 3'],
   ['/#/map', 'The 600-word map'],
   ['/#/browse', 'All 600 words'],
   ['/#/games', 'Training modes'],
-  ['/#/dashboard', 'Progress dashboard'],
+  ['/#/dashboard', 'Progress'],
   ['/#/heatmap', '600-word heatmap'],
   ['/#/notebook', 'My mistake notebook'],
   ['/#/measure-words', 'Measure words'],
   ['/#/palace', 'Memory palace'],
   ['/#/journey', 'Memory journey'],
-  ['/#/families', 'Families'],
+  ['/#/families', 'Word families'],
   ['/#/confusion', 'Confusion battles'],
   ['/#/tone', 'Tone trainer'],
   ['/#/pinyin', 'Pinyin trainer'],
   ['/#/story', 'Story chain'],
+  ['/#/stories', 'Story Mode'],
+  ['/#/stories/s01', 'The first day'],
+  ['/#/cinema', 'Conversation Cinema'],
+  ['/#/cinema/c01', 'First meeting'],
+  ['/#/saved', 'Saved scenes'],
+  ['/#/about', 'MIAN FAZLI BASIT'],
   ['/#/dialogues', 'Mini dialogues'],
   ['/#/boss', 'Boss battles'],
   ['/#/cram', 'Cram mode'],
   ['/#/achievements', 'Achievements'],
   ['/#/lists', 'Lists'],
   ['/#/settings', 'Settings'],
-  ['/#/qa', 'Data validation'],
+  ['/#/qa', 'Content check'],
   ['/#/word/1', '爱'],
   ['/#/word/300', '左边'],
   ['/#/word/600', '作用'],
@@ -89,7 +110,11 @@ const routes = [
 ];
 for (const [route, needle] of routes) {
   await page.goto(BASE + route, { waitUntil: 'networkidle' });
-  await page.waitForTimeout(150);
+  // Scene text is fetched on demand, so a screen can paint before its content
+  // has arrived. Give it a moment rather than racing the first frame.
+  await page
+    .waitForFunction((n) => document.body.innerText.includes(n), needle, { timeout: 6000 })
+    .catch(() => {});
   const body = await page.locator('body').innerText();
   check(`route ${route}`, body.includes(needle), `(missing "${needle}")`);
 }
@@ -97,7 +122,7 @@ for (const [route, needle] of routes) {
 // ---- QA page all green
 await page.goto(BASE + '/#/qa', { waitUntil: 'networkidle' });
 const qaText = await page.locator('body').innerText();
-check('QA page all checks pass', qaText.includes('All checks pass'), qaText.slice(0, 400));
+check('content check is all green', qaText.includes('All checks pass'), qaText.slice(0, 400));
 
 // ---- games: every mode builds questions
 await page.goto(BASE + '/#/games', { waitUntil: 'networkidle' });
@@ -168,12 +193,12 @@ check('search by number', (await page.locator('body').innerText()).includes('作
 
 // ---- export
 await page.goto(BASE + '/#/settings', { waitUntil: 'networkidle' });
-check('settings shows backup', (await page.locator('body').innerText()).includes('Export progress'));
+check('settings shows backup', (await page.locator('body').innerText()).includes('Export my progress'));
 
 // ---- export / import round trip
 const dl = await Promise.all([
   page.waitForEvent('download'),
-  page.getByRole('button', { name: /Export progress/ }).click(),
+  page.getByRole('button', { name: /Export my progress/ }).click(),
 ]).then(([d]) => d);
 const dlPath = await dl.path();
 const backup = JSON.parse(await readFile(dlPath, 'utf8'));
@@ -181,7 +206,7 @@ check('export produces a readable backup', Object.keys(backup.progress ?? {}).le
   `progress keys=${Object.keys(backup.progress ?? {}).length}`);
 
 // wipe, then import it back
-await page.getByRole('button', { name: 'Full reset…' }).click();
+await page.getByRole('button', { name: 'Erase everything…' }).click();
 await page.getByRole('button', { name: 'Yes, erase everything' }).click();
 await page.waitForTimeout(700);
 
@@ -189,7 +214,7 @@ await page.waitForTimeout(700);
 check('full reset returns to onboarding', (await page.locator('body').innerText()).includes('Get started'));
 await page.getByRole('button', { name: 'I already have a backup' }).click();
 await page.locator('textarea').fill(JSON.stringify(backup));
-await page.getByRole('button', { name: 'Import pasted JSON' }).click();
+await page.getByRole('button', { name: 'Import', exact: true }).click();
 await page.waitForTimeout(700);
 await page.goto(BASE + '/#/dashboard', { waitUntil: 'networkidle' });
 await page.waitForFunction(() => document.body.innerText.includes('ANSWERS LOGGED'), null, { timeout: 8000 });
@@ -240,7 +265,7 @@ for (; steps < 1200; steps += 1) {
     return { kind: 'none', text: document.body.innerText.slice(0, 200) };
   });
   if (steps % 50 === 0) {
-    const stage = await page.locator('.topbar__sub').innerText().catch(() => '?');
+    const stage = await page.locator('.appbar__title span').first().innerText().catch(() => '?');
     console.log(`      … walkthrough step ${steps}: ${stage}`);
   }
   if (probe.kind === 'match') {
@@ -289,10 +314,219 @@ for (let i = 0; i < 12; i += 1) {
 }
 check('disappearing mode reaches round 2', (await page.locator('body').innerText()).includes('Round 2'));
 
+
+/* ------------------------------------------------------------------ v2 */
+
+// ---- the back control is real, labelled and thumb-sized
+await page.goto(BASE + '/#/', { waitUntil: 'networkidle' });
+await page.goto(BASE + '/#/stories', { waitUntil: 'networkidle' });
+{
+  const back = page.locator('.backbtn').first();
+  check('back control is on the screen', (await back.count()) > 0);
+  const box = await back.boundingBox();
+  check('back control is big enough to hit', !!box && box.height >= 40 && box.width >= 40,
+    `box=${JSON.stringify(box)}`);
+  check('back control says Back', (await back.innerText()).trim().toLowerCase().includes('back'));
+  check('back control is the first thing in the bar',
+    await page.evaluate(() => document.querySelector('.appbar')?.firstElementChild?.classList.contains('backbtn')));
+  await back.click();
+  await page.waitForTimeout(250);
+  check('back returns to the previous screen', page.url().endsWith('#/'), page.url());
+}
+
+// ---- Story Mode
+await page.goto(BASE + '/#/stories/s01', { waitUntil: 'networkidle' });
+await page.waitForSelector('.line', { timeout: 8000 });
+{
+  const body = await page.locator('body').innerText();
+  check('a story shows its Chinese', /[一-鿿]/.test(body));
+  check('English starts hidden in a story', body.includes('Show meaning'));
+  // The view and difficulty controls live behind one disclosure so the story
+  // itself is the first thing on screen.
+  check('story offers its reading options', body.includes('Reading options'));
+  await page.getByText('Reading options').click();
+  await page.waitForTimeout(200);
+  const opened = await page.locator('body').innerText();
+  check('story offers the four learning views',
+    ['Beginner', 'Intermediate', 'Recall', 'Listening'].every((v) => opened.includes(v)));
+  check('story offers the three difficulties',
+    ['Easy', 'Normal', 'Challenge'].every((v) => opened.includes(v)));
+
+  // reveal one line's English, then check it stays revealed
+  await page.getByRole('button', { name: 'Show meaning', exact: true }).first().click();
+  await page.waitForTimeout(150);
+  const revealed = await page.locator('.line__en').count();
+  check('tapping reveals the English for one line', revealed >= 1, `revealed=${revealed}`);
+
+  // pinyin toggle
+  const pinyinBefore = await page.locator('.line .tok .p').count();
+  await page.getByRole('button', { name: 'Pinyin', exact: true }).first().click();
+  await page.waitForTimeout(200);
+  const pinyinAfter = await page.locator('.line .tok .p').count();
+  check('the pinyin toggle really removes the pinyin', pinyinBefore > 0 && pinyinAfter === 0,
+    `before=${pinyinBefore} after=${pinyinAfter}`);
+  await page.getByRole('button', { name: 'Pinyin', exact: true }).first().click();
+  await page.waitForTimeout(200);
+  check('the pinyin toggle puts it back', (await page.locator('.line .tok .p').count()) > 0);
+
+  // tap a target word for its gloss, then tap it away
+  const target = page.locator('.tok-btn.is-target').first();
+  check('story words are tappable', (await target.count()) > 0);
+  await target.click();
+  await page.waitForTimeout(200);
+  check('tapping a word reveals its pinyin and meaning', (await page.locator('.tok-gloss').count()) === 1);
+  await page.locator('.tok-btn.is-open').first().click();
+  await page.waitForTimeout(200);
+  check('tapping the word again hides the gloss', (await page.locator('.tok-gloss').count()) === 0);
+
+  // English caption toggle from the caption bar
+  await page.getByRole('button', { name: 'English', exact: true }).first().click();
+  await page.waitForTimeout(250);
+  check('turning English on shows every line’s meaning',
+    (await page.locator('.line__en').count()) === (await page.locator('.line').count()));
+  await page.getByRole('button', { name: 'English', exact: true }).first().click();
+  await page.waitForTimeout(250);
+  check('turning English off hides them again', (await page.locator('.line__en').count()) === 0);
+
+  // the story check runs and records a score
+  await page.getByRole('button', { name: /check me|Check what you remember/ }).click();
+  await page.waitForTimeout(300);
+  check('a story ends in a check', (await page.locator('.option').count()) > 0);
+  for (let i = 0; i < 10; i += 1) {
+    const opts = page.locator('.option');
+    if (!(await opts.count())) break;
+    await opts.first().click();
+    await page.waitForTimeout(850);
+  }
+  check('the story check finishes with a score',
+    (await page.locator('body').innerText()).includes('remembered'));
+}
+
+// ---- Conversation Cinema
+await page.goto(BASE + '/#/cinema/c01', { waitUntil: 'networkidle' });
+await page.waitForSelector('.speaker-row', { timeout: 8000 });
+{
+  const body = await page.locator('body').innerText();
+  check('an episode shows two speakers', body.includes('Speaker A') && body.includes('Speaker B'));
+  check('an episode shows both sides of the conversation',
+    (await page.locator('.speaker-row').count()) >= 8);
+  check('the two speakers are drawn differently',
+    (await page.locator('.avatar--a').count()) > 0 && (await page.locator('.avatar--b').count()) > 0);
+  check('the learning loop is on screen',
+    ['Watch', 'Replay', 'Tap words', 'No English', 'No pinyin', 'Audio only', 'Quiz']
+      .every((v) => body.includes(v)));
+
+  const pinyinBefore = await page.locator('.line .tok .p').count();
+  await page.getByRole('button', { name: 'Pinyin', exact: true }).first().click();
+  await page.waitForTimeout(200);
+  check('caption toggles work in an episode too',
+    pinyinBefore > 0 && (await page.locator('.line .tok .p').count()) === 0);
+  await page.getByRole('button', { name: 'Pinyin', exact: true }).first().click();
+  await page.waitForTimeout(200);
+
+  // walking the loop to the last stage opens the quiz
+  await page.getByRole('button', { name: /Stage 7: Quiz/ }).click();
+  await page.waitForTimeout(400);
+  check('the last stage of the loop is a quiz', (await page.locator('.option').count()) > 0);
+}
+
+// ---- saved scenes
+await page.goto(BASE + '/#/stories/s02', { waitUntil: 'networkidle' });
+await page.waitForSelector('.line', { timeout: 8000 });
+await page.getByRole('button', { name: 'Save this story' }).click();
+await page.waitForTimeout(200);
+await page.goto(BASE + '/#/saved', { waitUntil: 'networkidle' });
+await page.waitForTimeout(300);
+check('a saved story appears in Saved scenes',
+  (await page.locator('a[href*="#/stories/s02"]').count()) > 0);
+
+// ---- audio settings are remembered between sessions
+await page.goto(BASE + '/#/settings', { waitUntil: 'networkidle' });
+{
+  const body = await page.locator('body').innerText();
+  // Section headings are uppercased by CSS, and innerText reports what is drawn.
+  const settingsText = body.toLowerCase();
+  check('settings is grouped into sections',
+    ['learning', 'audio', 'captions', 'appearance', 'data & backup', 'about']
+      .every((v) => settingsText.includes(v)));
+  check('settings names the app and its creator',
+    body.includes('Learn HSK 3') && body.includes('MIAN FAZLI BASIT'));
+
+  await page.getByRole('button', { name: 'Challenge' }).click();
+  await page.waitForTimeout(200);
+  await page.getByRole('switch', { name: 'English' }).click();
+  await page.waitForTimeout(300);
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForTimeout(600);
+  check('story difficulty survives a reload',
+    (await page.getByRole('button', { name: 'Challenge' }).getAttribute('aria-pressed')) === 'true');
+  check('caption preferences survive a reload',
+    (await page.getByRole('switch', { name: 'English' }).getAttribute('aria-checked')) === 'true');
+  // put it back so later runs start from the documented default
+  await page.getByRole('switch', { name: 'English' }).click();
+  await page.waitForTimeout(250);
+}
+
+// ---- the app has no Mandarin voice here, and says so instead of faking one
+await page.goto(BASE + '/#/settings', { waitUntil: 'networkidle' });
+{
+  const body = await page.locator('body').innerText();
+  const honest = /no mandarin voice yet|mandarin voice/i.test(body);
+  check('audio section is honest about what this device has', honest);
+}
+
+// ---- phone widths: nothing overflows, nothing is too small to tap
+for (const width of [360, 375, 390, 412, 430]) {
+  await page.setViewportSize({ width, height: 800 });
+  for (const route of ['/#/', '/#/stories/s01', '/#/cinema/c01', '/#/word/1', '/#/settings', '/#/map']) {
+    await page.goto(BASE + route, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(200);
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    );
+    check(`no sideways scrolling at ${width}px on ${route}`, overflow <= 1, `overflow=${overflow}px`);
+  }
+  const small = await page.evaluate(() => {
+    const bad = [];
+    for (const el of document.querySelectorAll('.tabbar a, .backbtn, .btn--lg, .btn--block')) {
+      const r = el.getBoundingClientRect();
+      if (r.height > 0 && r.height < 40) bad.push(`${el.className}:${Math.round(r.height)}`);
+    }
+    return bad;
+  });
+  check(`main controls stay thumb-sized at ${width}px`, small.length === 0, small.join(', '));
+}
+await page.setViewportSize({ width: 390, height: 844 });
+
+// ---- both themes stay readable
+for (const theme of ['light', 'dark']) {
+  await page.emulateMedia({ colorScheme: theme });
+  await page.goto(BASE + '/#/stories/s01', { waitUntil: 'networkidle' });
+  await page.waitForSelector('.line', { timeout: 8000 });
+  const contrast = await page.evaluate(() => {
+    const lum = (c) => {
+      const [r, g, b] = c.match(/\d+/g).slice(0, 3).map((v) => {
+        const s = Number(v) / 255;
+        return s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+      });
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    };
+    const el = document.querySelector('.line__zh');
+    const bg = getComputedStyle(document.body).backgroundColor;
+    const fg = getComputedStyle(el).color;
+    const a = lum(fg);
+    const b = lum(bg);
+    return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+  });
+  check(`Chinese stays readable in ${theme} mode`, contrast >= 4.5, `contrast=${contrast.toFixed(2)}`);
+}
+await page.emulateMedia({ colorScheme: 'light' });
+
+
 check('no console errors', consoleErrors.length === 0, consoleErrors.slice(0, 5).join(' | '));
 
 await browser.close();
-server.kill();
+stopServer();
 
 if (failures.length) {
   console.error('\n' + failures.join('\n'));

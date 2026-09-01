@@ -1,15 +1,18 @@
-# HSK Memory Master
+# Learn HSK 3
 
-A local-first Mandarin **memory coach** for the 600 vocabulary items in
+A local-first Mandarin learning app for the 600 vocabulary items in
 *New HSK Level 3 Vocabulary (Chinese–English)*.
 
 Not a flashcard app. The point is to stop 600 isolated facts from behaving like
 600 isolated facts: every word is wired into a character family, a sound family,
 a theme pack, a room in a memory palace, a confusion set and a memory scene —
-and then drilled by a scheduler that learns *how you personally forget*.
+then met again in **40 stories** and **41 conversation episodes**, and drilled by
+a scheduler that learns *how you personally forget*.
 
-Everything runs in your browser. No account, no server, no API key, no network
-calls at runtime.
+Everything runs on the device. No account, no server, no API key, no network
+calls at runtime — on the web or in the Android app.
+
+**Learn HSK 3** carries the monogram **MFB**, for **MIAN FAZLI BASIT**.
 
 ---
 
@@ -30,11 +33,20 @@ npm run preview
 Tests:
 
 ```bash
-npm test           # 37 unit tests: data integrity, SRS, fingerprint, quiz engine
-npm run test:e2e   # headless browser: every screen, every mode, a full Magic 20
-                   # pack through all ten stages, and an export/import round
-                   # trip. Takes a few minutes — it really does click through
-                   # the whole pack.
+npm test           # 62 unit tests: data integrity, story/conversation coverage,
+                   # SRS, fingerprint, quiz engine, branding, storage migration
+npm run test:e2e   # 141 headless-browser checks: every screen, every mode, a
+                   # full Magic 20 pack through all ten stages, Story Mode and
+                   # Conversation Cinema, caption toggles, five phone widths and
+                   # an export/import round trip. Takes a few minutes — it really
+                   # does click through the whole pack.
+```
+
+Android:
+
+```bash
+npm run icons      # regenerate launcher icons and splash screens from the mark
+npm run android    # build + npx cap sync android, then open android/ in Studio
 ```
 
 Requires Node 18+. The browser test additionally needs `npx playwright install chromium`
@@ -82,7 +94,7 @@ Re-running it reproduces the committed `hsk3-source.json` byte for byte.
 
 ### Validation
 
-`/#/qa` in the app shows 23 live checks. Current state:
+`/#/qa` in the app shows 29 live checks. Current state:
 
 ```
 600 words · ids 1–600 complete · 0 duplicates
@@ -92,8 +104,16 @@ Re-running it reproduces the committed `hsk3-source.json` byte for byte.
   34 that appear only inside example sentences)
 275 syllables, all with a distinct sound hook
 31 packs · 73 confusion sets · 42 tone twins · 33 measure words · 20 dialogues
+40 stories covering 600/600 words · 41 conversation episodes covering 600/600
 every word in exactly one pack, one palace room and one theme
 ```
+
+Story and conversation coverage is decided by the **segmenter**, not by
+substring search: a story containing 只有 does not count as having taught 只,
+and a split frame word (虽然……但是……) counts only when both halves appear. The
+build prints `stories 40 covering 600/600 | conversations 41 covering 600/600`
+and `scripts/gaps.py` lists whatever is still missing while content is being
+written.
 
 The only genuine gap in the source is **part of speech for 12 fixed phrases**
 (不客气, 打电话, 对不起, 没关系, 再见, 打篮球, 好吃, 踢足球, 为什么, 感兴趣,
@@ -160,10 +180,29 @@ Never just "wrong". It works out whether you missed the tone but had the
 syllables, confused a known look-alike, picked a word sharing a character, or
 drew a blank — and files it in the Mistake Notebook with the memory hook.
 
+### Story Mode
+40 stories written from the vocabulary list. Chinese with pinyin above each word,
+English hidden until you ask for it, and every target word tappable for its
+pinyin and meaning. Four learning views (Beginner / Intermediate / Recall /
+Listening), three difficulties, sequential audio with the current line lit, and a
+check at the end. Reading a story credits the words you got through *without*
+tapping — as exposure only, never as mastery.
+
+### Conversation Cinema
+41 short episodes played by two illustrated speakers, with the talking one lit
+and captions you can strip one layer at a time: watch → replay → tap words → no
+English → no pinyin → audio only → quiz.
+
 ### Audio
-Browser `SpeechSynthesis` only, at 1× and 0.7×, with repeat-3×. If the device
-has no Mandarin voice the listening modes are **hidden and labelled unavailable**
-rather than played in the wrong language.
+Device `SpeechSynthesis` only. The app **detects** which Mandarin voices are
+actually installed rather than assuming one exists, prefers zh-CN, and never
+claims a voice is male unless the platform's own metadata says so. Settings give
+a voice picker with preview, two speaker voices for Cinema, speed
+(0.65/0.75/0.85/1.0, default 0.85) and 1–3 plays per tap. Everything spoken goes
+through `src/services/audio.ts`, which strips a string to Hanzi before it reaches
+a voice — so pinyin, English and memory sound hooks can never be read aloud. If
+the device has no Mandarin voice, listening is **hidden and labelled**, with
+instructions for installing one, rather than played in the wrong language.
 
 ### Storage
 IndexedDB, with a synchronous localStorage mirror written on page-hide so an
@@ -182,9 +221,15 @@ scripts/extract_pdf.py            PDF  -> src/data/hsk3-source.json   (source la
 scripts/build_data.py             raw  -> src/data/generated/*.json   (merged layer)
 src/data/*.raw.txt                hand-authored enrichment
 src/types/                        shared types
-src/services/                     pinyin, storage, progress/SRS, quiz, session, tts
-src/components/                   QuizRunner and the shared UI kit
-src/pages/                        29 screens
+src/data/stories.raw.txt          40 stories, one per line
+src/data/conversations.raw.txt    41 conversation episodes, one per line
+src/brand/                        the MFB mark, wordmark and line-icon set
+src/services/                     pinyin, storage, progress/SRS, quiz, session,
+                                  tts (voice detection), audio (the one entry
+                                  point for speech), platform (Capacitor bridge)
+src/components/                   QuizRunner, the scene player, the shared UI kit
+src/pages/                        33 screens
+android/                          Capacitor Android project
 tests/                            unit tests + headless browser smoke test
 ```
 

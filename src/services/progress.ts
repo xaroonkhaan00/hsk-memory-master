@@ -1,6 +1,9 @@
 import {
   DIMENSIONS,
   type AppState,
+  type AudioSettings,
+  type CaptionSettings,
+  type SceneProgress,
   type Attempt,
   type Dimension,
   type ErrorKind,
@@ -13,16 +16,44 @@ import { TOTAL, WORDS } from '../data';
 export const MINUTE = 60_000;
 export const DAY = 86_400_000;
 
-export const STATE_VERSION = 1;
+export const STATE_VERSION = 2;
+
+export const DEFAULT_AUDIO: AudioSettings = {
+  voiceId: null,
+  speakerAVoiceId: null,
+  speakerBVoiceId: null,
+  // Slightly slower than natural conversation: easier to follow, still natural.
+  rate: 0.85,
+  repeat: 1,
+  autoWord: true,
+  autoSentence: false,
+  autoStory: true,
+  autoConversation: true,
+};
+
+export const DEFAULT_CAPTIONS: CaptionSettings = {
+  hanzi: true,
+  pinyin: true,
+  // English stays off so the learner reaches for meaning before the translation.
+  english: false,
+  highlightTargets: true,
+};
 
 export const DEFAULT_SETTINGS: Settings = {
   dailyMinutes: 10,
   selfReportedWeakness: 'all',
   theme: 'system',
-  audioRate: 1,
+  audioRate: 0.85,
   onboarded: false,
   showPinyinDefault: true,
+  audio: { ...DEFAULT_AUDIO },
+  captions: { ...DEFAULT_CAPTIONS },
+  storyDifficulty: 'normal',
 };
+
+export function emptyScenes(): SceneProgress {
+  return { completed: [], replays: {}, scores: {}, hiddenEnglish: [], listening: [] };
+}
 
 export function emptyProgress(id: number): WordProgress {
   return {
@@ -46,10 +77,21 @@ export function emptyProgress(id: number): WordProgress {
   };
 }
 
+export function defaultSettings(): Settings {
+  // Nested objects are copied too: a shallow spread would hand every caller the
+  // same audio and caption objects, so one screen's edit would leak into the
+  // defaults a reset restores.
+  return {
+    ...DEFAULT_SETTINGS,
+    audio: { ...DEFAULT_AUDIO },
+    captions: { ...DEFAULT_CAPTIONS },
+  };
+}
+
 export function emptyState(): AppState {
   return {
     version: STATE_VERSION,
-    settings: { ...DEFAULT_SETTINGS },
+    settings: defaultSettings(),
     progress: {},
     attempts: [],
     days: {},
@@ -58,6 +100,9 @@ export function emptyState(): AppState {
     achievements: [],
     customLists: {},
     confusionLosses: {},
+    stories: emptyScenes(),
+    conversations: emptyScenes(),
+    saved: { stories: [], conversations: [], lines: [] },
     createdAt: Date.now(),
   };
 }
@@ -470,4 +515,46 @@ export function dailyNewGoal(state: AppState): number {
   if (acc < 0.75) return Math.max(5, Math.round(base * 0.75));
   if (acc > 0.9) return Math.round(base * 1.2);
   return base;
+}
+
+/**
+ * Bring a state loaded from storage — including a v1 backup that predates
+ * stories, conversations and audio settings — up to the current shape. New
+ * blocks are filled with defaults; nothing the learner earned is discarded.
+ */
+export function migrate(loaded: AppState): AppState {
+  const base = emptyState();
+  const state: AppState = {
+    ...base,
+    ...loaded,
+    version: STATE_VERSION,
+    // A v1 backup has no audio/caption blocks; fill them in rather than
+    // dropping the learner's progress or resetting their preferences.
+    settings: {
+      ...base.settings,
+      ...loaded.settings,
+      audio: { ...DEFAULT_AUDIO, ...(loaded.settings?.audio ?? {}) },
+      captions: { ...DEFAULT_CAPTIONS, ...(loaded.settings?.captions ?? {}) },
+      storyDifficulty: loaded.settings?.storyDifficulty ?? base.settings.storyDifficulty,
+    },
+    stories: { ...emptyScenes(), ...(loaded.stories ?? {}) },
+    conversations: { ...emptyScenes(), ...(loaded.conversations ?? {}) },
+    saved: {
+      stories: loaded.saved?.stories ?? [],
+      conversations: loaded.saved?.conversations ?? [],
+      lines: loaded.saved?.lines ?? [],
+    },
+    progress: loaded.progress ?? {},
+    attempts: loaded.attempts ?? [],
+    days: loaded.days ?? {},
+    packDone: loaded.packDone ?? {},
+    bossScores: loaded.bossScores ?? {},
+    achievements: loaded.achievements ?? [],
+    customLists: loaded.customLists ?? {},
+    confusionLosses: loaded.confusionLosses ?? {},
+  };
+  for (const [id, p] of Object.entries(state.progress)) {
+    state.progress[Number(id)] = { ...emptyProgress(Number(id)), ...(p as WordProgress) };
+  }
+  return state;
 }

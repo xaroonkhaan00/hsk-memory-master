@@ -53,7 +53,7 @@ export default function Palace() {
 
   return (
     <>
-      <TopBar title="Memory palace" sub="Fourteen rooms, 600 words" />
+      <TopBar title="Memory palace" sub="Fourteen rooms, 600 words" back="/" backLabel="Home" />
       <div className="page stack">
         <div className="card">
           <p className="small muted">

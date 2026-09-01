@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react';
 import { useStore } from '../store';
-import { META } from '../data';
+import { CONVERSATION_INDEX, META, STORY_INDEX } from '../data';
 import { useToast } from '../components/ui';
+import { BrandLockup, Credit } from '../brand/Logo';
 import type { Dimension } from '../types';
 
 const TIMES: { value: 5 | 10 | 20 | 30; label: string; blurb: string }[] = [
@@ -42,35 +43,38 @@ export default function Onboarding() {
       {step === 0 && (
         <div className="stack">
           <div className="center stack">
-            <div style={{ fontSize: '3rem' }}>🧠</div>
-            <h1>HSK Memory Master</h1>
+            <BrandLockup size={84} stacked />
             <p className="muted">
-              {META.totalWords} HSK-3 words, extracted from your PDF, turned into character
-              families, sound families, memory scenes and places — then drilled by a coach that
-              learns exactly how you forget.
+              {META.totalWords} words to see, hear and understand — met again in stories and
+              conversations until they stay with you.
             </p>
           </div>
           <div className="card stack--sm stack">
-            <div className="row">
+            <div className="row row--wrap">
               <span className="chip chip--accent">{META.totalWords} words</span>
-              <span className="chip">{META.totalExamples} example sentences</span>
+              <span className="chip">{STORY_INDEX.length} stories</span>
+              <span className="chip">{CONVERSATION_INDEX.length} conversations</span>
             </div>
             <div className="row row--wrap">
+              <span className="chip">{META.totalExamples} example sentences</span>
               <span className="chip">{META.uniqueCharacters} characters</span>
-              <span className="chip">{META.packs} packs</span>
-              <span className="chip">{META.confusionSets} confusion sets</span>
               <span className="chip">{META.measureWords} measure words</span>
             </div>
             <p className="small muted">
-              Everything is stored on this device only. No account, no server, no API key.
+              Everything stays on this device. No account, no sign-in, and it all works offline.
             </p>
           </div>
           <button className="btn btn--primary btn--lg btn--block" onClick={() => setStep(1)}>
             Get started
           </button>
-          <button className="btn btn--ghost btn--block" onClick={() => setRestoring((r) => !r)}>
+          <button
+            className="btn btn--ghost btn--block"
+            type="button"
+            onClick={() => setRestoring((r) => !r)}
+          >
             I already have a backup
           </button>
+          <Credit />
           {restoring && (
             <div className="card stack--sm stack">
               <h3>Restore your progress</h3>
@@ -78,8 +82,8 @@ export default function Onboarding() {
                 Import an export from another device or from before a reset. It replaces whatever is
                 on this device.
               </p>
-              <button className="btn btn--soft" onClick={() => fileRef.current?.click()}>
-                ⬆ Choose a backup file
+              <button className="btn btn--soft" type="button" onClick={() => fileRef.current?.click()}>
+                Choose a backup file
               </button>
               <input
                 ref={fileRef}
@@ -98,14 +102,14 @@ export default function Onboarding() {
               <textarea
                 value={pasted}
                 onChange={(e) => setPasted(e.target.value)}
-                placeholder="…or paste the exported JSON here"
+                placeholder="…or paste the contents of a backup here"
               />
               <button
                 className="btn btn--soft"
                 disabled={!pasted.trim()}
                 onClick={() => restore(pasted)}
               >
-                Import pasted JSON
+                Import
               </button>
             </div>
           )}

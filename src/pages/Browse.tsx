@@ -5,7 +5,7 @@ import { useStore } from '../store';
 import { progressOf } from '../services/progress';
 import { normalisePinyin } from '../services/pinyin';
 import { STATUSES, type Status } from '../types';
-import { Segmented, StatusChip, TopBar } from '../components/ui';
+import { Empty, Segmented, StatusChip, TopBar } from '../components/ui';
 
 type Sort = 'id' | 'pinyin' | 'weakest';
 
@@ -114,9 +114,24 @@ export default function Browse() {
         </div>
 
         {results.length === 0 ? (
-          <div className="card center">
-            <p className="muted">Nothing matches that.</p>
-          </div>
+          <Empty
+            title="No words match that"
+            body="Try fewer filters, or search by the characters, the pinyin, the English meaning or the number."
+            action={
+              <button
+                className="btn btn--soft"
+                type="button"
+                onClick={() => {
+                  setQ('');
+                  setLevel(0);
+                  setStatus('all');
+                  setParams({});
+                }}
+              >
+                Show every word
+              </button>
+            }
+          />
         ) : (
           <div className="card">
             <div className="list">

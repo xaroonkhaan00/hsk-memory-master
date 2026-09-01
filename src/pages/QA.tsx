@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CHAR_HUBS,
@@ -10,10 +10,13 @@ import {
   ROOMS,
   SOUNDS,
   WORDS,
+  loadConversations,
+  loadStories,
   tryWord,
 } from '../data';
 import { useStore } from '../store';
 import { TopBar } from '../components/ui';
+import type { Scene } from '../types';
 
 interface Check {
   label: string;
@@ -23,6 +26,18 @@ interface Check {
 
 export default function QA() {
   const { state } = useStore();
+  // Scene text is loaded on demand everywhere else, so this page fetches it too
+  // rather than forcing it into everyone's first paint.
+  const [scenes, setScenes] = useState<Scene[] | null>(null);
+  useEffect(() => {
+    let live = true;
+    void Promise.all([loadStories(), loadConversations()]).then(([a, b]) => {
+      if (live) setScenes([...a.values(), ...b.values()]);
+    });
+    return () => {
+      live = false;
+    };
+  }, []);
 
   const checks = useMemo<Check[]>(() => {
     const ids = WORDS.map((w) => w.id);
@@ -66,6 +81,20 @@ export default function QA() {
       d.targets.some((id) => !d.lines.some((l) => l.zh.includes(tryWord(id)?.plain ?? '\u0000'))),
     ).map((d) => d.title);
 
+    // Story / conversation coverage is decided by the build's own segmenter and
+    // republished here so the claim can be checked rather than trusted.
+    const loaded: Scene[] = scenes ?? [];
+    const badSceneTargets = loaded.filter((sc) => sc.targets.some((id) => !tryWord(id))).map((sc) => sc.id);
+    const emptySceneLines = loaded
+      .filter((sc) => sc.lines.some((l) => !/[\u4e00-\u9fff]/.test(l.zh) || !l.en.trim()))
+      .map((sc) => sc.id);
+    const chineseInEnglish = loaded
+      .filter((sc) => sc.lines.some((l) => /[\u4e00-\u9fff]/.test(l.en)))
+      .map((sc) => sc.id);
+    const brokenScenePinyin = loaded.filter((sc) => sc.lines.some((l) => l.pinyin.includes('?'))).map((sc) => sc.id);
+    const wordsWithoutStory = WORDS.filter((w) => w.inStories.length === 0).map((w) => w.id);
+    const wordsWithoutConversation = WORDS.filter((w) => w.inConversations.length === 0).map((w) => w.id);
+
     const list = (arr: (number | string)[]) =>
       arr.length === 0 ? 'none' : arr.slice(0, 25).join(', ') + (arr.length > 25 ? ` … (+${arr.length - 25})` : '');
 
@@ -76,7 +105,7 @@ export default function QA() {
       { label: 'Every record has Chinese characters', pass: noHanzi.length === 0, detail: `missing: ${list(noHanzi)}` },
       { label: 'Every record has pinyin', pass: noPinyin.length === 0, detail: `missing: ${list(noPinyin)}` },
       { label: 'Every record has an English meaning', pass: noMeaning.length === 0, detail: `missing: ${list(noMeaning)}` },
-      { label: 'Every record keeps its PDF example sentence', pass: noExample.length === 0, detail: `missing: ${list(noExample)}` },
+      { label: 'Every record keeps its example sentence', pass: noExample.length === 0, detail: `missing: ${list(noExample)}` },
       { label: 'Every example has an English translation', pass: emptyEnglish.length === 0, detail: `missing: ${list(emptyEnglish)}` },
       { label: 'Every example sentence has full pinyin', pass: brokenExamplePinyin.length === 0, detail: `unresolved: ${list(brokenExamplePinyin)}` },
       { label: 'Pinyin syllables align 1:1 with characters', pass: syllableMismatch.length === 0, detail: `mismatched: ${list(syllableMismatch)}` },
@@ -92,9 +121,15 @@ export default function QA() {
       { label: 'Measure-word guide references real words', pass: badMeasure.length === 0, detail: `broken: ${list(badMeasure)}` },
       { label: 'Mini dialogues are complete', pass: badDialogue.length === 0, detail: `broken: ${list(badDialogue)}` },
       { label: 'Dialogue target words really appear in their dialogue', pass: dialogueTargets.length === 0, detail: `mismatched: ${list(dialogueTargets)}` },
+      { label: 'Every word appears in at least one story', pass: wordsWithoutStory.length === 0, detail: `${600 - wordsWithoutStory.length}/600 covered · missing: ${list(wordsWithoutStory)}` },
+      { label: 'Every word appears in at least one conversation', pass: wordsWithoutConversation.length === 0, detail: `${600 - wordsWithoutConversation.length}/600 covered · missing: ${list(wordsWithoutConversation)}` },
+      { label: 'Story and conversation targets are real words', pass: !!scenes && badSceneTargets.length === 0, detail: scenes ? `broken: ${list(badSceneTargets)}` : 'loading scene text…' },
+      { label: 'Every scene line has Chinese and an English meaning', pass: !!scenes && emptySceneLines.length === 0, detail: scenes ? `broken: ${list(emptySceneLines)}` : 'loading scene text…' },
+      { label: 'No Chinese leaks into an English caption', pass: !!scenes && chineseInEnglish.length === 0, detail: scenes ? `broken: ${list(chineseInEnglish)}` : 'loading scene text…' },
+      { label: 'Every scene line has full pinyin', pass: !!scenes && brokenScenePinyin.length === 0, detail: scenes ? `unresolved: ${list(brokenScenePinyin)}` : 'loading scene text…' },
       { label: 'Build reported no warnings', pass: META.warnings.length === 0, detail: META.warnings.slice(0, 5).join(' | ') || 'none' },
     ];
-  }, []);
+  }, [scenes]);
 
   const posMissing = META.posAbsentInPdf;
   const failed = checks.filter((c) => !c.pass);
@@ -103,7 +138,7 @@ export default function QA() {
 
   return (
     <>
-      <TopBar title="Data validation & QA" back="/dashboard" />
+      <TopBar title="Content check" sub="Everything in the app, verified" back="/dashboard" backLabel="Progress" />
       <div className="page page--wide stack">
         <div className={`card ${failed.length ? '' : ''}`}>
           <div className="row">
@@ -138,10 +173,10 @@ export default function QA() {
           </div>
         </div>
 
-        <div className="section-title">Known gaps in the source PDF</div>
+        <div className="section-title">Known gaps in the source list</div>
         <div className="card stack--sm stack">
           <p className="small">
-            These are <b>not</b> extraction errors — the PDF itself gives no part of speech for these{' '}
+            These are <b>not</b> errors — the source list itself gives no part of speech for these{' '}
             {posMissing.length} entries (they are fixed phrases). Nothing has been invented to fill
             the gap.
           </p>
@@ -157,7 +192,7 @@ export default function QA() {
           </div>
         </div>
 
-        <div className="section-title">Entries the PDF prints twice</div>
+        <div className="section-title">Headwords listed twice</div>
         <div className="card stack--sm stack">
           <p className="small">
             Six headwords appear more than once in the source. Five of them are genuinely separate
@@ -191,6 +226,10 @@ export default function QA() {
             ['Confusion sets', META.confusionSets],
             ['Measure words', META.measureWords],
             ['Mini dialogues', META.dialogues],
+            ['Stories', META.storyEpisodes],
+            ['Conversation episodes', META.conversationEpisodes],
+            ['Story coverage', `${META.storyCoverage}/600`],
+            ['Conversation coverage', `${META.conversationCoverage}/600`],
             ['Tone twin sets', META.toneTwins],
             ['HSK1 / 2 / 3', `${META.levels['1']} / ${META.levels['2']} / ${META.levels['3']}`],
           ].map(([label, value]) => (
@@ -201,7 +240,7 @@ export default function QA() {
           ))}
         </div>
 
-        <div className="section-title">Spot check — beginning, middle and end of the PDF</div>
+        <div className="section-title">Spot check — beginning, middle and end of the list</div>
         <div className="card">
           <div className="scroll-x">
             <table>
@@ -212,7 +251,7 @@ export default function QA() {
                   <th>Pinyin</th>
                   <th>POS</th>
                   <th>Meaning</th>
-                  <th>PDF example</th>
+                  <th>Example</th>
                 </tr>
               </thead>
               <tbody>
@@ -223,7 +262,7 @@ export default function QA() {
                       <Link to={`/word/${w!.id}`}>{w!.hanzi}</Link>
                     </td>
                     <td>{w!.pinyin}</td>
-                    <td className="tiny">{w!.pos.join(', ') || <span className="muted">— none in PDF</span>}</td>
+                    <td className="tiny">{w!.pos.join(', ') || <span className="muted">— none listed</span>}</td>
                     <td className="tiny">{w!.senses.map((s) => s.meaning).join(' / ')}</td>
                     <td className="tiny hanzi">
                       {w!.senses.flatMap((s) => s.examples).map((e) => e.zh).join(' ')}
@@ -235,7 +274,7 @@ export default function QA() {
           </div>
         </div>
 
-        <div className="section-title">Learner database state</div>
+        <div className="section-title">Progress stored on this device</div>
         <div className="card grid grid--3">
           <div className="stat">
             <div className="stat__value mono">{Object.keys(state.progress).length}</div>

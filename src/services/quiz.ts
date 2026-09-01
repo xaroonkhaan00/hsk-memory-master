@@ -58,7 +58,7 @@ export const MODES: ModeInfo[] = [
   { key: 'tone', title: 'Tone Challenge', blurb: 'The meaning is free — the tones are the test.', icon: '📈', dimension: 'tone' },
   { key: 'listen-meaning', title: 'Listening → Meaning', blurb: 'No characters. Just the sound.', icon: '👂', dimension: 'listening', needsAudio: true },
   { key: 'listen-hanzi', title: 'Listening → Hanzi', blurb: 'Hear it, then find it in writing.', icon: '🎧', dimension: 'listening', needsAudio: true },
-  { key: 'cloze', title: 'Sentence Gap', blurb: 'Real PDF sentences with the word cut out.', icon: '✂️', dimension: 'usage' },
+  { key: 'cloze', title: 'Sentence Gap', blurb: 'Real sentences with the word cut out.', icon: '✂️', dimension: 'usage' },
   { key: 'match', title: 'Match Pairs', blurb: 'Five words, five meanings, one grid.', icon: '🃏', dimension: 'meaning' },
   { key: 'speed', title: 'Speed Round', blurb: 'Six seconds a question. No thinking time.', icon: '⚡', dimension: 'meaning' },
   { key: 'rescue', title: 'Weak Word Rescue', blurb: 'Only the words that keep beating you.', icon: '🛟', dimension: 'meaning' },

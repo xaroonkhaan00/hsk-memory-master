@@ -5,6 +5,7 @@ import { useStore } from '../store';
 import { packProgress } from '../services/session';
 import { overview } from '../services/progress';
 import { Meter, TopBar } from '../components/ui';
+import { Credit } from '../brand/Logo';
 
 const MILESTONES = [0, 20, 40, 100, 200, 300, 400, 500, 600];
 
@@ -19,7 +20,7 @@ export default function MapPage() {
 
   return (
     <>
-      <TopBar title="The 600-word map" sub={`${ov.seen} / ${TOTAL} words met`} />
+      <TopBar title="The 600-word map" sub={`${ov.seen} of ${TOTAL} words met`} back="/" backLabel="Home" />
       <div className="page stack">
         <div className="card stack--sm stack">
           <Meter label="Words met" value={ov.seen / TOTAL} right={`${ov.seen} / ${TOTAL}`} />
@@ -66,6 +67,8 @@ export default function MapPage() {
             </div>
           </div>
         ))}
+
+        <Credit />
       </div>
     </>
   );

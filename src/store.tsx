@@ -8,16 +8,24 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import type { AppState, Settings, WordProgress } from './types';
+import type { AppState, Settings } from './types';
 import { clearStorage, loadState, saveNow, saveState } from './services/storage';
 import {
-  STATE_VERSION,
   emptyProgress,
   emptyState,
+  migrate,
   recordAnswer,
   type RecordInput,
 } from './services/progress';
 import { checkAchievements } from './services/achievements';
+
+export interface SceneMark {
+  completed?: boolean;
+  replay?: boolean;
+  score?: number;
+  hiddenEnglish?: boolean;
+  listening?: boolean;
+}
 
 interface StoreValue {
   state: AppState;
@@ -28,6 +36,10 @@ interface StoreValue {
   setSettings: (patch: Partial<Settings>) => void;
   toggleStar: (id: number) => void;
   setNote: (id: number, note: string) => void;
+  setAudio: (patch: Partial<Settings['audio']>) => void;
+  setCaptions: (patch: Partial<Settings['captions']>) => void;
+  markScene: (kind: 'stories' | 'conversations', id: string, how: SceneMark) => void;
+  toggleSaved: (kind: 'stories' | 'conversations' | 'lines', id: string) => void;
   setList: (name: string, ids: number[]) => void;
   addToList: (name: string, id: number) => void;
   removeFromList: (name: string, id: number) => void;
@@ -41,28 +53,6 @@ interface StoreValue {
 }
 
 const StoreContext = createContext<StoreValue | null>(null);
-
-function migrate(loaded: AppState): AppState {
-  const base = emptyState();
-  const state: AppState = {
-    ...base,
-    ...loaded,
-    version: STATE_VERSION,
-    settings: { ...base.settings, ...loaded.settings },
-    progress: loaded.progress ?? {},
-    attempts: loaded.attempts ?? [],
-    days: loaded.days ?? {},
-    packDone: loaded.packDone ?? {},
-    bossScores: loaded.bossScores ?? {},
-    achievements: loaded.achievements ?? [],
-    customLists: loaded.customLists ?? {},
-    confusionLosses: loaded.confusionLosses ?? {},
-  };
-  for (const [id, p] of Object.entries(state.progress)) {
-    state.progress[Number(id)] = { ...emptyProgress(Number(id)), ...(p as WordProgress) };
-  }
-  return state;
-}
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<AppState>(() => emptyState());
@@ -132,6 +122,60 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       update((s) => {
         const p = s.progress[id] ?? emptyProgress(id);
         return { ...s, progress: { ...s.progress, [id]: { ...p, note } } };
+      });
+    },
+    [update],
+  );
+
+  const setAudio = useCallback(
+    (patch: Partial<Settings['audio']>) => {
+      update((s) => ({ ...s, settings: { ...s.settings, audio: { ...s.settings.audio, ...patch } } }));
+    },
+    [update],
+  );
+
+  const setCaptions = useCallback(
+    (patch: Partial<Settings['captions']>) => {
+      update((s) => ({
+        ...s,
+        settings: { ...s.settings, captions: { ...s.settings.captions, ...patch } },
+      }));
+    },
+    [update],
+  );
+
+  const markScene = useCallback(
+    (kind: 'stories' | 'conversations', id: string, how: SceneMark) => {
+      update((s) => {
+        const cur = s[kind];
+        const add = (list: string[], on: boolean | undefined) =>
+          on && !list.includes(id) ? [...list, id] : list;
+        return {
+          ...s,
+          [kind]: {
+            completed: add(cur.completed, how.completed),
+            replays: how.replay ? { ...cur.replays, [id]: (cur.replays[id] ?? 0) + 1 } : cur.replays,
+            scores: how.score !== undefined ? { ...cur.scores, [id]: how.score } : cur.scores,
+            hiddenEnglish: add(cur.hiddenEnglish, how.hiddenEnglish),
+            listening: add(cur.listening, how.listening),
+          },
+        };
+      });
+    },
+    [update],
+  );
+
+  const toggleSaved = useCallback(
+    (kind: 'stories' | 'conversations' | 'lines', id: string) => {
+      update((s) => {
+        const list = s.saved[kind];
+        return {
+          ...s,
+          saved: {
+            ...s.saved,
+            [kind]: list.includes(id) ? list.filter((x) => x !== id) : [...list, id],
+          },
+        };
       });
     },
     [update],
@@ -220,7 +264,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     try {
       const parsed = JSON.parse(rawText) as AppState;
       if (!parsed || typeof parsed !== 'object' || !('progress' in parsed)) {
-        return { ok: false, message: 'That file does not look like an HSK Memory Master backup.' };
+        return { ok: false, message: 'That file does not look like a Learn HSK 3 backup.' };
       }
       const migrated = migrate(parsed);
       dirtyRef.current = true;
@@ -243,6 +287,10 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       setSettings,
       toggleStar,
       setNote,
+      setAudio,
+      setCaptions,
+      markScene,
+      toggleSaved,
       setList,
       addToList,
       removeFromList,
@@ -263,6 +311,10 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       setSettings,
       toggleStar,
       setNote,
+      setAudio,
+      setCaptions,
+      markScene,
+      toggleSaved,
       setList,
       addToList,
       removeFromList,

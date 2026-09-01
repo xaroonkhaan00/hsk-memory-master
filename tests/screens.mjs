@@ -12,8 +12,23 @@ const PORT = 4327;
 const BASE = `http://localhost:${PORT}`;
 
 await mkdir(OUT, { recursive: true });
+// Detached so the whole process group can be killed: `npx` spawns vite as a
+// grandchild, and killing only the wrapper leaves the port held.
 const server = spawn('npx', ['vite', 'preview', '--port', String(PORT), '--strictPort'], {
   stdio: ['ignore', 'pipe', 'pipe'],
+  detached: true,
+});
+const stopServer = () => {
+  try {
+    process.kill(-server.pid, 'SIGKILL');
+  } catch {
+    server.kill('SIGKILL');
+  }
+};
+process.on('exit', stopServer);
+process.on('SIGINT', () => {
+  stopServer();
+  process.exit(130);
 });
 for (let i = 0; i < 60; i += 1) {
   try {
@@ -63,6 +78,12 @@ async function shoot(theme, pages) {
 const PAGES = [
   ['home', '/#/'],
   ['word', '/#/word/526'],
+  ['stories', '/#/stories'],
+  ['story', '/#/stories/s01'],
+  ['cinema', '/#/cinema'],
+  ['episode', '/#/cinema/c01'],
+  ['settings', '/#/settings'],
+  ['about', '/#/about'],
   ['map', '/#/map'],
   ['dashboard', '/#/dashboard'],
   ['heatmap', '/#/heatmap'],
@@ -75,8 +96,15 @@ const PAGES = [
 ];
 
 await shoot('dark', PAGES);
-await shoot('light', [['home', '/#/'], ['word', '/#/word/526'], ['dashboard', '/#/dashboard']]);
+await shoot('light', [
+  ['home', '/#/'],
+  ['word', '/#/word/526'],
+  ['story', '/#/stories/s01'],
+  ['episode', '/#/cinema/c01'],
+  ['settings', '/#/settings'],
+  ['dashboard', '/#/dashboard'],
+]);
 
 await browser.close();
-server.kill();
+stopServer();
 console.log(`screenshots written to ${OUT}/`);
