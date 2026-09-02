@@ -9,17 +9,18 @@ import {
   Avatar,
   CaptionBar,
   LineBlock,
+  PlaybackError,
   SceneCard,
   SceneLoading,
   SceneQuiz,
   SoundWave,
   Transport,
   useScene,
-  useSequencer,
+  useScenePlayer,
 } from '../components/scene';
 import { CONVERSATION_INDEX, getWord } from '../data';
 import { pushBackHandler } from '../services/platform';
-import { mandarinAvailable } from '../services/tts';
+import { mandarinConfirmed } from '../services/speech';
 import { useStore } from '../store';
 import type { CaptionSettings, SceneLine } from '../types';
 
@@ -145,10 +146,11 @@ function speakerOf(line: SceneLine): 'a' | 'b' {
 export function CinemaPlayer() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { state, setCaptions, setSettings, markScene, toggleSaved, record } = useStore();
+  const { state, setSettings, markScene, toggleSaved, record } = useStore();
   const { scene, loading } = useScene('conversation', id);
 
-  const captions = state.settings.captions;
+  // Cinema keeps its own caption defaults, separate from Story Mode.
+  const captions = state.settings.cinemaCaptions;
   const [stageIdx, setStageIdx] = useState(0);
   const [rate, setRate] = useState(state.settings.audio.rate);
   const [score, setScore] = useState<number | null>(null);
@@ -159,7 +161,7 @@ export function CinemaPlayer() {
   const stage = STAGES[stageIdx]!;
   const lines = scene?.lines ?? [];
   const targets = useMemo(() => new Set(scene?.targets ?? []), [scene]);
-  const seq = useSequencer(lines, { rate, speakerOf, onFinish: () => setReachedEnd(true) });
+  const player = useScenePlayer(lines, { rate, speakerOf, onFinish: () => setReachedEnd(true) });
 
   useEffect(
     () =>
@@ -174,8 +176,10 @@ export function CinemaPlayer() {
   );
 
   useEffect(() => {
-    if (scene && state.settings.audio.autoConversation && mandarinAvailable()) {
-      const t = setTimeout(() => seq.toggle(), 350);
+    // Only start by itself when a Chinese voice is actually there; otherwise
+    // the learner would open a scene into an error they did not ask for.
+    if (scene && state.settings.audio.autoConversation && mandarinConfirmed()) {
+      const t = setTimeout(() => player.playFrom(0), 350);
       return () => clearTimeout(t);
     }
     return undefined;
@@ -196,14 +200,14 @@ export function CinemaPlayer() {
   }
 
   const saved = state.saved.conversations.includes(scene.id);
-  const active = lines[seq.index];
+  const active = lines[player.index];
 
   const goStage = (i: number) => {
     const next = STAGES[i]!;
     setStageIdx(i);
-    setCaptions(next.captions);
+    setSettings({ cinemaCaptions: next.captions });
     setReachedEnd(false);
-    seq.reset();
+    player.reset();
     if (i > 0) markScene('conversations', scene.id, { replay: true });
     if (next.key === 'audio-only') {
       markScene('conversations', scene.id, { listening: true });
@@ -270,7 +274,7 @@ export function CinemaPlayer() {
           {/* the stage itself: whoever is talking is lit */}
           <div className="card card--hero stage">
             {(['a', 'b'] as const).map((who) => {
-              const talking = seq.speaking && active !== undefined && speakerOf(active) === who;
+              const talking = player.speaking && active !== undefined && speakerOf(active) === who;
               return (
                 <div key={who} className="stage__side">
                   <Avatar who={who} talking={talking} />
@@ -283,7 +287,7 @@ export function CinemaPlayer() {
 
           <CaptionBar
             captions={captions}
-            onChange={setCaptions}
+            onChange={(patch) => setSettings({ cinemaCaptions: { ...captions, ...patch } })}
             autoLabel="Auto play"
             auto={state.settings.audio.autoConversation}
             onAuto={(v) =>
@@ -296,18 +300,18 @@ export function CinemaPlayer() {
               const who = speakerOf(l);
               return (
                 <div key={i} className={`speaker-row${who === 'b' ? ' speaker-row--b' : ''}`}>
-                  <Avatar who={who} talking={seq.index === i && seq.speaking} />
-                  <div className={`bubble${seq.index === i ? ' bubble--active' : ''}`}>
+                  <Avatar who={who} talking={player.index === i && player.speaking} />
+                  <div className={`bubble${player.index === i ? ' bubble--active' : ''}`}>
                     <LineBlock
                       line={l}
                       index={i}
                       targets={targets}
                       captions={captions}
-                      active={seq.index === i}
-                      speaking={seq.index === i && seq.speaking}
+                      active={player.index === i}
+                      speaking={player.index === i && player.speaking}
                       saved={state.saved.lines.includes(`${scene.id}:${i}`)}
                       onSave={() => toggleSaved('lines', `${scene.id}:${i}`)}
-                      onPlay={() => seq.go(i)}
+                      onPlay={() => player.playLine(i)}
                       onWordTapped={(wid) => setHelped((s) => new Set(s).add(wid))}
                     />
                   </div>
@@ -316,7 +320,9 @@ export function CinemaPlayer() {
             })}
           </div>
 
-          <Transport seq={seq} total={lines.length} rate={rate} onRate={setRate} />
+          <PlaybackError message={player.error} />
+
+          <Transport player={player} total={lines.length} rate={rate} onRate={setRate} />
 
           <button
             className="btn btn--primary btn--block btn--lg"

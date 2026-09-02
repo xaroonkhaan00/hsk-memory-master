@@ -10,17 +10,18 @@ import {
   LineBlock,
   SceneCard,
   SceneLoading,
+  PlaybackError,
   SceneQuiz,
   Transport,
   VIEWS,
   VIEW_CAPTIONS,
   useScene,
-  useSequencer,
+  useScenePlayer,
   viewOf,
 } from '../components/scene';
 import { STORY_INDEX, getWord } from '../data';
 import { pushBackHandler } from '../services/platform';
-import { mandarinAvailable } from '../services/tts';
+import { mandarinConfirmed } from '../services/speech';
 import { useStore } from '../store';
 import type { CaptionMode, StoryDifficulty } from '../types';
 
@@ -126,7 +127,7 @@ export function StoryPlayer() {
 
   const lines = scene?.lines ?? [];
   const targets = useMemo(() => new Set(scene?.targets ?? []), [scene]);
-  const seq = useSequencer(lines, { rate, onFinish: () => setReachedEnd(true) });
+  const player = useScenePlayer(lines, { rate, onFinish: () => setReachedEnd(true) });
 
   useEffect(() => setRate(DIFFICULTY_RATE[difficulty]), [difficulty]);
 
@@ -145,8 +146,10 @@ export function StoryPlayer() {
   );
 
   useEffect(() => {
-    if (scene && state.settings.audio.autoStory && mandarinAvailable()) {
-      const t = setTimeout(() => seq.toggle(), 350);
+    // Only start by itself when a Chinese voice is actually there; otherwise
+    // the learner would open a scene into an error they did not ask for.
+    if (scene && state.settings.audio.autoStory && mandarinConfirmed()) {
+      const t = setTimeout(() => player.playFrom(0), 350);
       return () => clearTimeout(t);
     }
     return undefined;
@@ -267,17 +270,19 @@ export function StoryPlayer() {
                 index={i}
                 targets={targets}
                 captions={captions}
-                active={seq.index === i}
-                speaking={seq.index === i && seq.speaking}
+                active={player.index === i}
+                speaking={player.index === i && player.speaking}
                 saved={state.saved.lines.includes(`${scene.id}:${i}`)}
                 onSave={() => toggleSaved('lines', `${scene.id}:${i}`)}
-                onPlay={() => seq.go(i)}
+                onPlay={() => player.playLine(i)}
                 onWordTapped={(wid) => setHelped((s) => new Set(s).add(wid))}
               />
             ))}
           </div>
 
-          <Transport seq={seq} total={lines.length} rate={rate} onRate={setRate} />
+          <PlaybackError message={player.error} />
+
+          <Transport player={player} total={lines.length} rate={rate} onRate={setRate} />
 
           <button className="btn btn--primary btn--block btn--lg" type="button" onClick={finish}>
             {reachedEnd ? 'Check what you remember' : 'I have read it — check me'}
@@ -320,7 +325,7 @@ export function StoryPlayer() {
                 setScore(null);
                 setReachedEnd(false);
                 setHelped(new Set());
-                seq.reset();
+                player.reset();
                 markScene('stories', scene.id, { replay: true });
               }}
             >

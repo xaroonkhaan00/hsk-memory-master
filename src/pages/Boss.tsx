@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { BOSS_BANDS } from '../data';
 import { useStore } from '../store';
 import { buildBoss } from '../services/session';
-import { mandarinAvailable } from '../services/tts';
+import { speechAvailable } from '../services/speech';
 import QuizRunner from '../components/QuizRunner';
 import { Meter, Ring, TopBar } from '../components/ui';
 import { DIMENSIONS, type Dimension, type QuizResult } from '../types';
@@ -23,7 +23,7 @@ export default function Boss() {
   const [running, setRunning] = useState(false);
   const [seed, setSeed] = useState(0);
   const [result, setResult] = useState<QuizResult[] | null>(null);
-  const audio = mandarinAvailable();
+  const audio = speechAvailable();
 
   const current = BOSS_BANDS.find((b) => b.key === band);
 

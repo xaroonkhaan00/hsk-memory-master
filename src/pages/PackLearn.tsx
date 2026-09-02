@@ -4,7 +4,7 @@ import { CHAR_HUBS, getPack, getWord } from '../data';
 import { useStore } from '../store';
 import { MAGIC_STAGES, buildStageItems, packProgress, type MagicStage } from '../services/session';
 import { buildItem } from '../services/quiz';
-import { mandarinAvailable } from '../services/tts';
+import { speechAvailable } from '../services/speech';
 import QuizRunner from '../components/QuizRunner';
 import { Meter, Speaker, Syllables, TopBar } from '../components/ui';
 import type { QuizItem, Word } from '../types';
@@ -30,7 +30,7 @@ export default function PackLearn() {
   // finishing a stage would rebuild that stage's questions and restart the quiz
   // instead of showing the results.
   const wrongIdsRef = useRef<number[]>([]);
-  const audio = mandarinAvailable();
+  const audio = speechAvailable();
 
   const words = useMemo(() => (pack ? pack.words.map(getWord) : []), [pack]);
   const stage = MAGIC_STAGES[stageIndex];

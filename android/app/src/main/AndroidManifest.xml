@@ -38,4 +38,18 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+        Android 11 (API 30) filters which packages an app can see. Without this
+        block the speech engine is invisible: TextToSpeech fails to bind and the
+        WebView reports zero voices, which is exactly how the app went silent on
+        a real phone while every browser test passed.
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+        <package android:name="com.google.android.tts" />
+        <package android:name="com.samsung.SMT" />
+    </queries>
 </manifest>

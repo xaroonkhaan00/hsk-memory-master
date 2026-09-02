@@ -5,6 +5,7 @@ export * from './services/quiz';
 export * from './services/session';
 export * from './services/achievements';
 export { audioText, isSpeakable, SPEED_OPTIONS, REPEAT_OPTIONS } from './services/audio';
+export * from './services/exam';
 export { APP_NAME, CREATOR, MONOGRAM } from './brand/Logo';
 export {
   WORDS,

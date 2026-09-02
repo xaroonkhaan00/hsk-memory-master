@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { TONE_SHAPES } from '../services/pinyin';
 import type { Status, Word } from '../types';
-import { mandarinAvailable } from '../services/tts';
+import { speechAvailable } from '../services/speech';
 import { play, stop } from '../services/audio';
 import { useStore } from '../store';
 
@@ -182,7 +182,7 @@ export function Speaker({
   const [on, setOn] = useState(false);
   // Nothing at all when there is no Mandarin voice: a row of identical "audio
   // off" badges is noise. `NoVoiceNote` says it once, where it belongs.
-  if (!mandarinAvailable()) return null;
+  if (!speechAvailable()) return null;
   return (
     <button
       className={`btn ${compact ? 'btn--icon btn--soft' : 'btn--soft btn--sm'}${on ? ' is-playing' : ''}`}
@@ -227,7 +227,7 @@ export function SpeakerIcon({ active }: { active?: boolean }) {
 
 /** Said once per screen, not once per button. */
 export function NoVoiceNote() {
-  if (mandarinAvailable()) return null;
+  if (speechAvailable()) return null;
   return (
     <Link className="chip chip--warn" to="/settings">
       Add a Chinese voice to hear this
@@ -237,7 +237,7 @@ export function NoVoiceNote() {
 
 export function AudioRow({ text }: { text: string }) {
   const { state } = useStore();
-  if (!mandarinAvailable()) {
+  if (!speechAvailable()) {
     return (
       <div className="fact">
         <span className="label">Listening</span>

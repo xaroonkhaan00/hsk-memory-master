@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useStore } from '../store';
 import { buildDailySession } from '../services/session';
-import { mandarinAvailable } from '../services/tts';
+import { speechAvailable } from '../services/speech';
 import QuizRunner from '../components/QuizRunner';
 import { Segmented, TopBar } from '../components/ui';
 import type { QuizItem } from '../types';
@@ -15,7 +15,7 @@ export default function Today() {
   const [minutes, setMinutes] = useState<number>(state.settings.dailyMinutes);
   const [started, setStarted] = useState(false);
   const [seed, setSeed] = useState(0);
-  const audio = mandarinAvailable();
+  const audio = speechAvailable();
 
   const session = useMemo(
     () => buildDailySession(state, minutes, audio),

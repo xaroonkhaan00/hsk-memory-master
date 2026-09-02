@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "description": "Learn HSK 3 — a local-first Mandarin learning app by Mian Fazli Basit (MFB).",
+  "description": "Learn HSK 3 \u2014 a local-first Mandarin learning app by Mian Fazli Basit (MFB).",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -13,7 +13,8 @@
     "test": "node --test tests/*.test.mjs",
     "test:e2e": "npm run build && node tests/smoke.mjs",
     "icons": "node scripts/make-icons.mjs",
-    "android": "npm run build && npx cap sync android"
+    "android": "npm run build && npx cap sync android && npm run check:android",
+    "check:android": "node scripts/check-android.mjs"
   },
   "dependencies": {
     "@capacitor/app": "^8.1.1",

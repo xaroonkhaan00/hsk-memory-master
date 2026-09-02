@@ -33,21 +33,31 @@ npm run preview
 Tests:
 
 ```bash
-npm test           # 62 unit tests: data integrity, story/conversation coverage,
-                   # SRS, fingerprint, quiz engine, branding, storage migration
-npm run test:e2e   # 141 headless-browser checks: every screen, every mode, a
-                   # full Magic 20 pack through all ten stages, Story Mode and
-                   # Conversation Cinema, caption toggles, five phone widths and
-                   # an export/import round trip. Takes a few minutes — it really
-                   # does click through the whole pack.
+npm test              # 98 unit tests: data integrity, story/conversation coverage,
+                      # SRS, fingerprint, quiz engine, mock-exam generation,
+                      # shuffling, scoring, the native audio bridge, pinyin
+                      # input, branding and storage migration
+npm run test:e2e      # 174 headless-browser checks: every screen, every mode, a
+                      # full Magic 20 pack through all ten stages, Story Mode,
+                      # Conversation Cinema, a whole reading paper end to end,
+                      # audio diagnostics, five phone widths and an
+                      # export/import round trip.
+npm run check:android # type-check the native plugin against API stubs
 ```
 
 Android:
 
 ```bash
 npm run icons      # regenerate launcher icons and splash screens from the mark
-npm run android    # build + npx cap sync android, then open android/ in Studio
+npm run android    # build, npx cap sync android, then type-check the plugin
 ```
+
+The native speech plugin lives in
+`android/app/src/main/java/com/mfb/learnhsk3/MandarinTtsPlugin.java` and is
+registered in `MainActivity` before the bridge starts. The manifest declares a
+`<queries>` block for `android.intent.action.TTS_SERVICE`: without it, Android 11
+and later hide the speech service, `getVoices()` returns nothing, and the app
+goes silent on a real phone while every browser test still passes.
 
 Requires Node 18+. The browser test additionally needs `npx playwright install chromium`
 if Chromium is not already present.
@@ -193,16 +203,33 @@ tapping — as exposure only, never as mastery.
 and captions you can strip one layer at a time: watch → replay → tap words → no
 English → no pinyin → audio only → quiz.
 
+### Mock exam
+An original HSK 3 practice paper: 40 listening, 30 reading and 10 writing
+questions, 80 in all, scored out of 300 with 180 to pass. Nothing is copied from
+a real exam — every sentence, dialogue and passage comes from this app's own
+corpus, so the Chinese is always grammatical and at level. Each attempt is
+generated from a fresh seed, so the questions and the option order differ every
+time while the section shape stays exact; the same seed rebuilds the same paper,
+which is what makes the answer keys testable. Mock mode hides pinyin, meanings
+and word-tapping and runs a clock; practice mode keeps them. Results are stored
+with per-section scores, and the review shows every miss with the vocabulary
+behind it.
+
 ### Audio
-Device `SpeechSynthesis` only. The app **detects** which Mandarin voices are
+Two backends behind one service. On Android the app talks to the platform's own
+`TextToSpeech` through a small Capacitor plugin; everywhere else it uses the
+browser's `SpeechSynthesis`. The app **detects** which Mandarin voices are
 actually installed rather than assuming one exists, prefers zh-CN, and never
 claims a voice is male unless the platform's own metadata says so. Settings give
 a voice picker with preview, two speaker voices for Cinema, speed
 (0.65/0.75/0.85/1.0, default 0.85) and 1–3 plays per tap. Everything spoken goes
 through `src/services/audio.ts`, which strips a string to Hanzi before it reaches
-a voice — so pinyin, English and memory sound hooks can never be read aloud. If
-the device has no Mandarin voice, listening is **hidden and labelled**, with
-instructions for installing one, rather than played in the wrong language.
+a voice — so pinyin, English and memory sound hooks can never be read aloud.
+Every call resolves when the engine says the phrase finished, which is how a
+story and a dialogue advance; nothing is paced by a guessed timer. Settings →
+Audio & voice has a real test button and a diagnostics panel that reports the
+backend, whether the engine started, whether Chinese is installed, the selected
+voice and the last actual error.
 
 ### Storage
 IndexedDB, with a synchronous localStorage mirror written on page-hide so an

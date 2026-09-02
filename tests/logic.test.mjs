@@ -142,7 +142,11 @@ test('the error engine names the kind of mistake', () => {
   const typing = m.buildItem('typing', 128, { state }); // 学习 xuéxí
   assert.equal(typing.kind, 'type');
   assert.equal(m.judge(typing, 'xuéxí', 900).correct, true);
-  const toneMiss = m.judge(typing, 'xuexi', 900);
+  // Tone marks are optional by default: the syllables are what is being tested,
+  // and a phone keyboard makes typing tones a typing test instead.
+  const toneless = m.judge(typing, 'xuexi', 900);
+  assert.equal(toneless.correct, true);
+  const toneMiss = m.judge(typing, 'xuexi', 900, { lenientPinyin: false });
   assert.equal(toneMiss.correct, false);
   assert.equal(toneMiss.errorKind, 'tone');
   const blank = m.judge(typing, '', 900);
