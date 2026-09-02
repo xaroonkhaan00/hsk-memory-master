@@ -139,7 +139,7 @@ test('a version 1 backup keeps every scrap of its progress', () => {
   };
   const next = m.migrate(structuredClone(v1));
 
-  assert.equal(next.version, 2);
+  assert.equal(next.version, 3);
   // nothing the learner earned is lost
   assert.equal(next.progress[7].attempts, 12);
   assert.equal(next.progress[7].correct, 9);
@@ -164,6 +164,16 @@ test('a version 1 backup keeps every scrap of its progress', () => {
   // a progress record missing new fields is completed, not dropped
   assert.equal(typeof next.progress[7].scores.tone, 'number');
   assert.ok(Array.isArray(next.progress[7].errors));
+});
+
+test('a v1 backup also gains the newer blocks, still empty', () => {
+  const v1 = { version: 1, settings: {}, progress: {}, attempts: [], days: {}, createdAt: 1 };
+  const next = m.migrate(structuredClone(v1));
+  assert.deepEqual(next.exams.history, []);
+  assert.deepEqual(next.exams.seen, {});
+  assert.equal(next.settings.pinyinInput, 'lenient');
+  assert.equal(next.settings.pinyinDisplay, 'marks');
+  assert.equal(next.settings.cinemaCaptions.english, false);
 });
 
 test('a version 2 state survives a round trip unchanged', () => {

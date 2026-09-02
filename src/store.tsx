@@ -8,7 +8,7 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import type { AppState, Settings } from './types';
+import type { AppState, ExamRecord, Settings } from './types';
 import { clearStorage, loadState, saveNow, saveState } from './services/storage';
 import {
   emptyProgress,
@@ -39,6 +39,7 @@ interface StoreValue {
   setAudio: (patch: Partial<Settings['audio']>) => void;
   setCaptions: (patch: Partial<Settings['captions']>) => void;
   markScene: (kind: 'stories' | 'conversations', id: string, how: SceneMark) => void;
+  recordExam: (record: ExamRecord, examinedWordIds: number[]) => void;
   toggleSaved: (kind: 'stories' | 'conversations' | 'lines', id: string) => void;
   setList: (name: string, ids: number[]) => void;
   addToList: (name: string, id: number) => void;
@@ -159,6 +160,25 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             hiddenEnglish: add(cur.hiddenEnglish, how.hiddenEnglish),
             listening: add(cur.listening, how.listening),
           },
+        };
+      });
+    },
+    [update],
+  );
+
+  /**
+   * File a finished mock. The per-word counter is what keeps later papers from
+   * drilling the same vocabulary, and it is deliberately separate from the SRS
+   * scores: one exam should not brand a word as weak on its own.
+   */
+  const recordExam = useCallback(
+    (record: ExamRecord, examinedWordIds: number[]) => {
+      update((s) => {
+        const seen = { ...s.exams.seen };
+        for (const id of examinedWordIds) seen[id] = (seen[id] ?? 0) + 1;
+        return {
+          ...s,
+          exams: { history: [...s.exams.history, record].slice(-100), seen },
         };
       });
     },
@@ -290,6 +310,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       setAudio,
       setCaptions,
       markScene,
+      recordExam,
       toggleSaved,
       setList,
       addToList,
@@ -314,6 +335,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       setAudio,
       setCaptions,
       markScene,
+      recordExam,
       toggleSaved,
       setList,
       addToList,

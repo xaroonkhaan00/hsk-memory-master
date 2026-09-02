@@ -4,7 +4,7 @@ import { WORDS, tryWord } from '../data';
 import { useStore } from '../store';
 import { MODE_BY_KEY, buildItem, type ModeKey } from '../services/quiz';
 import { dueWords, difficulty, progressOf, weakWords } from '../services/progress';
-import { mandarinAvailable } from '../services/tts';
+import { speechAvailable } from '../services/speech';
 import QuizRunner from '../components/QuizRunner';
 import { Segmented, TopBar } from '../components/ui';
 import Disappearing from './Disappearing';
@@ -30,7 +30,7 @@ export default function GamePlay() {
   const [length, setLength] = useState(12);
   const [started, setStarted] = useState(false);
   const [runIds, setRunIds] = useState<number[]>([]);
-  const audio = mandarinAvailable();
+  const audio = speechAvailable();
 
   const listParam = params.get('list');
   const idsParam = params.get('ids');

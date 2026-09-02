@@ -93,6 +93,8 @@ const routes = [
   ['/#/cinema', 'Conversation Cinema'],
   ['/#/cinema/c01', 'First meeting'],
   ['/#/saved', 'Saved scenes'],
+  ['/#/exam', 'Mock exam'],
+  ['/#/settings/audio', 'Audio diagnostics'],
   ['/#/about', 'MIAN FAZLI BASIT'],
   ['/#/dialogues', 'Mini dialogues'],
   ['/#/boss', 'Boss battles'],
@@ -447,23 +449,56 @@ await page.goto(BASE + '/#/settings', { waitUntil: 'networkidle' });
   // Section headings are uppercased by CSS, and innerText reports what is drawn.
   const settingsText = body.toLowerCase();
   check('settings is grouped into sections',
-    ['learning', 'audio', 'captions', 'appearance', 'data & backup', 'about']
-      .every((v) => settingsText.includes(v)));
+    [
+      'learning',
+      'audio & voice',
+      'stories & conversations',
+      'pinyin',
+      'mock exam',
+      'appearance',
+      'data & backup',
+      'accessibility',
+      'about',
+    ].every((v) => settingsText.includes(v)));
+  check('settings keeps a route into the audio screen',
+    (await page.locator('a[href*="settings/audio"]').count()) > 0);
+  check('settings offers the pinyin typing rule', settingsText.includes('tones optional'));
   check('settings names the app and its creator',
     body.includes('Learn HSK 3') && body.includes('MIAN FAZLI BASIT'));
 
+  // Story Mode and Conversation Cinema now keep separate caption defaults, so
+  // there are two "English" switches; the first belongs to Story Mode.
+  const englishSwitch = page.getByRole('switch', { name: 'English' }).first();
+  check('story and conversation captions are configured separately',
+    (await page.getByRole('switch', { name: 'English' }).count()) === 2);
+  check('English captions start off',
+    (await englishSwitch.getAttribute('aria-checked')) === 'false');
+
   await page.getByRole('button', { name: 'Challenge' }).click();
   await page.waitForTimeout(200);
-  await page.getByRole('switch', { name: 'English' }).click();
+  await englishSwitch.click();
   await page.waitForTimeout(300);
   await page.reload({ waitUntil: 'networkidle' });
-  await page.waitForTimeout(600);
+  await page.waitForTimeout(700);
   check('story difficulty survives a reload',
     (await page.getByRole('button', { name: 'Challenge' }).getAttribute('aria-pressed')) === 'true');
   check('caption preferences survive a reload',
-    (await page.getByRole('switch', { name: 'English' }).getAttribute('aria-checked')) === 'true');
-  // put it back so later runs start from the documented default
-  await page.getByRole('switch', { name: 'English' }).click();
+    (await page.getByRole('switch', { name: 'English' }).first().getAttribute('aria-checked')) ===
+      'true');
+
+  // Typed-pinyin leniency is a setting, and it persists too.
+  await page.getByRole('button', { name: 'Tones required' }).click();
+  await page.waitForTimeout(250);
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForTimeout(700);
+  check('typed-pinyin rule survives a reload',
+    (await page.getByRole('button', { name: 'Tones required' }).getAttribute('aria-pressed')) ===
+      'true');
+  await page.getByRole('button', { name: 'Tones optional' }).click();
+  await page.waitForTimeout(200);
+
+  // put the caption default back so later runs start from the documented state
+  await page.getByRole('switch', { name: 'English' }).first().click();
   await page.waitForTimeout(250);
 }
 
@@ -521,6 +556,111 @@ for (const theme of ['light', 'dark']) {
   check(`Chinese stays readable in ${theme} mode`, contrast >= 4.5, `contrast=${contrast.toFixed(2)}`);
 }
 await page.emulateMedia({ colorScheme: 'light' });
+
+
+
+/* ------------------------------------------------------------- mock exam */
+
+await page.goto(BASE + '/#/exam', { waitUntil: 'networkidle' });
+await page.waitForTimeout(300);
+{
+  const body = await page.locator('body').innerText();
+  check('exam hub states the official shape',
+    ['80', '40', '30', '10'].every((n) => body.includes(n)) && /listening/i.test(body));
+  check('exam hub offers the practice modes',
+    /listening practice/i.test(body) && /reading practice/i.test(body) &&
+    /writing practice/i.test(body) && /quick mock/i.test(body));
+  check('exam hub names the pass mark', body.includes('180'));
+}
+
+// A reading paper needs no audio, so it runs end to end in a headless browser.
+await page.goto(BASE + '/#/exam/run?mode=reading&practice=1', { waitUntil: 'networkidle' });
+await page.waitForSelector('.option', { timeout: 20000 });
+{
+  const header = await page.locator('.exam-bar__mid').innerText();
+  check('exam shows question number and section', /Question 1 \/ 30/.test(header) && /Reading/.test(header));
+  check('exam offers a flag control', (await page.getByRole('button', { name: /Flag for review/ }).count()) > 0);
+  check('practice mode allows leaving via a clear control',
+    (await page.getByRole('button', { name: 'Leave the exam' }).count()) > 0);
+
+  // Answer every question with the first option, then submit.
+  let answered = 0;
+  for (let i = 0; i < 30; i += 1) {
+    const opts = page.locator('.option');
+    if (await opts.count()) {
+      await opts.first().click();
+      answered += 1;
+    }
+    const next = page.getByRole('button', { name: 'Next', exact: true });
+    if (await next.count()) await next.first().click();
+    else break;
+    await page.waitForTimeout(40);
+  }
+  check('every reading question could be answered', answered === 30, `answered=${answered}`);
+
+  await page.getByRole('button', { name: /Finish and submit/ }).click();
+  await page.waitForTimeout(200);
+  await page.getByRole('button', { name: 'Submit paper', exact: true }).click();
+  await page.waitForTimeout(600);
+  const result = await page.locator('body').innerText();
+  check('the exam produces a score out of 300', result.includes('/ 300'));
+  check('the exam reports each section', /listening/i.test(result) && /reading/i.test(result) && /writing/i.test(result));
+  check('the exam says pass or not yet', /Pass|Not yet/.test(result));
+  check('the exam offers a review', /Review|Nothing missed/i.test(result));
+}
+
+// The result is kept.
+await page.goto(BASE + '/#/exam', { waitUntil: 'networkidle' });
+await page.waitForTimeout(400);
+check('a finished exam is stored in history',
+  (await page.locator('body').innerText()).includes('/300'));
+
+// Two attempts must not be the same paper.
+// Enter through the hub the way a learner does. Re-issuing an identical URL
+// with goto() is a no-op in the browser, so it would not exercise anything.
+// The prompt line is the same for every question in a part, so the signature
+// has to look at the material itself.
+const paperSignature = async () => {
+  await page.goto(BASE + '/#/exam', { waitUntil: 'networkidle' });
+  await page.getByRole('link', { name: /Reading practice/ }).click();
+  await page.waitForSelector('.option', { timeout: 20000 });
+  await page.waitForTimeout(250);
+  const passage = await page.locator('.exam-passage').first().innerText().catch(() => '');
+  const options = await page.locator('.option__label').allInnerTexts();
+  return `${passage}::${options.join('|')}`;
+};
+const first = await paperSignature();
+const second = await paperSignature();
+check('each attempt generates a different paper', first !== second, 'two attempts were identical');
+
+// Leaving mid-exam asks first.
+await page.goto(BASE + '/#/exam/run?mode=reading&practice=1', { waitUntil: 'networkidle' });
+await page.waitForSelector('.option', { timeout: 20000 });
+await page.getByRole('button', { name: 'Leave the exam' }).click();
+await page.waitForTimeout(200);
+check('leaving an exam asks for confirmation',
+  (await page.locator('body').innerText()).includes('Leave exam?'));
+await page.getByRole('button', { name: 'Stay' }).click();
+await page.waitForTimeout(150);
+check('staying keeps the paper open', (await page.locator('.option').count()) > 0);
+
+/* --------------------------------------------------------- audio settings */
+
+await page.goto(BASE + '/#/settings/audio', { waitUntil: 'networkidle' });
+await page.waitForTimeout(300);
+{
+  const body = await page.locator('body').innerText();
+  check('audio settings offers a real test button', body.includes('Test Chinese audio'));
+  check('audio settings shows the speeds', ['0.65', '0.75', '0.85', '1'].every((v) => body.includes(v)));
+  await page.getByText('Audio diagnostics').click();
+  await page.waitForTimeout(250);
+  const diag = await page.locator('body').innerText();
+  for (const label of ['Platform', 'Backend', 'Engine started', 'Mandarin available', 'Last result', 'Last error']) {
+    check(`diagnostics reports ${label}`, diag.includes(label));
+  }
+  check('diagnostics does not claim a backend it does not have',
+    /Browser speech|Native Android speech|None/.test(diag));
+}
 
 
 check('no console errors', consoleErrors.length === 0, consoleErrors.slice(0, 5).join(' | '));

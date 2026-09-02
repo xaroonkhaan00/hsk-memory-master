@@ -331,6 +331,7 @@ export interface AudioSettings {
   autoSentence: boolean;
   autoStory: boolean;
   autoConversation: boolean;
+  autoListening: boolean;
 }
 
 export interface CaptionSettings {
@@ -339,6 +340,10 @@ export interface CaptionSettings {
   english: boolean;
   highlightTargets: boolean;
 }
+
+/** How a typed pinyin answer is graded, and how pinyin is shown. */
+export type PinyinInputMode = 'lenient' | 'strict';
+export type PinyinDisplay = 'marks' | 'plain' | 'hidden';
 
 export interface Settings {
   dailyMinutes: 5 | 10 | 20 | 30;
@@ -350,7 +355,13 @@ export interface Settings {
   showPinyinDefault: boolean;
   audio: AudioSettings;
   captions: CaptionSettings;
+  /** Conversation Cinema keeps its own caption defaults. */
+  cinemaCaptions: CaptionSettings;
   storyDifficulty: StoryDifficulty;
+  /** 'lenient' accepts xuexi for xuéxí; tone marks are never required. */
+  pinyinInput: PinyinInputMode;
+  pinyinDisplay: PinyinDisplay;
+  examStrict: boolean;
 }
 
 export interface Achievement {
@@ -371,6 +382,27 @@ export interface SceneProgress {
   listening: string[];
 }
 
+/** One completed mock exam, kept so progress over time is visible. */
+export interface ExamRecord {
+  at: number;
+  seed: number;
+  mode: 'full' | 'quick' | 'listening' | 'reading' | 'writing';
+  listening: number;
+  reading: number;
+  writing: number;
+  total: number;
+  passed: boolean;
+  msUsed: number;
+  questions: number;
+  correct: number;
+}
+
+export interface ExamState {
+  history: ExamRecord[];
+  /** How often each word has been examined, so rarer words come up first. */
+  seen: Record<number, number>;
+}
+
 export interface AppState {
   version: number;
   settings: Settings;
@@ -386,6 +418,7 @@ export interface AppState {
   conversations: SceneProgress;
   /** Saved stories, episodes and individual lines. */
   saved: { stories: string[]; conversations: string[]; lines: string[] };
+  exams: ExamState;
   createdAt: number;
 }
 

@@ -16,7 +16,7 @@ import { TOTAL, WORDS } from '../data';
 export const MINUTE = 60_000;
 export const DAY = 86_400_000;
 
-export const STATE_VERSION = 2;
+export const STATE_VERSION = 3;
 
 export const DEFAULT_AUDIO: AudioSettings = {
   voiceId: null,
@@ -29,6 +29,7 @@ export const DEFAULT_AUDIO: AudioSettings = {
   autoSentence: false,
   autoStory: true,
   autoConversation: true,
+  autoListening: true,
 };
 
 export const DEFAULT_CAPTIONS: CaptionSettings = {
@@ -48,7 +49,12 @@ export const DEFAULT_SETTINGS: Settings = {
   showPinyinDefault: true,
   audio: { ...DEFAULT_AUDIO },
   captions: { ...DEFAULT_CAPTIONS },
+  cinemaCaptions: { ...DEFAULT_CAPTIONS },
   storyDifficulty: 'normal',
+  // Tone marks are never required from a phone keyboard.
+  pinyinInput: 'lenient',
+  pinyinDisplay: 'marks',
+  examStrict: true,
 };
 
 export function emptyScenes(): SceneProgress {
@@ -85,6 +91,7 @@ export function defaultSettings(): Settings {
     ...DEFAULT_SETTINGS,
     audio: { ...DEFAULT_AUDIO },
     captions: { ...DEFAULT_CAPTIONS },
+    cinemaCaptions: { ...DEFAULT_CAPTIONS },
   };
 }
 
@@ -103,6 +110,7 @@ export function emptyState(): AppState {
     stories: emptyScenes(),
     conversations: emptyScenes(),
     saved: { stories: [], conversations: [], lines: [] },
+    exams: { history: [], seen: {} },
     createdAt: Date.now(),
   };
 }
@@ -535,7 +543,14 @@ export function migrate(loaded: AppState): AppState {
       ...loaded.settings,
       audio: { ...DEFAULT_AUDIO, ...(loaded.settings?.audio ?? {}) },
       captions: { ...DEFAULT_CAPTIONS, ...(loaded.settings?.captions ?? {}) },
+      cinemaCaptions: {
+        ...DEFAULT_CAPTIONS,
+        ...(loaded.settings?.cinemaCaptions ?? loaded.settings?.captions ?? {}),
+      },
       storyDifficulty: loaded.settings?.storyDifficulty ?? base.settings.storyDifficulty,
+      pinyinInput: loaded.settings?.pinyinInput ?? base.settings.pinyinInput,
+      pinyinDisplay: loaded.settings?.pinyinDisplay ?? base.settings.pinyinDisplay,
+      examStrict: loaded.settings?.examStrict ?? base.settings.examStrict,
     },
     stories: { ...emptyScenes(), ...(loaded.stories ?? {}) },
     conversations: { ...emptyScenes(), ...(loaded.conversations ?? {}) },
@@ -543,6 +558,10 @@ export function migrate(loaded: AppState): AppState {
       stories: loaded.saved?.stories ?? [],
       conversations: loaded.saved?.conversations ?? [],
       lines: loaded.saved?.lines ?? [],
+    },
+    exams: {
+      history: loaded.exams?.history ?? [],
+      seen: loaded.exams?.seen ?? {},
     },
     progress: loaded.progress ?? {},
     attempts: loaded.attempts ?? [],

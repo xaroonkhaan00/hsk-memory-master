@@ -1,14 +1,23 @@
 /**
  * The app's single audio entry point.
  *
- * Everything that plays Mandarin goes through here so that two rules hold
- * everywhere: only Hanzi is ever sent to a Mandarin voice, and the learner's
- * saved speed / repeat / voice preferences are always applied.
+ * Everything that plays Mandarin goes through here, so three rules hold
+ * everywhere: only Hanzi is ever sent to a voice, the learner's saved speed,
+ * repeat and voice preferences are always applied, and every caller can await
+ * the phrase actually finishing.
  */
 import type { AudioSettings, Word } from '../types';
-import { mandarinAvailable, secondVoiceId, speak, stopSpeaking } from './tts';
+import {
+  initSpeech,
+  mandarinVoices,
+  secondVoiceId,
+  speakOnce,
+  speechAvailable,
+  stopSpeech,
+  type SpeakResult,
+} from './speech';
 
-const HANZI = /[㐀-鿿豈-﫿]/;
+const HANZI = /[㐀-鿿豈-﫿]/;
 
 /**
  * Strip a string down to what a Mandarin voice should receive.
@@ -37,6 +46,8 @@ export interface PlayOptions {
   speaker?: 'a' | 'b';
   rate?: number;
   repeat?: 1 | 2 | 3;
+  /** Set `cancelled` to stop a queued repeat or an awaited sequence. */
+  signal?: { cancelled: boolean };
   onStart?: () => void;
   onEnd?: () => void;
 }
@@ -44,25 +55,67 @@ export interface PlayOptions {
 function voiceFor(audio: AudioSettings, speaker?: 'a' | 'b'): string | null {
   if (speaker === 'a') return audio.speakerAVoiceId ?? audio.voiceId;
   if (speaker === 'b') {
-    // Fall back to a genuinely different voice if the device has one; if it
-    // does not, both speakers share the accurate voice and the UI separates
-    // them visually instead.
+    // A genuinely different voice when the device has one; when it does not,
+    // both speakers share the accurate voice and the scene separates them
+    // visually instead of faking variety.
     return audio.speakerBVoiceId ?? secondVoiceId(audio.voiceId) ?? audio.voiceId;
   }
   return audio.voiceId;
 }
 
-/** Speak any Chinese text. Returns false when nothing speakable was supplied. */
+/**
+ * Speak Chinese and resolve when the engine reports it has finished.
+ *
+ * This is what Story Mode and Conversation Cinema await: no timers, no guessed
+ * durations. Non-Chinese input resolves immediately as "not spoken" rather than
+ * being read aloud in the wrong language.
+ */
+export async function speakChinese(
+  text: string,
+  audio: AudioSettings,
+  opts: PlayOptions = {},
+): Promise<SpeakResult> {
+  const clean = audioText(text);
+  if (!clean) return { completed: false, cancelled: false, error: 'no Chinese in this text' };
+
+  const repeat = opts.repeat ?? audio.repeat ?? 1;
+  const rate = opts.rate ?? audio.rate;
+  const voiceId = voiceFor(audio, opts.speaker);
+
+  opts.onStart?.();
+  let last: SpeakResult = { completed: false, cancelled: false };
+  for (let i = 0; i < Math.max(1, Math.min(3, repeat)); i += 1) {
+    if (opts.signal?.cancelled) {
+      opts.onEnd?.();
+      return { completed: false, cancelled: true };
+    }
+    last = await speakOnce(clean, { voiceId, rate, signal: opts.signal });
+    if (!last.completed) break;
+    if (i + 1 < repeat) await pause(280, opts.signal);
+  }
+  opts.onEnd?.();
+  return last;
+}
+
+function pause(ms: number, signal?: { cancelled: boolean }): Promise<void> {
+  return new Promise((resolve) => {
+    const t = setTimeout(resolve, ms);
+    if (signal?.cancelled) {
+      clearTimeout(t);
+      resolve();
+    }
+  });
+}
+
+/**
+ * Fire-and-forget speech for taps on a speaker button.
+ * Returns false only when there was nothing speakable to say.
+ */
 export function play(text: string, audio: AudioSettings, opts: PlayOptions = {}): boolean {
   const clean = audioText(text);
-  if (!clean || !mandarinAvailable()) return false;
-  return speak(clean, {
-    voiceId: voiceFor(audio, opts.speaker),
-    rate: opts.rate ?? audio.rate,
-    repeat: opts.repeat ?? audio.repeat,
-    onStart: opts.onStart,
-    onEnd: opts.onEnd,
-  });
+  if (!clean) return false;
+  void speakChinese(clean, audio, opts);
+  return true;
 }
 
 /** A headword. Uses `plain` so bracketed variants never reach the engine. */
@@ -71,8 +124,10 @@ export function playWord(word: Word, audio: AudioSettings, opts: PlayOptions = {
 }
 
 export function stop(): void {
-  stopSpeaking();
+  stopSpeech();
 }
+
+export { initSpeech, mandarinVoices, speechAvailable };
 
 export const SPEED_OPTIONS = [
   { value: 0.65, label: '0.65×', hint: 'Very slow' },

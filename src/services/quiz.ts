@@ -16,7 +16,7 @@ import type {
 } from '../types';
 import { accepted, englishMatches, stripTones } from './pinyin';
 import { avgScore, progressOf } from './progress';
-import { mandarinAvailable } from './tts';
+import { speechAvailable } from './speech';
 
 export type ModeKey =
   | 'hanzi-meaning'
@@ -79,7 +79,7 @@ export const MODE_BY_KEY: Record<ModeKey, ModeInfo> = Object.fromEntries(
 ) as Record<ModeKey, ModeInfo>;
 
 export function availableModes(): ModeInfo[] {
-  const audio = mandarinAvailable();
+  const audio = speechAvailable();
   return MODES.filter((m) => !m.needsAudio || audio);
 }
 
@@ -557,7 +557,7 @@ export function buildItem(mode: ModeKey, wordId: number, opts: BuildOptions): Qu
     case 'tone':
       return toneItem(w, pool);
     case 'listen-meaning':
-      if (!mandarinAvailable()) return null;
+      if (!speechAvailable()) return null;
       return mcq('listen-meaning', w, {
         dimension: 'listening',
         instruction: 'Listen, then choose the meaning.',
@@ -568,7 +568,7 @@ export function buildItem(mode: ModeKey, wordId: number, opts: BuildOptions): Qu
         pool,
       });
     case 'listen-hanzi':
-      if (!mandarinAvailable()) return null;
+      if (!speechAvailable()) return null;
       return mcq('listen-hanzi', w, {
         dimension: 'listening',
         instruction: 'Listen, then choose the characters.',
@@ -679,7 +679,12 @@ export interface Judgement {
  * Never just "wrong": work out WHY it was wrong so the notebook and the error
  * engine can say something useful.
  */
-export function judge(item: QuizItem, given: string, ms: number): Judgement {
+export function judge(
+  item: QuizItem,
+  given: string,
+  ms: number,
+  opts: { lenientPinyin?: boolean } = {},
+): Judgement {
   if (item.kind === 'type') {
     const target = item.answerKey;
     if (item.answerFace === 'pinyin') {
@@ -691,10 +696,16 @@ export function judge(item: QuizItem, given: string, ms: number): Judgement {
         };
       }
       if (verdict === 'toneless') {
+        // Typing tone marks on a phone keyboard is a typing test, not a
+        // language test. By default the syllables are what counts, and the
+        // tone-marked form is shown so the tone is still learned.
+        if (opts.lenientPinyin !== false) {
+          return { correct: true, note: `Correct. With tones: ${target}` };
+        }
         return {
           correct: false,
           errorKind: 'tone',
-          note: 'The syllables were right — only the tones were wrong.',
+          note: `The syllables were right — the tones were not. It is ${target}.`,
         };
       }
       if (!given.trim()) return { correct: false, errorKind: 'forgotten' };

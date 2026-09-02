@@ -5,6 +5,7 @@ import { applyStatusBarTheme, initNativeShell } from './services/platform';
 import { BrandLockup } from './brand/Logo';
 import { Icon, type IconName } from './brand/icons';
 import { stop } from './services/audio';
+import { initSpeech } from './services/speech';
 
 import Home from './pages/Home';
 import Onboarding from './pages/Onboarding';
@@ -37,6 +38,8 @@ import Lists from './pages/Lists';
 import StoryList, { StoryPlayer } from './pages/Story';
 import CinemaList, { CinemaPlayer } from './pages/Cinema';
 import Saved from './pages/Saved';
+import ExamHome, { ExamRunner } from './pages/Exam';
+import AudioSettings from './pages/AudioSettings';
 import About from './pages/About';
 
 /** Every navigation starts at the top of the new screen and silences any audio
@@ -55,8 +58,8 @@ function TabBar() {
     { to: '/', icon: 'home', label: 'Home' },
     { to: '/stories', icon: 'book', label: 'Stories' },
     { to: '/cinema', icon: 'film', label: 'Cinema' },
+    { to: '/exam', icon: 'trophy', label: 'Exam' },
     { to: '/browse', icon: 'search', label: 'Words' },
-    { to: '/dashboard', icon: 'chart', label: 'Progress' },
   ];
   return (
     <nav className="tabbar" aria-label="Main">
@@ -89,6 +92,13 @@ export default function App() {
 
   // The Android back button walks the app's own history and only leaves the app
   // from the home screen, so a study session is never dropped by one press.
+  // Bring the speech engine up as the app starts: on Android the native engine
+  // takes a moment to bind, and a learner who taps a speaker button in the
+  // first second should still hear it.
+  useEffect(() => {
+    void initSpeech();
+  }, []);
+
   useEffect(() => {
     initNativeShell(
       () => navigate(-1),
@@ -130,6 +140,9 @@ export default function App() {
         <Route path="/cinema" element={<CinemaList />} />
         <Route path="/cinema/:id" element={<CinemaPlayer />} />
         <Route path="/saved" element={<Saved />} />
+        <Route path="/exam" element={<ExamHome />} />
+        <Route path="/exam/run" element={<ExamRunner />} />
+        <Route path="/settings/audio" element={<AudioSettings />} />
         <Route path="/about" element={<About />} />
         <Route path="/games" element={<Games />} />
         <Route path="/games/:mode" element={<GamePlay />} />

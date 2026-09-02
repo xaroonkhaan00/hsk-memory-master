@@ -83,6 +83,8 @@ const PAGES = [
   ['cinema', '/#/cinema'],
   ['episode', '/#/cinema/c01'],
   ['settings', '/#/settings'],
+  ['audio', '/#/settings/audio'],
+  ['exam', '/#/exam'],
   ['about', '/#/about'],
   ['map', '/#/map'],
   ['dashboard', '/#/dashboard'],
@@ -102,6 +104,8 @@ await shoot('light', [
   ['story', '/#/stories/s01'],
   ['episode', '/#/cinema/c01'],
   ['settings', '/#/settings'],
+  ['audio', '/#/settings/audio'],
+  ['exam', '/#/exam'],
   ['dashboard', '/#/dashboard'],
 ]);
 

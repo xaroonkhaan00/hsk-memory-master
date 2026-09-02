@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { MODES } from '../services/quiz';
-import { mandarinAvailable } from '../services/tts';
+import { speechAvailable } from '../services/speech';
 import { TopBar } from '../components/ui';
 
 export default function Games() {
-  const audio = mandarinAvailable();
+  const audio = speechAvailable();
   return (
     <>
       <TopBar title="Training modes" sub={`${MODES.length} modes`} back="/" backLabel="Home" />

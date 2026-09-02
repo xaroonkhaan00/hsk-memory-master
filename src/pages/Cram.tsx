@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useStore } from '../store';
 import { buildCram } from '../services/session';
-import { mandarinAvailable } from '../services/tts';
+import { speechAvailable } from '../services/speech';
 import QuizRunner from '../components/QuizRunner';
 import { Segmented, TopBar } from '../components/ui';
 
@@ -12,7 +12,7 @@ export default function Cram() {
   const [size, setSize] = useState(20);
   const [running, setRunning] = useState(false);
   const [seed, setSeed] = useState(0);
-  const audio = mandarinAvailable();
+  const audio = speechAvailable();
 
   const items = useMemo(
     () => buildCram(state, size, audio),

@@ -1,88 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useStore } from '../store';
-import {
-  mandarinAvailable,
-  mandarinVoices,
-  onVoicesChanged,
-  secondVoiceId,
-  ttsSupported,
-  type VoiceInfo,
-} from '../services/tts';
-import { REPEAT_OPTIONS, SPEED_OPTIONS, play } from '../services/audio';
+import { mandarinVoices, onSpeechChanged, type VoiceInfo } from '../services/speech';
 import { CONVERSATION_INDEX, PACKS, STORY_INDEX, TOTAL } from '../data';
 import { Segmented, TopBar, useToast } from '../components/ui';
 import { Toggle } from '../components/scene';
 import { APP_NAME, BrandLockup, CREATOR, Credit, MONOGRAM } from '../brand/Logo';
-import { platformName } from '../services/platform';
 import type { Dimension } from '../types';
-
-const SAMPLE = '你好，我们一起学习汉语。';
-
-function voiceLabel(v: VoiceInfo): string {
-  const bits: string[] = [v.lang];
-  if (v.mainland) bits.push('mainland');
-  if (v.gender) bits.push(v.gender);
-  if (v.localService) bits.push('offline');
-  return bits.join(' · ');
-}
-
-/** A picker over the Mandarin voices this device actually has. */
-function VoicePicker({
-  label,
-  hint,
-  value,
-  onChange,
-  voices,
-  allowAuto,
-}: {
-  label: string;
-  hint?: string;
-  value: string | null;
-  onChange: (id: string | null) => void;
-  voices: VoiceInfo[];
-  allowAuto?: string;
-}) {
-  const { state } = useStore();
-  const id = `voice-${label.replace(/\s+/g, '-').toLowerCase()}`;
-  return (
-    <div className="stack--sm">
-      <label className="section-title" htmlFor={id}>
-        {label}
-      </label>
-      {hint && <p className="tiny muted">{hint}</p>}
-      <select
-        id={id}
-        value={value ?? ''}
-        onChange={(e) => onChange(e.target.value || null)}
-      >
-        <option value="">{allowAuto ?? 'Choose automatically'}</option>
-        {voices.map((v) => (
-          <option key={v.id} value={v.id}>
-            {v.name} — {voiceLabel(v)}
-          </option>
-        ))}
-      </select>
-      <button
-        className="btn btn--soft btn--sm"
-        type="button"
-        onClick={() =>
-          play(SAMPLE, { ...state.settings.audio, voiceId: value ?? state.settings.audio.voiceId }, {
-            repeat: 1,
-          })
-        }
-      >
-        Preview this voice
-      </button>
-    </div>
-  );
-}
 
 export default function Settings() {
   const {
     state,
     setSettings,
-    setAudio,
     setCaptions,
     resetStats,
     resetAll,
@@ -97,8 +26,9 @@ export default function Settings() {
   const fileRef = useRef<HTMLInputElement>(null);
   const audio = state.settings.audio;
   const captions = state.settings.captions;
+  const cinema = state.settings.cinemaCaptions;
 
-  useEffect(() => onVoicesChanged(() => setVoices([...mandarinVoices()])), []);
+  useEffect(() => onSpeechChanged(() => setVoices([...mandarinVoices()])), []);
 
   const download = () => {
     const blob = new Blob([exportJson()], { type: 'application/json' });
@@ -112,8 +42,6 @@ export default function Settings() {
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     showToast('Backup saved');
   };
-
-  const oneVoiceOnly = voices.length === 1;
 
   return (
     <>
@@ -172,121 +100,36 @@ export default function Settings() {
           </p>
         </div>
 
-        {/* ---------------------------------------------------------- AUDIO */}
+        {/* -------------------------------------------------- AUDIO & VOICE */}
         <div className="card stack--sm">
-          <div className="section-title">Audio</div>
-          {!ttsSupported() ? (
-            <p className="small muted">
-              This device does not offer speech, so listening practice is hidden rather than played
-              with the wrong voice.
-            </p>
-          ) : !mandarinAvailable() ? (
-            <div className="fact">
-              <span className="label">No Mandarin voice yet</span>
-              This {platformName() === 'android' ? 'phone' : 'device'} has no Chinese voice
-              installed, so nothing is spoken — the app will not read Chinese with an English voice.
-              {platformName() === 'android'
-                ? ' Open Settings → System → Languages & input → Text-to-speech, then install the Chinese (Mandarin) voice data. It works offline once installed.'
-                : " Add a Chinese voice in your system's speech settings and it will appear here."}
+          <div className="section-title">Audio &amp; voice</div>
+          <div className="row">
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <b style={{ display: 'block', fontWeight: 660 }}>Mandarin voice</b>
+              <span className="tiny muted">
+                {voices.find((v) => v.id === audio.voiceId)?.name ??
+                  voices[0]?.name ??
+                  'Chosen automatically'}
+              </span>
             </div>
-          ) : (
-            <>
-              <p className="small muted">
-                Speech comes from this device's own voices. Nothing is downloaded while you study
-                and no service is called, so audio keeps working offline.
-              </p>
-              <VoicePicker
-                label="Preferred voice"
-                hint={`${voices.length} Mandarin ${voices.length === 1 ? 'voice' : 'voices'} found on this device.`}
-                value={audio.voiceId}
-                onChange={(id) => setAudio({ voiceId: id })}
-                voices={voices}
-                allowAuto="Best available (recommended)"
-              />
-
-              <div className="section-title">Speed</div>
-              <Segmented
-                value={audio.rate}
-                onChange={(v) => setAudio({ rate: v })}
-                options={SPEED_OPTIONS.map((o) => ({ value: o.value as number, label: o.label }))}
-                ariaLabel="Speaking speed"
-              />
-              <p className="tiny muted">
-                {SPEED_OPTIONS.find((o) => o.value === audio.rate)?.hint ??
-                  'Slower than conversation, which is easier to copy.'}
-              </p>
-
-              <div className="section-title">Plays per tap</div>
-              <Segmented
-                value={audio.repeat}
-                onChange={(v) => setAudio({ repeat: v })}
-                options={REPEAT_OPTIONS}
-                ariaLabel="Repeats"
-              />
-
-              <div className="section-title">Conversation speakers</div>
-              {oneVoiceOnly ? (
-                <p className="tiny muted">
-                  This device has one Mandarin voice, so both speakers use it and the scene tells
-                  them apart on screen instead. An accurate voice matters more than fake variety.
-                </p>
-              ) : (
-                <>
-                  <VoicePicker
-                    label="Speaker A"
-                    value={audio.speakerAVoiceId}
-                    onChange={(id) => setAudio({ speakerAVoiceId: id })}
-                    voices={voices}
-                    allowAuto="Same as preferred voice"
-                  />
-                  <VoicePicker
-                    label="Speaker B"
-                    value={audio.speakerBVoiceId}
-                    onChange={(id) => setAudio({ speakerBVoiceId: id })}
-                    voices={voices}
-                    allowAuto={`Automatic (${
-                      voices.find((v) => v.id === secondVoiceId(audio.voiceId))?.name ?? 'second voice'
-                    })`}
-                  />
-                </>
-              )}
-
-              <div className="section-title">Play by itself</div>
-              <Toggle
-                label="Words"
-                hint="Speak a word when its page opens"
-                on={audio.autoWord}
-                onChange={(v) => setAudio({ autoWord: v })}
-              />
-              <Toggle
-                label="Example sentences"
-                hint="Speak the example under a word"
-                on={audio.autoSentence}
-                onChange={(v) => setAudio({ autoSentence: v })}
-              />
-              <Toggle
-                label="Stories"
-                hint="Start reading a story as soon as it opens"
-                on={audio.autoStory}
-                onChange={(v) => setAudio({ autoStory: v })}
-              />
-              <Toggle
-                label="Conversations"
-                hint="Start an episode as soon as it opens"
-                on={audio.autoConversation}
-                onChange={(v) => setAudio({ autoConversation: v })}
-              />
-            </>
-          )}
+            <span className="chip">{audio.rate}×</span>
+          </div>
+          <Link className="btn btn--soft btn--block" to="/settings/audio">
+            Voice, speed, test and diagnostics
+          </Link>
+          <p className="tiny muted">
+            Speech comes from this device. Nothing is downloaded while you study, so audio keeps
+            working offline once a Chinese voice is installed.
+          </p>
         </div>
 
-        {/* ------------------------------------------------------- CAPTIONS */}
+        {/* --------------------------------------- STORIES & CONVERSATIONS */}
         <div className="card stack--sm">
-          <div className="section-title">Captions</div>
+          <div className="section-title">Stories &amp; conversations</div>
           <p className="tiny muted">
-            The starting point for every story and episode. You can still change them inside a
-            scene.
+            Where each player starts. You can still change any of this inside a scene.
           </p>
+          <div className="section-title">Story captions</div>
           <Toggle
             label="Chinese"
             hint="汉字 on screen"
@@ -301,7 +144,7 @@ export default function Settings() {
           />
           <Toggle
             label="English"
-            hint="Off by default — try to understand first, then reveal"
+            hint="Off by default — understand first, then reveal"
             on={captions.english}
             onChange={(v) => setCaptions({ english: v })}
           />
@@ -311,12 +154,94 @@ export default function Settings() {
             on={captions.highlightTargets}
             onChange={(v) => setCaptions({ highlightTargets: v })}
           />
+
+          <div className="section-title">Conversation captions</div>
+          <Toggle
+            label="Chinese"
+            hint="汉字 on screen"
+            on={cinema.hanzi}
+            onChange={(v) => setSettings({ cinemaCaptions: { ...cinema, hanzi: v } })}
+          />
+          <Toggle
+            label="Pinyin"
+            hint="Sound written above each word"
+            on={cinema.pinyin}
+            onChange={(v) => setSettings({ cinemaCaptions: { ...cinema, pinyin: v } })}
+          />
+          <Toggle
+            label="English"
+            hint="Off by default"
+            on={cinema.english}
+            onChange={(v) => setSettings({ cinemaCaptions: { ...cinema, english: v } })}
+          />
+          <Toggle
+            label="Highlight your words"
+            on={cinema.highlightTargets}
+            onChange={(v) => setSettings({ cinemaCaptions: { ...cinema, highlightTargets: v } })}
+          />
+        </div>
+
+        {/* ------------------------------------------------------- CAPTIONS */}
+        <div className="card stack--sm">
+          <div className="section-title">Pinyin</div>
+          <label className="tiny muted">How pinyin is written on screen</label>
+          <Segmented
+            value={state.settings.pinyinDisplay}
+            onChange={(v) => setSettings({ pinyinDisplay: v })}
+            options={[
+              { value: 'marks' as const, label: 'With tones' },
+              { value: 'plain' as const, label: 'Plain' },
+              { value: 'hidden' as const, label: 'Hidden' },
+            ]}
+            ariaLabel="Pinyin display"
+          />
+          <p className="tiny muted">
+            The stored pronunciation always keeps its tone marks — this only changes what is drawn.
+          </p>
+
+          <div className="section-title">Typing pinyin</div>
+          <Segmented
+            value={state.settings.pinyinInput}
+            onChange={(v) => setSettings({ pinyinInput: v })}
+            options={[
+              { value: 'lenient' as const, label: 'Tones optional' },
+              { value: 'strict' as const, label: 'Tones required' },
+            ]}
+            ariaLabel="Typed pinyin"
+          />
+          <p className="tiny muted">
+            With tones optional, typing <b>xuexi</b> counts as correct for <b>xuéxí</b>; xue2xi2
+            works too. The tone-marked form is always shown back to you.
+          </p>
           <Toggle
             label="Show pinyin on word cards"
             hint="Outside stories, in quizzes and lists"
             on={state.settings.showPinyinDefault}
             onChange={(v) => setSettings({ showPinyinDefault: v })}
           />
+        </div>
+
+        {/* ------------------------------------------------------ MOCK EXAM */}
+        <div className="card stack--sm">
+          <div className="section-title">Mock exam</div>
+          <Toggle
+            label="Strict exam conditions"
+            hint="No pinyin, no meanings, one play per listening question"
+            on={state.settings.examStrict}
+            onChange={(v) => setSettings({ examStrict: v })}
+          />
+          <Toggle
+            label="Story difficulty affects practice"
+            hint="Uses the difficulty you set above"
+            on={state.settings.storyDifficulty !== 'easy'}
+            onChange={(v) => setSettings({ storyDifficulty: v ? 'normal' : 'easy' })}
+          />
+          <div className="row row--wrap">
+            <Link className="btn btn--soft btn--sm" to="/exam">
+              Open mock exams
+            </Link>
+            <span className="chip">{state.exams.history.length} taken</span>
+          </div>
         </div>
 
         {/* ----------------------------------------------------- APPEARANCE */}
@@ -462,6 +387,19 @@ export default function Settings() {
               Erase everything…
             </button>
           )}
+        </div>
+
+        {/* -------------------------------------------------- ACCESSIBILITY */}
+        <div className="card stack--sm">
+          <div className="section-title">Accessibility</div>
+          <p className="small muted">
+            Every control is a real button or link, so screen readers and keyboards work without
+            anything extra. Chinese is marked as Chinese so a screen reader reads it correctly, and
+            animations stop when your system asks for reduced motion.
+          </p>
+          <p className="tiny muted">
+            Keys: 1–9 pick an answer, Enter submits a typed answer and moves on.
+          </p>
         </div>
 
         {/* ---------------------------------------------------------- ABOUT */}

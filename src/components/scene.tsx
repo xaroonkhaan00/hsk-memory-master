@@ -9,8 +9,8 @@ import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } fro
 import { Link } from 'react-router-dom';
 import type { CaptionMode, CaptionSettings, ExampleToken, Scene, SceneLine, SceneRef } from '../types';
 import { getWord, loadConversation, loadStory, tryWord } from '../data';
-import { play, stop } from '../services/audio';
-import { mandarinAvailable } from '../services/tts';
+import { play, speakChinese, stop } from '../services/audio';
+import { speechAvailable } from '../services/speech';
 import { useStore } from '../store';
 import { SpeakerIcon } from './ui';
 
@@ -251,7 +251,7 @@ export function LineBlock({
       )}
 
       <div className="line__tools">
-        {onPlay && mandarinAvailable() && (
+        {onPlay && speechAvailable() && (
           <button
             type="button"
             className={`btn btn--icon btn--ghost${speaking ? ' is-playing' : ''}`}
@@ -311,180 +311,286 @@ export function SoundWave() {
   );
 }
 
-/* -------------------------------------------------------------- sequencer */
+/* ----------------------------------------------------------------- player */
 
-export interface Sequencer {
+export interface ScenePlayer {
   index: number;
   playing: boolean;
   speaking: boolean;
-  go: (i: number) => void;
+  /** Set when the engine reported a real failure, so the UI can say so. */
+  error: string;
+  /** Play from a line and keep going to the end of the scene. */
+  playFrom: (i: number) => void;
+  /** Speak one line on its own, without starting the run. */
+  playLine: (i: number) => void;
+  toggle: () => void;
+  pause: () => void;
   next: () => void;
   prev: () => void;
-  toggle: () => void;
   replayLine: () => void;
+  restart: () => void;
   reset: () => void;
 }
 
 /**
- * Plays the lines of a scene one after another. `onFinish` fires when the last
- * line ends during continuous playback, never when the learner steps manually.
+ * Plays a scene line by line.
+ *
+ * The whole point of this hook is that it waits for the engine's own
+ * completion callback before moving on. Guessing a duration with a timer is
+ * what makes a dialogue drift out of sync with its captions — a slow phrase
+ * gets cut off, a fast one leaves dead air, and a device with no voice
+ * silently "plays" the entire scene in a few seconds.
+ *
+ * One press of play runs the whole scene: each line highlights itself, is
+ * spoken, and hands over to the next when the engine says it has finished.
  */
-export function useSequencer(
+export function useScenePlayer(
   lines: SceneLine[],
-  opts: { rate?: number; speakerOf?: (l: SceneLine) => 'a' | 'b' | undefined; onFinish?: () => void },
-): Sequencer {
+  opts: {
+    rate?: number;
+    /** Pause between lines, ms. A beat of silence reads as turn-taking. */
+    gap?: number;
+    speakerOf?: (l: SceneLine) => 'a' | 'b' | undefined;
+    onFinish?: () => void;
+  },
+): ScenePlayer {
   const { state } = useStore();
   const audio = state.settings.audio;
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [speaking, setSpeaking] = useState(false);
-  const playingRef = useRef(false);
+  const [error, setError] = useState('');
+
+  /** The run in flight. Setting `cancelled` unwinds it at the next await. */
+  const run = useRef<{ cancelled: boolean } | null>(null);
   const finish = useRef(opts.onFinish);
   finish.current = opts.onFinish;
+
   const rate = opts.rate ?? audio.rate;
+  const gap = opts.gap ?? 420;
   const speakerOf = opts.speakerOf;
+  // Kept in refs so a run started earlier still uses current settings without
+  // being torn down and restarted every time a caption toggle changes.
+  const cfg = useRef({ lines, rate, gap, speakerOf, audio });
+  cfg.current = { lines, rate, gap, speakerOf, audio };
 
-  const speakLine = useCallback(
-    (i: number, chain: boolean) => {
-      const line = lines[i];
-      if (!line) return;
-      const ok = play(line.zh, audio, {
-        rate,
-        repeat: 1,
-        speaker: speakerOf?.(line),
-        onStart: () => setSpeaking(true),
-        onEnd: () => {
-          setSpeaking(false);
-          if (!chain || !playingRef.current) return;
-          if (i + 1 < lines.length) {
-            setIndex(i + 1);
-            speakLine(i + 1, true);
-          } else {
-            playingRef.current = false;
-            setPlaying(false);
-            finish.current?.();
-          }
-        },
-      });
-      if (!ok) {
-        // No Mandarin voice: still walk the scene so captions advance.
-        setSpeaking(false);
-        if (chain && playingRef.current) {
-          playingRef.current = false;
-          setPlaying(false);
-        }
-      }
-    },
-    [lines, audio, rate, speakerOf],
-  );
-
-  const stopAll = useCallback(() => {
-    playingRef.current = false;
+  const halt = useCallback(() => {
+    if (run.current) run.current.cancelled = true;
+    run.current = null;
+    stop();
     setPlaying(false);
     setSpeaking(false);
-    stop();
   }, []);
 
-  useEffect(() => () => stopAll(), [stopAll]);
+  useEffect(() => () => halt(), [halt]);
+
+  const sleep = (ms: number, signal: { cancelled: boolean }) =>
+    new Promise<void>((resolve) => {
+      const t = setTimeout(resolve, ms);
+      const poll = setInterval(() => {
+        if (signal.cancelled) {
+          clearTimeout(t);
+          clearInterval(poll);
+          resolve();
+        }
+      }, 60);
+      setTimeout(() => clearInterval(poll), ms + 80);
+    });
+
+  const speakAt = useCallback(
+    async (i: number, signal: { cancelled: boolean }) => {
+      const line = cfg.current.lines[i];
+      if (!line) return { completed: false, cancelled: true };
+      setIndex(i);
+      setSpeaking(true);
+      const result = await speakChinese(line.zh, cfg.current.audio, {
+        rate: cfg.current.rate,
+        repeat: 1,
+        speaker: cfg.current.speakerOf?.(line),
+        signal,
+      });
+      setSpeaking(false);
+      return result;
+    },
+    [],
+  );
+
+  /** Walk the scene from `start`, awaiting each line's real completion. */
+  const playFrom = useCallback(
+    (start: number) => {
+      halt();
+      const signal = { cancelled: false };
+      run.current = signal;
+      setError('');
+      setPlaying(true);
+
+      void (async () => {
+        for (let i = Math.max(0, start); i < cfg.current.lines.length; i += 1) {
+          if (signal.cancelled) return;
+          const result = await speakAt(i, signal);
+          if (signal.cancelled) return;
+          if (!result.completed) {
+            if (result.cancelled) return;
+            // A genuine engine failure stops the run and is shown, rather than
+            // racing silently through every remaining line.
+            setError(result.error ?? 'The speech engine could not play this line.');
+            setPlaying(false);
+            run.current = null;
+            return;
+          }
+          if (i + 1 < cfg.current.lines.length) await sleep(cfg.current.gap, signal);
+        }
+        if (signal.cancelled) return;
+        run.current = null;
+        setPlaying(false);
+        finish.current?.();
+      })();
+    },
+    [halt, speakAt],
+  );
+
+  const playLine = useCallback(
+    (i: number) => {
+      halt();
+      const signal = { cancelled: false };
+      run.current = signal;
+      setError('');
+      void (async () => {
+        const result = await speakAt(i, signal);
+        if (!signal.cancelled && !result.completed && !result.cancelled) {
+          setError(result.error ?? 'The speech engine could not play this line.');
+        }
+        if (run.current === signal) run.current = null;
+      })();
+    },
+    [halt, speakAt],
+  );
 
   return {
     index,
     playing,
     speaking,
-    go: (i) => {
-      const clamped = Math.max(0, Math.min(lines.length - 1, i));
-      stop();
-      setIndex(clamped);
-      if (playingRef.current) speakLine(clamped, true);
-      else speakLine(clamped, false);
-    },
+    error,
+    playFrom,
+    playLine,
+    toggle: () => (playing ? halt() : playFrom(index)),
+    pause: halt,
     next: () => {
-      if (index + 1 >= lines.length) {
-        stopAll();
-        finish.current?.();
-        return;
+      const i = Math.min(cfg.current.lines.length - 1, index + 1);
+      if (playing) playFrom(i);
+      else {
+        setIndex(i);
+        playLine(i);
       }
-      const i = index + 1;
-      stop();
-      setIndex(i);
-      speakLine(i, playingRef.current);
     },
     prev: () => {
       const i = Math.max(0, index - 1);
-      stop();
-      setIndex(i);
-      speakLine(i, playingRef.current);
-    },
-    toggle: () => {
-      if (playingRef.current) {
-        stopAll();
-        return;
+      if (playing) playFrom(i);
+      else {
+        setIndex(i);
+        playLine(i);
       }
-      playingRef.current = true;
-      setPlaying(true);
-      speakLine(index, true);
     },
-    replayLine: () => {
-      stop();
-      speakLine(index, playingRef.current);
-    },
+    replayLine: () => (playing ? playFrom(index) : playLine(index)),
+    restart: () => playFrom(0),
     reset: () => {
-      stopAll();
+      halt();
       setIndex(0);
+      setError('');
     },
   };
 }
 
 export function Transport({
-  seq,
+  player,
   total,
   rate,
   onRate,
   extra,
 }: {
-  seq: Sequencer;
+  player: ScenePlayer;
   total: number;
   rate: number;
   onRate: (r: number) => void;
   extra?: ReactNode;
 }) {
-  const rates = [0.65, 0.85, 1.0];
+  const rates = [0.65, 0.75, 0.85, 1.0];
+  const step = () => rates[(rates.indexOf(rate) + 1) % rates.length] ?? 0.85;
   return (
     <div className="player">
-      <button type="button" className="btn btn--icon btn--soft" aria-label="Previous line" onClick={seq.prev}>
+      <button
+        type="button"
+        className="btn btn--icon btn--soft"
+        aria-label="Previous line"
+        onClick={player.prev}
+      >
         ⏮
       </button>
       <button
         type="button"
         className="btn btn--icon player__play"
-        aria-label={seq.playing ? 'Pause' : 'Play'}
-        onClick={seq.toggle}
+        aria-label={player.playing ? 'Pause' : 'Play'}
+        onClick={player.toggle}
       >
-        {seq.playing ? '❚❚' : '▶'}
+        {player.playing ? '❚❚' : '▶'}
       </button>
-      <button type="button" className="btn btn--icon btn--soft" aria-label="Next line" onClick={seq.next}>
+      <button
+        type="button"
+        className="btn btn--icon btn--soft"
+        aria-label="Next line"
+        onClick={player.next}
+      >
         ⏭
       </button>
-      <button type="button" className="btn btn--icon btn--soft" aria-label="Repeat this line" onClick={seq.replayLine}>
+      <button
+        type="button"
+        className="btn btn--icon btn--soft"
+        aria-label="Repeat this line"
+        onClick={player.replayLine}
+      >
         ↻
+      </button>
+      <button
+        type="button"
+        className="btn btn--icon btn--soft"
+        aria-label="Start again from the beginning"
+        onClick={player.restart}
+      >
+        ⤒
       </button>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div className="progressline" aria-hidden>
-          <i style={{ width: `${total ? ((seq.index + 1) / total) * 100 : 0}%` }} />
+          <i style={{ width: `${total ? ((player.index + 1) / total) * 100 : 0}%` }} />
         </div>
         <div className="tiny muted" style={{ marginTop: 4 }}>
-          Line {seq.index + 1} of {total}
+          Line {player.index + 1} of {total}
         </div>
       </div>
       <button
         type="button"
         className="chip chip--button"
         aria-label={`Playback speed ${rate}×`}
-        onClick={() => onRate(rates[(rates.indexOf(rate) + 1) % rates.length]!)}
+        onClick={() => onRate(step())}
       >
         {rate}×
       </button>
       {extra}
+    </div>
+  );
+}
+
+/** Shown when the engine actually refused, so a silent player is never a mystery. */
+export function PlaybackError({ message }: { message: string }) {
+  if (!message) return null;
+  return (
+    <div className="trick" role="alert">
+      <span className="label">Audio could not play</span>
+      {message}
+      <div style={{ marginTop: 8 }}>
+        <Link className="btn btn--soft btn--sm" to="/settings/audio">
+          Open audio diagnostics
+        </Link>
+      </div>
     </div>
   );
 }

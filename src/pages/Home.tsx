@@ -69,6 +69,7 @@ export default function Home() {
 
   const strong = ov.mastered + ov.strong;
   const storiesRead = state.stories.completed.length;
+  const lastExam = state.exams.history[state.exams.history.length - 1];
   const episodesWatched = state.conversations.completed.length;
 
   return (
@@ -148,6 +149,17 @@ export default function Home() {
           />
           <Tile to="/map" icon="spark" title="Magic 20" sub="Ten stages, twenty words" />
           <Tile to="/cram" icon="bolt" title="Quick review" sub="A fast pass before you stop" />
+          <Tile
+            to="/exam"
+            icon="trophy"
+            title="Mock exam"
+            sub={
+              lastExam
+                ? `Last: ${lastExam.total}/300 · ${lastExam.passed ? 'pass' : 'not yet'}`
+                : 'Full HSK 3 paper — 80 questions'
+            }
+            wide
+          />
           <Tile
             to="/stories"
             icon="book"
@@ -263,6 +275,7 @@ export default function Home() {
         {/* ----------------------------------------------------- everything */}
         <div className="section-title">More ways to practise</div>
         <div className="grid grid--2">
+          <Tile to="/dashboard" icon="chart" title="Progress" sub="Dashboard and history" />
           <Tile to="/browse" icon="search" title="All words" sub={`Search the ${TOTAL}`} />
           <Tile to="/saved" icon="star" title="Saved scenes" sub="Your own collection" />
           <Tile to="/tone" icon="wave" title="Tone trainer" sub="Hear the four tones apart" />
